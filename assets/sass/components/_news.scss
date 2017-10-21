@@ -1,0 +1,85 @@
+.news-snip {
+	box-sizing: border-box;
+	position: relative;
+	&:nth-of-type(2n) {padding-left: 5em;}
+	&:nth-of-type(2n+1) {padding-right: 5em;
+		.news-snip-last {left: -4.5em;}
+	}
+	@include breakpoint(xsmall) {padding: 2em 0!important;
+		&:nth-of-type(2n) {padding-left: 0;}
+		&:nth-of-type(2n+1) {padding-right: 0;
+			.news-snip-last {left: -20px;}
+		}
+	}
+	&.fit {padding: 8em 0 6em;
+		@include breakpoint(xsmall) {padding: 2em 0}
+	}
+	&.hor-image {padding-top: 8.25em;
+		.news-snip-last {top: 9.7em;}
+		@include breakpoint(xsmall) {padding: 2em 0;
+			.news-snip-last {top: 90px}
+		}
+	}
+}
+.news {
+	.news-banner {padding: 4em 0;
+		@include breakpoint(xsmall) {padding: 2em 0}
+	}
+	.image {
+		&:hover {opacity: 1}
+		@include breakpoint(small) {
+			&:after {display: none}
+		}
+		@include breakpoint(xsmall) {
+			&:after {display: none}
+		}
+	}
+	.image.fit {margin: 0}
+	.news-snip-content {
+		@include breakpoint(xsmall) {padding: 0 2em}
+	}
+	.news-snip-tags {list-style: none; padding: 1em 0; margin: 0;
+		li {display: inline-block; padding: 0; padding-right: 1em;
+			a {text-decoration: none; color: _palette(fg-light); font-size: 9pt; font-family: _font(family-bold);}
+		}
+	}
+	h4 {line-height: 1.25em; margin-bottom: 0.5em}
+	p {margin-bottom: 1em; line-height: 1.45em}
+	.news-snip-date {color: _palette(fg-light); font-family: _font(family-bold);}
+	.news-snip-last {
+		-webkit-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+	    width: auto;
+	    height: 20px;
+	    display: inline-block;
+	    position: absolute;
+	    left: 0;
+	    top: 37px;
+	    font-family: _font(family-bold);
+	    font-size: 15px;
+	    @include breakpoint(xsmall) {z-index: 1; left: -21px; top: 90px}
+	}
+}
+
+.news-page {
+	h1 {margin: 0;}
+}
+.news-tags {list-style: none; margin: 3em auto 5em; text-align: center; padding: 0;
+	li {display: inline-block; padding: 0 2em;
+		a {font-size: 20px; font-family: _font(family-bold); text-decoration: none; color: _palette(fg-light);
+			&:hover {color: _palette(fg); cursor: pointer}
+			&.active {color: _palette(fg)}
+		}
+	}
+	@include breakpoint(small) {margin: 2em auto 4em;
+		li {
+			&:first-child {padding-left: 0}
+		}
+	}
+	@include breakpoint(xsmall) {margin: 2em auto; text-align: left;
+		li {padding: 0.5em 2em;
+			&:first-child {padding-left: 2em}
+		}
+	}
+}
+.news-more {padding-top: 3em}

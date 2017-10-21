@@ -1,0 +1,105 @@
+// skel-baseline v3.0.1 | (c) n33 | skel.io | MIT licensed
+
+/* Main */
+
+	#main {
+		@include padding(4em, 0);
+
+		@include breakpoint(small) {
+			@include padding(3em, 0);
+		}
+		.home-page & {padding: 0}
+		.news-page & {@include padding(6em, 0);}
+		.artists-page & {min-height: 100vh; padding: 80px 0 0 0;
+			// background: _palette(fg);
+		}
+	}
+
+	.vh {min-height: 100vh}
+	// .is-loading {display: none;}
+
+	section {position: relative;}
+	.sticky {position: fixed!important; z-index: 1000; top: 0!important}
+	.fixed {position: fixed; top: 0; right: 0; bottom: 0; left: 0}
+	.noscroll {overflow: hidden;}
+	.stuck {position:fixed; top:0; right: 0; bottom: 0; left: 0;}
+	.an-notify {
+		&.visible {position: relative; top: 0;}
+		position: absolute;
+		top: -100px;
+		background: _palette(fg);
+		text-align: center;
+		line-height: 4em;
+		z-index: 100000;
+		@include vendor('transition', 'all #{_duration(nav)} ease-in-out');
+		@include breakpoint(small) {padding: 1em 2em; text-align: left; line-height: 1.5em;}
+		@include breakpoint(xsmall) {line-height: 1.5em; padding: 1em 4em 1em 2em; text-align: left; font-size: 0.9em;}
+		p {color: _palette(bg); margin: 0; font-family: _font(family-light)}
+		.an-notify-close {
+			background-image: url(../../images/icon/x-b.svg);
+	    	background-repeat: no-repeat;
+	    	background-size: 36%;
+	    	background-position: center;
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+			border: 0;
+			cursor: pointer;
+			display: block;
+			height: 4em;
+			position: absolute;
+			right: 3em;
+			top: 0;
+			width: 4em;
+			outline: none!important;
+			&:hover {opacity: 0.7; outline: none!important;}
+			@include breakpoint(small) {right: 0;}
+			@include breakpoint(xsmall) {right: 0; height: 5em;}
+		}
+	}
+	a {
+		@include vendor('transition', 'opacity #{_duration(transition)} ease-in-out');
+		&:hover {opacity: 0.7; cursor: pointer;}
+	}
+	.an-backtotop {
+		background-image: url(../../images/icon/up.svg);
+	    background-repeat: no-repeat;
+	    background-size: contain;
+	    background-position: center;
+	    background-color: transparent;
+	    width: 40px;
+	    height: 40px;
+	    position: fixed;
+	    bottom: -5em;
+	    z-index: 1000;
+	    right: 4em;
+	    padding: 0;
+	    @include breakpoint(small) {right: 2.5em;}
+	    @include breakpoint(xsmall) {right: 1.25em;}
+	    @include vendor('transition', 'bottom #{_duration(transition)} ease-in-out');
+	    &:hover {cursor: pointer}
+	}
+	.no-js #loader { display: none;  }
+	.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+	.an-loader {
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 9999;
+		background: #fff;
+	}
+	.an-loader-img {
+		position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    width: 120px;
+	    height: 120px;
+	    margin: -60px 0 0 -60px;
+		background: url(../../images/preload.svg) center no-repeat;
+		-webkit-animation:spin 4s linear infinite;
+	    -moz-animation:spin 4s linear infinite;
+	    animation:spin 4s linear infinite;
+	}
+	@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+	@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+	// @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

@@ -1,0 +1,191 @@
+// skel-baseline v3.0.1 | (c) n33 | skel.io | MIT licensed
+
+/* Nav */
+
+	#nav-mask {
+		content: '';
+		display: block;
+		position: fixed;
+	    overflow: hidden;
+	    z-index: -1;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    background-color: _palette(fg);
+	    opacity: 0;
+	    @include vendor('transition', ('opacity #{_duration(nav)} ease-out', 'z-index #{_duration(nav)} ease-in'));
+
+	    &.visible {opacity: 0.7; z-index: _misc(z-index-base) + 1;
+	    	@include vendor('transition', ('all #{_duration(nav)} ease-in-out'));
+	    }
+	}
+	#nav {
+		@include vendor('transform', 'translateX(100%)');
+		@include vendor('transition', ('transform #{_duration(nav)} ease', 'visibility #{_duration(nav)}'));
+		-webkit-overflow-scrolling: touch;
+		background: _palette(bg);
+		box-shadow: none;
+		color: _palette(fg);
+		height: 100%;
+		// max-width: 90%;
+		overflow-y: scroll;
+		padding: 6em 3em 3em;
+		position: fixed;
+		right: 0;
+		top: 0;
+		visibility: hidden;
+		width: 25em;
+		z-index: _misc(z-index-base) + 2;
+		@include breakpoint(xsmall) {width: 100%; padding: 6em 2em 2em}
+
+		.nav-content {min-height: 100%; padding-bottom: 60px;}
+		.nav-footer {
+		    position: initial;
+		    margin: 0;
+		    display: block;
+		    bottom: 1em;
+		    right: 2em;
+		    left: 2em;
+		    height: 60px;
+		    margin-top: -60px;
+			a { text-decoration: none;
+			    text-align: right;
+			    padding-left: 1em;
+			    padding-top: 1.5em;
+			    margin-bottom: 1em;
+			    display: block;
+			    float: right;
+				&:hover {opacity: 0.7; cursor: pointer}
+				i {margin-right: 7px;}
+			}
+			span {float: left; text-align: left;}
+			@include breakpoint(xsmall) {}
+		}
+
+		ul {
+			margin: 0 0 (_size(element-margin) * 0.5) 0;
+
+			&.links {
+				list-style: none;
+				padding: 0;
+
+				> li {
+					padding: 0; line-height: 3.5em; display: block;
+
+					> a:not(.button) {
+						border: 0;
+						border-top: solid 1px _palette(accent2, border);
+						color: inherit;
+						display: inline-block;
+						letter-spacing: _size(letter-spacing-alt);
+						line-height: 1.25em;
+						text-decoration: none;
+						cursor: pointer;
+						font-size: 20px;
+						font-family: _font(family-bold);
+						padding-left: 20px;
+						// @include breakpoint(small) {font-family: _font(family-bold);}
+						// @include breakpoint(xsmall) {font-family: _font(family-bold); font-size: 20px}
+
+						&:hover {opacity: 0.7}
+					}
+
+					> .button {
+						display: block;
+						margin: 0.5em 0 0 0;
+					}
+
+					&:first-child {
+						> a:not(.button) {
+							border-top: 0 !important;
+						}
+					}
+					&#lang {line-height: 5em;
+		    			a {
+		    				background-image: url(../../images/icon/ru-b-1.svg);
+		    				background-repeat: no-repeat;
+				    	    width: 27px;
+				    		height: 27px;
+				    		display: inline-block;
+				    		&:hover {
+				    			background-image: url(../../images/icon/ru-b-2.svg);
+				    		}
+		    			}
+			    	}
+				}
+			}
+		}
+
+		.close {
+			background-image: url(../../images/icon/x.svg);
+	    	background-repeat: no-repeat;
+	    	background-size: 27%;
+	    	background-position: center;
+			@include vendor('transition', 'color #{_duration(transition)} ease-in-out');
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+			border: 0;
+			cursor: pointer;
+			display: block;
+			height: 74px;
+			position: absolute;
+			right: 1em;
+			top: 0;
+			width: 80px;
+			outline: none!important;
+			&:hover {opacity: 0.7; outline: none!important;}
+
+			@include breakpoint(small) {}
+			@include breakpoint(xsmall) {right: 0}
+		}
+
+		&.visible {
+			@include vendor('transform', 'translateX(0)');
+			// box-shadow: 0 0 1.5em 0 rgba(0,0,0,0.2);
+			visibility: visible;
+		}
+
+		@include breakpoint(small) {
+			// padding: 2.5em 1.75em;
+		}
+
+		.nav-social {
+    		position: relative;
+    		display: block;
+    		list-style: none;
+    		text-align: right;
+    		margin-bottom: 3em;
+    		// margin: 0;
+    		// float: right;
+		    // bottom: 5em;
+    		// right: 2em;
+    		li {display: inline-block; padding-left: 1.25em}
+    		a {
+	    	    width: 27px;
+	    		height: 27px;
+	    		display: inline-block;
+	    		background-repeat: no-repeat;
+	    		cursor: pointer;
+			}
+    		.telegram {
+    			a {background-image: url(../../images/icon/t-b-1.svg);
+		    		&:hover {background-image: url(../../images/icon/t-b-2.svg);}
+    			}
+    		}
+    		.insta {
+    			a {background-image: url(../../images/icon/in-b-1.svg);
+		    		&:hover {background-image: url(../../images/icon/in-b-2.svg);}
+    			}
+    		}
+    		.vk {
+    			a {background-image: url(../../images/icon/vk-b-1.svg);
+		    		&:hover {background-image: url(../../images/icon/vk-b-2.svg);}
+    			}
+    		}
+    		.fb {
+    			a {background-image: url(../../images/icon/f-b-1.svg);
+		    		&:hover {background-image: url(../../images/icon/f-b-2.svg);}
+    			}
+    		}
+    	}
+	}
