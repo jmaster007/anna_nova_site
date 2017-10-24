@@ -1,0 +1,222 @@
+.third-grid {
+
+	.news-snip {
+		padding-left: 5em;
+		padding-right: 0;
+		@media (max-width: $small) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		&:nth-of-type(3n+1) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		&:nth-of-type(2n) {
+			@media (max-width: $small) {
+				padding-left: 5em;
+			}
+		}
+	}
+}
+
+.thin-block {
+	max-width: 1180px;
+
+	.row {
+		display: flex;
+		justify-content: center;
+		@media (max-width: $xsmall) {
+			flex-wrap: wrap;
+		}
+	}
+}
+
+.booklet-page {
+
+	#header {
+		top: 30px;
+		height: 0;
+
+		.lg-black {
+			display: none;
+		}
+
+		&.sticky {
+			height: 6em;
+
+			.lg-black {
+				display: block;
+			}
+		}
+
+		a[href="#nav"] {
+			background-image: url(../../images/icon/burger.svg);
+			// width: 40px;
+			// background-size: contain;
+			// @media (max-width: $large) {
+			// 	width: 27px;
+			// }
+		}
+	}
+}
+
+#banner {
+
+	// .lg-black, .lg, .lg-white {
+	// 	width: 80px;
+	// 	height: 80px;
+	// 	padding-top: 80px;
+	// 	@media (max-width: $large) {
+	// 		width: 40px;
+	// 		height: 40px;
+	// 		padding-top: 40px;
+	// 	}
+	// }
+
+	.sub-scroll-menu {
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		text-align: center;
+		top: 60px;
+		@media (max-width: $small) {
+			display: none;
+		}
+
+		.item {
+			display: inline-block;
+			font-size: 15px;
+			color: #b5b4b4;
+
+			& + .item {
+				margin-left: 32px;
+			}
+		}
+	}
+
+	.carousel-booklet {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		// min-height: 100vh;
+
+		.static-banner-logo {
+		    position: absolute;
+		    z-index: 100;
+		    left: 4em;
+		    top: 4em;
+		}
+
+		.static-banner-menu {
+		    position: absolute;
+		    z-index: 100;
+		    right: 4em;
+		    top: 4em;
+		}
+
+		.banner-title {
+			padding: 0;
+			@media (max-width: $xsmall) {
+				min-height: unset;
+				padding-bottom: 60px;
+			}
+
+			h2 {
+				color: #000;
+				line-height: normal;
+				margin-bottom: 0;
+
+				&.banner-subtitle {
+					color: #b5b4b4;
+					font-size: 45px;
+					@media (max-width: $large) {
+						font-size: 24px;
+					}
+					@media (max-width: $small) {
+						font-size: 20px;
+					}
+					@media (max-width: $xsmall) {
+						font-size: 15px;
+					}
+				}
+			}
+
+			&:before {
+				display: none;
+			}
+		}
+
+		.banner-center-title {
+			display: inline-block;
+			margin: auto;
+
+			h2 {
+				color: #000;
+				font-size: 88px;
+				text-align: center;
+				letter-spacing: -.4px;
+				margin-bottom: .5em;
+				@media (max-width: $large) {
+					font-size: 56px;
+				}
+				@media (max-width: $small) {
+					font-size: 34px;
+				}
+
+				&.small {
+					font-size: 45px;
+					letter-spacing: -.6px;
+					@media (max-width: $large) {
+						font-size: 24px;
+					}
+					@media (max-width: $small) {
+						font-size: 20px;
+					}
+					@media (max-width: $xsmall) {
+						font-size: 15px;
+					}
+				}
+			}
+		}
+
+		.carousel-cell {
+			display: flex;
+		}
+	}
+
+	.flickity-page-dots {
+
+		.dot {
+			border: 1px solid #000;
+			width: 9px;
+			height: 9px;
+
+			&.is-selected {
+				background: #000;
+			}
+		}
+	}
+}
+
+.home-page {
+
+	#banner {
+
+		.flickity-page-dots {
+
+			.dot {
+				border: 1px solid #fff;
+				width: 9px;
+				height: 9px;
+
+				&.is-selected {
+					background: #fff;
+				}
+			}
+		}
+	}
+}

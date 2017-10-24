@@ -1,0 +1,543 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>ANNANOVA Booklet</title>
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link href="../apple-touch-icon.png" rel="apple-touch-icon" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/fonts.css" />
+		<link rel="stylesheet" href="assets/css/animate.min.css" />
+
+		<link rel="stylesheet" href="assets/css/styles.css" />
+		<style type="text/css">
+			.no-js #loader { display: none;  }
+			.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+			.an-loader {
+				position: fixed;
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				height: 100%;
+				z-index: 9999;
+				background: #fff;
+			}
+			.an-loader-img {
+				position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    width: 120px;
+			    height: 120px;
+			    margin: -60px 0 0 -60px;
+				background: url(images/preload.svg) center no-repeat;
+				-webkit-animation:spin 4s linear infinite;
+			    -moz-animation:spin 4s linear infinite;
+			    animation:spin 4s linear infinite;
+			}
+			@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+			@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+			@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+		</style>
+	</head>
+
+	<body id="top" class="booklet-page">
+
+<!-- LOADER -->
+		<div class="an-loader"><span class="an-loader-img"></span></div>
+
+<!-- HEADER -->
+		<header id="header" class="">
+			<a id="an-backtotop" class="lg-black" href="index.html" onclick="$('#top').animatescroll();"></a>
+			<a href="#nav" id="header-nav"></a>
+		</header>
+
+<!-- NAV -->
+		<nav id="nav">
+			<div class="nav-content">
+				<a class="lg-black only-small only-xsmall" href="index.html"></a>
+				<ul class="links align-right">
+					<li><a href="artists.html">ARTISTS</a></li>
+					<li><a>EXHIBITIONS</a></li>
+					<li><a href="news.html">NEWS</a></li>
+					<li><a>ART FAIRS</a></li>
+					<li><a>PROJECTS</a></li>
+					<li><a>BOOKLET</a></li>
+					<li><a>28 BUGS SHOP</a></li>
+					<li><a>ABOUT</a></li>
+					<li id="lang"><a></a></li>
+				</ul>
+				<ul class="nav-social">
+					<li class="telegram"><a></a></li>
+					<li class="insta"><a></a></li>
+					<li class="vk"><a></a></li>
+					<li class="fb"><a></a></li>
+				</ul>
+			</div>
+			<div class="nav-footer">
+				<a><i class="fa fa-map-marker" aria-hidden="true"></i>Zhukovskogo St., 28</a>
+				<span><strong>Tue - Sat</strong><br>12:00 – 19:00</span>
+			</div>
+		</nav>
+		<div id="nav-mask"></div>
+
+<!-- BANNER -->
+		<section id="banner" class="fadeIn">
+
+			<div class="carousel-booklet">
+
+				<div class="sub-scroll-menu">
+					<h4 class="item"><a onclick="$('#news').animatescroll();">NEWS</a></h4>
+					<h4 class="item"><a onclick="$('#must-read').animatescroll();">MUST READ</a></h4>
+					<h4 class="item"><a onclick="$('#info').animatescroll();">INFO</a></h4>
+				</div>
+
+				<div class="static-banner-logo">
+					<div class="lg-black"></div>
+				</div>
+
+				<div class="carousel-cell" data-flickity-bg-lazyload="images/4.jpg">
+					<div class="banner-center-title">
+						<h2>BOOKLET</h2>
+						<h2 class="small-label">the magazine of Anna Nova gallery</h2>
+					</div>
+					<div class="banner-title">
+						<h2><a href="">Issue #7</a></h2>
+						<h2 class="banner-subtitle">MAIN ARTIST: ALJOSCHA</h2>
+					</div>
+					<div class="mask-cursor-left"></div>
+					<div class="mask-cursor-right"></div>
+					<!-- <div class="banner-mask"></div> -->
+				</div>
+				<div class="carousel-cell" data-flickity-bg-lazyload="images/4.jpg">
+					<div class="banner-title">
+						<h2><a href="">ARTISTS OF ANNA NOVA<br>IN STREET ART MUSEUM</a></h2>
+						<h2 class="banner-subtitle">#EXHIBITION</h2>
+					</div>
+					<div class="mask-cursor-left"></div>
+					<div class="mask-cursor-right"></div>
+					<!-- <div class="banner-mask"></div> -->
+				</div>
+				<div class="carousel-cell" data-flickity-bg-lazyload="images/4.jpg">
+					<div class="banner-title">
+						<h2><a href="">Issue #7</a></h2>
+						<h2 class="banner-subtitle">MAIN ARTIST: ALJOSCHA</h2>
+					</div>
+					<div class="mask-cursor-left"></div>
+					<div class="mask-cursor-right"></div>
+					<!-- <div class="banner-mask"></div> -->
+				</div>
+			</div>
+		</section>
+
+<!-- MAIN -->
+		<div id="main" class="container">
+
+			<a id="an-backtotop" class="an-backtotop" onclick="$('#top').animatescroll();"></a>
+
+<!-- NEWS -->
+			<hr class="trans" />
+			<section class="panel news row 0% third-grid" id="news">
+				<div class="4u 6u(small) 12u$(xsmall) news-snip wow fadeIn" data-wow-delay="0.75s">
+					<a href="" title="Read" class="image fit">
+						<img src="images/news/7.png">
+					</a>
+					<div class="news-snip-content">
+						<ul class="news-snip-tags">
+							<li><a href="">EXHIBITION</a></li>
+							<li><a href="">EXHIBITION</a></li>
+							<li><a href="">EXHIBITION</a></li>
+						</ul>
+						<h4><a href="" title="Read">ARTISTS OF ANNA NOVA<br>IN STREET ART MUSEUM</a></h4>
+						<p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p>
+					</div>
+				</div>
+				<div class="4u 6u$(small) 12u$(xsmall) hor-image news-snip wow fadeIn" data-wow-delay="0.5s">
+					<a href="" title="Read" class="image fit">
+						<img src="images/news/1.png">
+					</a>
+					<div class="news-snip-content">
+						<ul class="news-snip-tags">
+							<li><a href="">EXHIBITION</a></li>
+							<li><a href="">EXHIBITION</a></li>
+							<li><a href="">EXHIBITION</a></li>
+						</ul>
+						<h4><a href="" title="Read">ARTISTS OF ANNA NOVA<br>IN STREET ART MUSEUM</a></h4>
+						<p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p>
+					</div>
+				</div>
+				<div class="4u$ 6u(small) 12u$(xsmall) news-snip wow fadeIn" data-wow-delay="0.25s">
+					<a href="" title="Read" class="image fit">
+						<img src="images/news/2.png">
+					</a>
+					<div class="news-snip-content">
+						<ul class="news-snip-tags">
+							<li><a href="">EXHIBITION</a></li>
+							<li><a href="">EXHIBITION</a></li>
+							<li><a href="">EXHIBITION</a></li>
+						</ul>
+						<h4><a href="" title="Read">ARTISTS OF ANNA NOVA<br>IN STREET ART MUSEUM</a></h4>
+						<p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p>
+					</div>
+				</div>
+				<div class="4u 6u$(small) 12u$(xsmall) hor-image news-snip wow fadeIn" data-wow-delay="0.25s">
+					<a href="" title="Read" class="image fit">
+						<img src="images/news/6.png">
+					</a>
+					<div class="news-snip-content">
+						<ul class="news-snip-tags">
+							<li><a href="">EXHIBITION</a></li>
+							<li><a href="">EXHIBITION</a></li>
+							<li><a href="">EXHIBITION</a></li>
+						</ul>
+						<h4><a href="" title="Read">ARTISTS OF ANNA NOVA<br>IN STREET ART MUSEUM</a></h4>
+						<p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p>
+					</div>
+				</div>
+				<div class="4u 6u(small) 12u$(xsmall) news-snip wow fadeIn" data-wow-delay="0.5s">
+					<a href="" title="Read" class="image fit">
+						<img src="images/news/3.png">
+					</a>
+					<div class="news-snip-content">
+						<ul class="news-snip-tags">
+							<li><a href="">EXHIBITION</a></li>
+							<li><a href="">EXHIBITION</a></li>
+							<li><a href="">EXHIBITION</a></li>
+						</ul>
+						<h4><a href="" title="Read">ARTISTS OF ANNA NOVA<br>IN STREET ART MUSEUM</a></h4>
+						<p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p>
+					</div>
+				</div>
+				<div class="4u$ 6u$(small) 12u$(xsmall) hor-image news-snip wow fadeIn" data-wow-delay="0.75s">
+					<a href="" title="Read" class="image fit">
+						<img src="images/news/9.png">
+					</a>
+					<div class="news-snip-content">
+						<ul class="news-snip-tags">
+							<li><a href="">EXHIBITION</a></li>
+							<li><a href="">EXHIBITION</a></li>
+							<li><a href="">EXHIBITION</a></li>
+						</ul>
+						<h4><a href="" title="Read">ARTISTS OF ANNA NOVA<br>IN STREET ART MUSEUM</a></h4>
+						<p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p>
+					</div>
+				</div>
+				<div class="4u 6u(small) 12u$(xsmall) news-snip wow fadeIn" data-wow-delay="0.25s">
+					<a href="" title="Read" class="image fit">
+						<img src="images/news/2.png">
+					</a>
+					<div class="news-snip-content">
+						<ul class="news-snip-tags">
+							<li><a href="">EXHIBITION</a></li>
+							<li><a href="">EXHIBITION</a></li>
+							<li><a href="">EXHIBITION</a></li>
+						</ul>
+						<h4><a href="" title="Read">ARTISTS OF ANNA NOVA<br>IN STREET ART MUSEUM</a></h4>
+						<p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p>
+					</div>
+				</div>
+				<div class="4u 6u$(small) 12u$(xsmall) hor-image news-snip wow fadeIn" data-wow-delay="0.5s">
+					<a href="" title="Read" class="image fit">
+						<img src="images/news/1.png">
+					</a>
+					<div class="news-snip-content">
+						<ul class="news-snip-tags">
+							<li><a href="">EXHIBITION</a></li>
+							<li><a href="">EXHIBITION</a></li>
+							<li><a href="">EXHIBITION</a></li>
+						</ul>
+						<h4><a href="" title="Read">ARTISTS OF ANNA NOVA<br>IN STREET ART MUSEUM</a></h4>
+						<p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p>
+					</div>
+				</div>
+			</section>
+
+			<hr class="trans" />
+<!-- PARTNERS -->
+			<section class="panel partners thin-block">
+				<h2 class="align-center">BOOKLET THANKS TO THE FOLLOWING FOR THEIR SUPPORT:</h2>
+				<ul class="row" data-wow-delay="">
+					<li class="2u 3u(small) 4u(xsmall) image"><a href="*"><img src="images/partners/1.png"></a></li>
+					<li class="2u 3u(small) 4u(xsmall) image"><a href="*"><img src="images/partners/2.png"></a></li>
+					<li class="2u 3u(small) 4u(xsmall) image"><a href="*"><img src="images/partners/3.png"></a></li>
+					<li class="2u 3u(small) 4u(xsmall) image"><a href="*"><img src="images/partners/4.png"></a></li>
+					<li class="2u 3u(small) 4u(xsmall) image"><a href="*"><img src="images/partners/5.png"></a></li>
+					<li class="2u 3u(small) 4u(xsmall) image"><a href="*"><img src="images/partners/4.png"></a></li>
+				</ul>
+				<ul class="row" data-wow-delay="">
+					<li class="2u 3u(small) 4u(xsmall) image"><a href="*"><img src="images/partners/1.png"></a></li>
+					<li class="2u 3u(small) 4u(xsmall) image"><a href="*"><img src="images/partners/2.png"></a></li>
+					<li class="2u 3u(small) 4u(xsmall) image"><a href="*"><img src="images/partners/3.png"></a></li>
+					<li class="2u 3u(small) 4u(xsmall) image"><a href="*"><img src="images/partners/4.png"></a></li>
+					<li class="2u 3u(small) 4u(xsmall) image"><a href="*"><img src="images/partners/5.png"></a></li>
+					<li class="2u 3u(small) 4u(xsmall) image"><a href="*"><img src="images/partners/4.png"></a></li>
+				</ul>
+			</section>
+			<hr class="trans" />
+
+<!-- MUST READ -->
+		<section class="panel mustread row 0%" id="must-read">
+			<h2 class="block-title 12u$">MUST READ</h2>
+			<div class="holder row">
+				<div class="3u 4u(small) 12u(xsmall) item">
+					<a href="#" class="image">
+						<img src="images/mustread/booklet1.png">
+					</a>
+					<div class="issue">Issue #7</div>
+					<h4 class="name">
+						<a href="#">BOOKLET</a>
+					</h4>
+					<div class="season">AUTUMN / WINTER 2017</div>
+				</div>
+				<div class="3u 4u(small) 12u(xsmall) item">
+					<a href="#" class="image">
+						<img src="images/mustread/booklet1.png">
+					</a>
+					<div class="issue">Issue #7</div>
+					<h4 class="name">
+						<a href="#">BOOKLET</a>
+					</h4>
+					<div class="season">AUTUMN / WINTER 2017</div>
+				</div>
+				<div class="3u 4u(small) 12u(xsmall) item">
+					<a href="#" class="image">
+						<img src="images/mustread/booklet1.png">
+					</a>
+					<div class="issue">Issue #7</div>
+					<h4 class="name">
+						<a href="#">BOOKLET</a>
+					</h4>
+					<div class="season">AUTUMN / WINTER 2017</div>
+				</div>
+				<div class="3u 4u(small) 12u(xsmall) item">
+					<a href="#" class="image">
+						<img src="images/mustread/booklet1.png">
+					</a>
+					<div class="issue">Issue #7</div>
+					<h4 class="name">
+						<a href="#">BOOKLET</a>
+					</h4>
+					<div class="season">AUTUMN / WINTER 2017</div>
+				</div>
+				<div class="3u 4u(small) 12u(xsmall) item">
+					<a href="#" class="image">
+						<img src="images/mustread/booklet1.png">
+					</a>
+					<div class="issue">Issue #7</div>
+					<h4 class="name">
+						<a href="#">BOOKLET</a>
+					</h4>
+					<div class="season">AUTUMN / WINTER 2017</div>
+				</div>
+				<div class="3u 4u(small) 12u(xsmall) item">
+					<a href="#" class="image">
+						<img src="images/mustread/booklet1.png">
+					</a>
+					<div class="issue">Issue #7</div>
+					<h4 class="name">
+						<a href="#">BOOKLET</a>
+					</h4>
+					<div class="season">AUTUMN / WINTER 2017</div>
+				</div>
+			</div>
+		</section>
+
+<!-- LOCATIONS -->
+		<section class="panel locations" id="info">
+			<h2 class="block-title 12u$">LOCATIONS</h2>
+			<div class="buttons">
+				<div class="item map active" data-id="map-block"></div>
+				<div class="item list" data-id="list-block"></div>
+			</div>
+
+			<div class="holder">
+				<div id="map-block" class="locations-type">
+					<div class="cities">
+						<a href="#" class="city spb active"><h4>SAINT PETERSBURG</h4></a>
+						<a href="#" class="city msk"><h4>MOSCOW</h4></a>
+					</div>
+					<div id="map-spb" class="map-item"></div>
+					<div id="map-msk"  class="map-item" style="display: none;"></div>
+				</div>
+				<div id="list-block" class="locations-type" style="display: none;">
+					<div class="column">
+						<h4 class="top-headline">САНКТ-ПЕТЕРБУРГ</h4>
+						<h4 class="headline">Рестораны:</h4>
+						<div class="item">Chin Chin CaféGoose</div>
+						<div class="item">GooseHitch</div>
+						<div class="item">ItalyBottega</div>
+						<div class="item">Jack & Chan</div>
+						<div class="item">KROO Café</div>
+						<div class="item">PMI Bar</div>
+						<div class="item">Porto Maltese</div>
+						<div class="item">ProWine’s</div>
+						<div class="item">Tse Fung</div>
+						<div class="item">Waterloo</div>
+						<div class="item">АРКА</div>
+						<div class="item">BAR&GRILL</div>
+						<div class="item">Винный бар Grand Cru</div>
+						<div class="item">Гастробар «Компания»</div>
+					</div>
+					<div class="column">
+						<div class="item">Грамм Запись</div>
+						<div class="item">Даблби</div>
+						<div class="item">Кафе Музея Фаберже</div>
+						<div class="item">Charlie</div>
+						<div class="item">EM</div>
+						<div class="item">Hamlet & Jacks</div>
+						<div class="item">Мансарда</div>
+						<div class="item">Трибуна</div>
+						<div class="item">Гостиницы:</div>
+						<div class="item">Demetra Art Hotel</div>
+						<div class="item">W Saint-Petersburg</div>
+						<div class="item">Эрмитаж</div>
+						<h4 class="headline">Spa&Beauty:</h4>
+						<div class="item">Authentica Club</div>
+						<div class="item">Bliss SpaCrystal Spa & Lounge</div>
+					</div>
+					<div class="column">
+						<div class="item">Neuhaus SPA & Wellness</div>
+						<div class="item">NOVA Arena</div>
+						<div class="item">Redken Loft</div>
+						<div class="item">Дома красоты Carita</div>
+						<h4 class="headline">Fashion бутики:</h4>
+						<div class="item">8-Store</div>
+						<div class="item">Alcozer & JAu Pont Rouge</div>
+						<div class="item">Chin Chin Dressing</div>
+						<div class="item">Comme des Garcons</div>
+						<div class="item">DAYNIGHT</div>
+						<div class="item">Gate31</div>
+						<div class="item">JNBY</div>
+						<h4 class="headline">Mint Store</h4>
+						<div class="item">Museum</div>
+						<div class="item">Philipp Plein</div>
+						<div class="item">Subbota showroom</div>
+					</div>
+					<div class="column">
+						<h4 class="top-headline">Дизайн-студии:</h4>
+						<div class="item">Du Bout Du Monde</div>
+						<div class="item">Galerie 46</div>
+						<div class="item">Prostranstvo U</div>
+						<div class="item">ALPH LAUREN</div>
+						<div class="item">HOMESAN-GALLY DECOR</div>
+						<div class="item">Space Four</div>
+						<div class="item">Галерея дизайна Neuhaus</div>
+						<div class="item">Галерея интерьерного света Visual Comfort & Co</div>
+						<div class="item">Салон DECORUM</div>
+						<div class="item">Студия Братьев Жилиных</div>
+						<h4 class="headline">Другое:</h4>
+						<div class="item">Rolls Royce Motor Cars</div>
+						<div class="item">АвтоSpaАуди Центр</div>
+					</div>
+					<div class="column">
+						<div class="item">БЦ Bolloev Center</div>
+						<div class="item">БЦ Преображенский двор</div>
+						<div class="item">Коворкинг Gnezdo</div>
+						<div class="item">Офис компании ПетроСтиль</div>
+						<div class="item">Охта Молл</div>
+						<div class="item">Резиденция QuartaRiata</div>
+						<div class="item">Читальный зал Aperto</div>
+						<h4 class="headline">Москва</h4>
+						<div class="item">Authentica Club/div>
+						<div class="item">Bulgakov Space</div>
+						<div class="item">Digital пространство и бар Kl10chБизнес-центр Cabinet Lounge</div>
+						<div class="item">Коворкинг Yellow Door</div>
+						<div class="item">Студия Nova Music</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+<!-- DOWNLOAD -->
+		<section class="panel download">
+			<h4 class="item">
+				<a href="#" target="_blank">
+					<div class="text">DOANLOAD PDF <i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+					<div class="label">MEDIA KIT</div>
+				</a>
+			</h4>
+
+			<h4 class="item">
+				<a href="#" target="_blank">
+					<div class="text">DOANLOAD PDF <i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+					<div class="label">TECHNICAL<br>REQUIREMENTS</div>
+				</a>
+			</h4>
+		</section>
+
+
+		</div>
+
+<!-- FOOTER -->
+		<footer id="footer">
+			<div class="row 0%">
+				<div class="4u 12u(xsmall) fit align-left(">
+					<h4>PARTNERSHIP</h4>
+					<p><a href="">For collectors, designers, museums, etc.</a></p>
+				</div>
+				<div class="4u 12u(xsmall) align-center">
+					<h4>CONTACT US</h4>
+					<p><a href="tel:+7(812)275-97-62">+7 (812) 275-97-62</a></p>
+				</div>
+				<div class="4u 12u(xsmall) align-right">
+					<div class="email-us">
+						<h4>EMAIL US</h4>
+						<p><a href="mailto:info@annanova-gallery.ru">info@annanova-gallery.ru</a></p>
+					</div>
+				</div>
+				<div class="12u copyright">© 2017 Anna Nova Gallery</div>
+			</div>
+		</footer>
+
+<!-- SCRIPTS -->
+
+		<!-- SKELJS -->
+		<script src="assets/js/skel/skel.min.js"></script>
+		<script src="assets/js/skel/skel-viewport.min.js"></script>
+		<script src="assets/js/skel/skel-layout.min.js"></script>
+
+		<!-- JQUERY -->
+		<script src="assets/js/jquery-3.2.1.min.js"></script>
+
+		<!-- DESANDRO -->
+		<script src="assets/js/desandro/flickity.min.js"></script>
+		<script src="assets/js/desandro/flickity.bg-lazyload.js"></script>
+		<script src="assets/js/desandro/isotope.pkgd.min.js"></script>
+
+		<!-- SCROLLIFY -->
+		<script src="assets/js/scrollify/jquery.scrollify.min.js"></script>
+
+		<!-- ANIMATESCROLL -->
+		<script src="assets/js/animatescroll/animatescroll.min.js"></script>
+		<!-- <script src="assets/js/animatescroll/animatescroll.noeasing.js"></script> -->
+
+		<!-- WAYPOINT -->
+		<script type="text/javascript" src="assets/js/waypoint/noframework.waypoints.min.js"></script>
+		<!-- <script type="text/javascript" src="assets/js/waypoint/jquery.waypoints.min.js"></script> -->
+		<!-- <script type="text/javascript" src="assets/js/waypoint/shortcuts/sticky.min.js"></script> -->
+		<script type="text/javascript" src="assets/js/waypoint/shortcuts/inview.min.js"></script>
+
+		<!-- ONSCREEN -->
+		<!-- <script type="text/javascript" src="https://unpkg.com/onscreen/dist/on-screen.umd.min.js"></script> -->
+
+		<!-- SCROLLMAGIC -->
+		<!-- <script src="assets/js/scrollmagic/scrollmagic.min.js"></script>
+		<script src="assets/js/scrollmagic/plugins/animation.gsap.min.js"></script>
+		<script src="assets/js/scrollmagic/plugins/animation.velocity.min.js"></script>
+		<script src="assets/js/scrollmagic/plugins/debug.addIndicators.min.js"></script>
+		<script src="assets/js/scrollmagic/plugins/jquery.scrollmagic.min.js"></script> -->
+
+		<!-- WOWJS -->
+		<script src="assets/js/wowjs/wow.min.js"></script>
+
+		<!-- MAINJS -->
+		<script src="assets/js/main.js"></script>
+
+		<!-- Google maps -->
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+		<!-- New scripts -->
+		<script src="assets/js/scripts.js"></script>
+
+	</body>
+</html>

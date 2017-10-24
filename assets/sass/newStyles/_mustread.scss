@@ -1,0 +1,33 @@
+.mustread {
+	margin-bottom: 280px;
+
+	.block-title {
+		margin-bottom: .5em;
+	}
+
+	.holder {
+		max-width: 1180px;
+		width: 100%;
+
+		.item {
+			margin-bottom: 80px;
+			@media (max-width: $small) {
+				text-align: center;
+			}
+
+			.image {
+				margin-bottom: 19px;
+			}
+
+			.issue {
+				font-size: 1.050em;
+				font-family: 'geometriabold';
+			}
+
+			.name {
+				font-size: 2.310em;
+				margin-bottom: 0;
+			}
+		}
+	}
+}

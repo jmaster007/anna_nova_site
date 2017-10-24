@@ -1,0 +1,53 @@
+.download {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 270px;
+	@media (max-width: $large) {
+		margin-bottom: 110px;
+	}
+	@media (max-width: $xsmall) {
+		margin-bottom: 120px;
+	}
+
+	.item {
+		display: inline-block;
+		transition: opacity .3s ease-in-out;
+
+		.text {
+			font-size: 25px;
+			letter-spacing: -.3px;
+			@media (max-width: $large) {
+				font-size: 18px;
+			}
+			@media (max-width: $xsmall) {
+				font-size: 14px;
+			}
+		}
+
+		.label {
+			font-size: 47px;
+			line-height: normal;
+			@media (max-width: $large) {
+				font-size: 34px;
+			}
+			@media (max-width: $xsmall) {
+				font-size: 27px;
+			}
+		}
+
+		& + .item {
+			margin-top: 80px;
+			@media (max-width: $large) {
+				margin-top: 55px;
+			}
+			@media (max-width: $xsmall) {
+				margin-top: 45px;
+			}
+		}
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+}
