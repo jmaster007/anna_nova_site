@@ -1,7 +1,3 @@
-
-
-
-
 $(document).ready(function() {
 
 	// When the window has finished loading create our google map below
