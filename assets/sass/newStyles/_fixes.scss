@@ -37,11 +37,15 @@
 
 	#header {
 		top: 0;
-		height: 0;
+		height: 6em;
 
-		.lg-black {
-			display: none;
-		}
+		// .lg-black {
+		// 	display: none;
+		// }
+
+		// .lg, .lg-white, .lg-black {
+		// 	opacity: 1;
+		// }
 
 		&.sticky {
 			height: 6em;
@@ -171,9 +175,9 @@
 		}
 
 		.lg, .lg-white, .lg-black {
-			width: 50px;
-			height: 50px;
-			padding-top: 50px;
+			width: 40px;
+			height: 40px;
+			padding-top: 40px;
 		}
 	}
 
@@ -213,7 +217,7 @@
 #header {
 
 	a[href="#nav"] {
-		right: 3em;
+		right: 35px;
 		top: 0;
 	}
 
@@ -224,7 +228,7 @@
 	&.sticky {
 
 		a[href="#nav"] {
-			background-position: center;
+			background-position: center right;
 		}
 
 		.sub-scroll-menu {
@@ -248,10 +252,21 @@
 	}
 
 	.lg, .lg-white, .lg-black {
-		width: 50px;
-		height: 50px;
-		padding-top: 50px;
+		width: 40px;
+		height: 40px;
+		padding-top: 40px;
 		background-size: 100%;
-		top: 25px;
+		top: 2em;
+		left: 2em;
 	}
+}
+
+h2.block-title {
+	@media (max-width: $xsmall) {
+		font-size: 3em;
+	}
+}
+
+#header {
+	transition: background .3s ease-in-out;
 }

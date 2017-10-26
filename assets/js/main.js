@@ -138,7 +138,7 @@ $(window).scroll(function () {
 		    }
 		});
 	} else {
-		if ($(this).scrollTop() > $(window).height()) {
+		if ($(this).scrollTop() > 0) {
 	    	$('header').addClass("sticky");
 	    	// $('.an-notify').removeClass('sticky');
 	    	$('.an-backtotop').css('bottom', '2em');
