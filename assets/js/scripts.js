@@ -76,23 +76,24 @@ $(document).ready(function() {
 		$(this).addClass('active');
 		event.stopPropagation();
 	});
-
 	//
-
-	$('.cities .city').on('click', function() {
-		var maps = $('.map-item'),
-			tabs = $('.cities .city');
-		if ( $(this).hasClass('spb') ) {
-			maps.hide();
-			tabs.removeClass('active');
-			$(this).addClass('active');
-			$('#map-spb').fadeIn(700);
-		} else if ( $(this).hasClass('msk') ) {
-			maps.hide();
-			tabs.removeClass('active');
-			$(this).addClass('active');
-			$('#map-msk').fadeIn(700);
-		}
-		return false;
-	});
+    // Переключалку карты решили отключить. Пусть пока полежит :3
+	// $('.cities .city').on('click', function() {
+	// 	var maps = $('.map-item'),
+	// 		tabs = $('.cities .city');
+	// 	if ( $(this).hasClass('spb') ) {
+	// 		maps.hide();
+	// 		tabs.removeClass('active');
+	// 		$(this).addClass('active');
+	// 		$('#map-spb').fadeIn(700);
+	// 	} else if ( $(this).hasClass('msk') ) {
+	// 		maps.hide();
+	// 		tabs.removeClass('active');
+	// 		$(this).addClass('active');
+	// 		$('#map-msk').fadeIn(700);
+	// 	}
+	// 	return false;
+	// });
+    //
+    $("#header .sub-scroll-menu").scrollspy({ offset: -90 });
 });

@@ -247,6 +247,10 @@
 				& + .item {
 					margin-left: 32px;
 				}
+
+				&.active {
+					color: #000;
+				}
 			}
 		}
 	}
@@ -258,6 +262,9 @@
 		background-size: 100%;
 		top: 2em;
 		left: 2em;
+		@media (max-width: $small) {
+			opacity: 1;
+		}
 	}
 }
 
