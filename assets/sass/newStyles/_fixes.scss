@@ -37,18 +37,8 @@
 
 	#header {
 		top: 0;
-		height: 6em;
-
-		// .lg-black {
-		// 	display: none;
-		// }
-
-		// .lg, .lg-white, .lg-black {
-		// 	opacity: 1;
-		// }
 
 		&.sticky {
-			height: 6em;
 
 			.lg-black {
 				display: block;
@@ -215,43 +205,42 @@
 }
 
 #header {
+	height: 70px;
+	line-height: 70px;
 
 	a[href="#nav"] {
-		right: 35px;
+		right: 30px;
 		top: 0;
+		height: 70px;
 	}
 
 	.sub-scroll-menu {
-		display: none;
+		display: block;
+		width: 100%;
+		text-align: center;
+		@media (max-width: $small) {
+			display: none;
+		}
+
+		.item {
+			display: inline-block;
+			font-size: 15px;
+			color: #b5b4b4;
+
+			& + .item {
+				margin-left: 32px;
+			}
+
+			&.active {
+				color: #000;
+			}
+		}
 	}
 
 	&.sticky {
 
 		a[href="#nav"] {
 			background-position: center right;
-		}
-
-		.sub-scroll-menu {
-			display: block;
-			width: 100%;
-			text-align: center;
-			@media (max-width: $small) {
-				display: none;
-			}
-
-			.item {
-				display: inline-block;
-				font-size: 15px;
-				color: #b5b4b4;
-
-				& + .item {
-					margin-left: 32px;
-				}
-
-				&.active {
-					color: #000;
-				}
-			}
 		}
 	}
 
@@ -260,8 +249,8 @@
 		height: 40px;
 		padding-top: 40px;
 		background-size: 100%;
-		top: 2em;
-		left: 2em;
+		top: 15px;
+		left: 30px;
 		@media (max-width: $small) {
 			opacity: 1;
 		}
@@ -276,4 +265,26 @@ h2.block-title {
 
 #header {
 	transition: background .3s ease-in-out;
+}
+
+.an-backtotop {
+	right: 30px;
+}
+
+#footer {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+#nav {
+	padding: 6em 30px 3em;
+
+	.close {
+		right: 5px;
+	}
+
+	.lg, .lg-white, .lg-black {
+		top: 15px;
+		left: 30px;
+	}
 }
