@@ -137,6 +137,17 @@ $(window).scroll(function () {
 		    	$('.an-backtotop').css('bottom', '-5em');
 		    }
 		});
+	} else if ($('body').is('.home-page')) {
+		$(window).scroll(function () {
+		    if ($(this).scrollTop() > $(window).height()) {
+		    	$('header').addClass("sticky");
+		    	$('.an-backtotop').css('bottom', '2em');
+		    }
+		    else {
+		    	$('header').removeClass("sticky");
+		    	$('.an-backtotop').css('bottom', '-5em');
+		    }
+		});
 	} else {
 		if ($(this).scrollTop() > 0) {
 	    	$('header').addClass("sticky");

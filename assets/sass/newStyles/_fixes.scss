@@ -97,6 +97,7 @@
 
 		.banner-title {
 			padding: 0;
+			right: 30px;
 			@media (max-width: $xsmall) {
 				min-height: unset;
 				padding-bottom: 60px;
@@ -106,12 +107,19 @@
 				color: #000;
 				line-height: normal;
 				margin-bottom: 0;
+				font-size: 72px;
+				@media (max-width: $large) {
+					font-size: 44px;
+				}
+				@media (max-width: $xsmall) {
+					font-size: 30px;
+				}
 
 				&.banner-subtitle {
 					color: #b5b4b4;
-					font-size: 45px;
+					font-size: 44px;
 					@media (max-width: $large) {
-						font-size: 24px;
+						font-size: 20px;
 					}
 					@media (max-width: $small) {
 						font-size: 20px;
@@ -136,7 +144,7 @@
 				font-size: 88px;
 				text-align: center;
 				letter-spacing: -.4px;
-				margin-bottom: .5em;
+				margin-bottom: .25em;
 				@media (max-width: $large) {
 					font-size: 56px;
 				}
@@ -144,7 +152,7 @@
 					font-size: 34px;
 				}
 
-				&.small {
+				&.small-label {
 					font-size: 45px;
 					letter-spacing: -.6px;
 					@media (max-width: $large) {
@@ -200,6 +208,17 @@
 					background: #fff;
 				}
 			}
+		}
+	}
+
+	.an-notify {
+		position: static;
+		height: 0;
+		overflow: hidden;
+
+		&.visible {
+			position: static;
+			height: 53px;
 		}
 	}
 }
@@ -280,7 +299,7 @@ h2.block-title {
 	padding: 6em 30px 3em;
 
 	.close {
-		right: 5px;
+		right: 0;
 	}
 
 	.lg, .lg-white, .lg-black {

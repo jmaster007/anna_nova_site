@@ -95,5 +95,9 @@ $(document).ready(function() {
 	// 	return false;
 	// });
     //
-    $("#header .sub-scroll-menu").scrollspy({ offset: -90 });
+    $("#header .sub-scroll-menu").scrollspy({ offset: -80 });
+    //
+    $('.sub-scroll-menu .item').on('click', function() {
+        $(this).addClass('shmactive');
+    });
 });
