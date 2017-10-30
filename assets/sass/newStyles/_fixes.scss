@@ -33,7 +33,7 @@
 	}
 }
 
-.booklet-page {
+.booklet-page, .news-item-page {
 
 	#header {
 		top: 0;
@@ -231,6 +231,9 @@
 		right: 30px;
 		top: 0;
 		height: 70px;
+		@media (max-width: $small) {
+			right: 20px;
+		}
 	}
 
 	.sub-scroll-menu {
@@ -248,6 +251,10 @@
 
 			& + .item {
 				margin-left: 32px;
+			}
+
+			a:active {
+				color: #b5b4b4;
 			}
 
 			&.active {
@@ -272,6 +279,7 @@
 		left: 30px;
 		@media (max-width: $small) {
 			opacity: 1;
+			left: 20px;
 		}
 	}
 }
@@ -288,22 +296,38 @@ h2.block-title {
 
 .an-backtotop {
 	right: 30px;
+	@media (max-width: $small) {
+		right: 20px;
+	}
 }
 
 #footer {
 	padding-left: 30px;
 	padding-right: 30px;
+	@media (max-width: $small) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }
 
 #nav {
 	padding: 6em 30px 3em;
+	@media (max-width: $small) {
+		padding: 6em 20px 3em;
+	}
 
 	.close {
 		right: 0;
+		@media (max-width: $small) {
+			right: -10px;
+		}
 	}
 
 	.lg, .lg-white, .lg-black {
 		top: 15px;
 		left: 30px;
+		@media (max-width: $small) {
+			left: 20px;
+		}
 	}
 }

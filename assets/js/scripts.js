@@ -97,7 +97,7 @@ $(document).ready(function() {
     //
     $("#header .sub-scroll-menu").scrollspy({ offset: -80 });
     //
-    $('.sub-scroll-menu .item').on('click', function() {
-        $(this).addClass('shmactive');
-    });
+    // $('.sub-scroll-menu .item').on('click', function() {
+    //     $(this).addClass('shmactive');
+    // });
 });
