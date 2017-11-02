@@ -61,65 +61,69 @@
 
 	#banner {
 		height: 730px;
+		margin-bottom: 50px;
+		min-height: unset;
 		@media (max-width: $large) {
 			height: 440px;
 		}
 		@media (max-width: $small) {
 			height: 300px;
+			margin-bottom: 30px;
 		}
 		@media (max-width: $xsmall) {
 			height: 250px;
+			margin-bottom: 30px;
 		}
 
 		.mask-cursor-left,
 		.mask-cursor-right {
 			bottom: 60px;
 		}
-	}
 
-	.news-item-carousel {
-		margin-bottom: 50px;
-		height: 680px;
-		@media (max-width: $large) {
-			height: 390px;
-		}
-		@media (max-width: $small) {
-			height: 250px;
-		}
-		@media (max-width: $small) {
-			height: 200px;
-		}
+		.news-item-carousel {
+			height: 730px;
+			@media (max-width: $large) {
+				height: 440px;
+			}
+			@media (max-width: $small) {
+				height: 300px;
+			}
+			@media (max-width: $xsmall) {
+				height: 250px;
+			}
 
-		.carousel-cell {
-			padding-bottom: 60px;
+			.carousel-cell {
+				padding-bottom: 60px;
+				background-size: contain;
 
-			.text {
-				position: absolute;
-				bottom: 0;
-				height: 60px;
-				padding-top: 15px;
-				z-index: 1;
-				background: #fff;
-				width: 100%;
-				text-align: left;
-				font-size: 12px;
-				line-height: 1.42;
-				@media (max-width: $large) {
-					padding: 15px 30px 0;
-				}
-				@media (max-width: $large) {
-					padding: 15px 20px 0;
-				}
+				.text {
+					position: absolute;
+					bottom: 0;
+					height: 60px;
+					padding-top: 15px;
+					z-index: 1;
+					background: #fff;
+					width: 100%;
+					text-align: left;
+					font-size: 12px;
+					line-height: 1.42;
+					@media (max-width: $large) {
+						padding: 15px 30px 0;
+					}
+					@media (max-width: $large) {
+						padding: 15px 20px 0;
+					}
 
-				.author {
-					color: #000;
-					text-decoration: underline;
+					.author {
+						color: #000;
+						text-decoration: underline;
+					}
 				}
 			}
-		}
 
-		.flickity-page-dots {
-			bottom: -5px;
+			.flickity-page-dots {
+				bottom: -5px;
+			}
 		}
 	}
 

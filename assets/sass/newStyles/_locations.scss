@@ -81,14 +81,19 @@
 
 					.headline {
 						margin: 1em 0;
+						line-height: 1.143;
 					}
 
 					.top-headline {
 						margin-bottom: 1em;
+						line-height: 1.143;
 					}
 
 					.item {
 						white-space: nowrap;
+						@media (max-width: $large) {
+							white-space: normal;
+						}
 					}
 				}
 			}

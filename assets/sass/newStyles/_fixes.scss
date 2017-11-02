@@ -88,14 +88,20 @@
 
 #banner {
 
+	.carousel-cell {
+		background-repeat: no-repeat;
+	}
+
 	.sub-scroll-menu {
 		position: absolute;
 		z-index: 1;
 		width: 100%;
 		text-align: center;
 		top: 25px;
+		transition: opacity .3s ease-in-out;
 		@media (max-width: $small) {
-			display: none;
+			opacity: 0;
+			visibility: hidden;
 		}
 
 		.item {
@@ -283,8 +289,10 @@
 		display: block;
 		width: 100%;
 		text-align: center;
+		transition: opacity .3s ease-in-out;
 		@media (max-width: $small) {
-			display: none;
+			opacity: 0;
+			visibility: hidden;
 		}
 
 		.item {
@@ -293,7 +301,11 @@
 			color: #b5b4b4;
 
 			& + .item {
-				margin-left: 32px;
+				margin-right: 32px;
+			}
+
+			&:last-child {
+				margin-right: 0;
 			}
 
 			a:active {
@@ -371,6 +383,35 @@ h2.block-title {
 		left: 30px;
 		@media (max-width: $small) {
 			left: 20px;
+		}
+	}
+}
+
+.booklet-page {
+
+	#header {
+
+		.lg, .lg-white, .lg-black,
+		#header-nav {
+			transform: scale(1);
+			opacity: 1;
+			transition: transform .3s ease-in-out, opacity .6s ease-in;
+		}
+
+		&.sticky {
+
+			.lg, .lg-white, .lg-black,
+			#header-nav {
+				transform: scale(0);
+				opacity: 0;
+			}
+
+			.sub-scroll-menu {
+				@media (max-width: $small) {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
 		}
 	}
 }
