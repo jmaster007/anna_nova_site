@@ -1,0 +1,182 @@
+.b-author-bio {
+    margin-top: 120px;
+    z-index: 2;
+    @media (max-width: $large) {
+        margin-top: 60px;
+    }
+    @media (max-width: $small) {
+        margin-top: -140px;
+    }
+    @media (max-width: $xsmall) {
+        margin-top: -80px;
+    }
+
+    .author {
+        text-align: center;
+        margin-bottom: 95px;
+        @media (max-width: $large) {
+            margin-bottom: 80px;
+        }
+
+        .avatar {
+            display: inline-block;
+            width: 250px;
+            height: 250px;
+            margin-bottom: 49px;
+            @media (max-width: $large) {
+                width: 180px;
+                height: 180px;
+                margin-bottom: 40px;
+            }
+            @media (max-width: $xsmall) {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 15px;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .name {
+            font-size: 20px;
+            text-transform: uppercase;
+            line-height: normal;
+            font-family: 'geometriabold';
+        }
+    }
+
+    .title {
+
+        h4 {
+            text-align: center;
+            font-size: 50px;
+            margin-bottom: 90px;
+            line-height: normal;
+            @media (max-width: $large) {
+                font-size: 34px;
+                margin-bottom: 75px;
+            }
+            @media (max-width: $small) {
+                font-size: 22px;
+                margin-bottom: 31px;
+            }
+        }
+    }
+
+    .personal {
+        margin-bottom: 120px;
+        @media (max-width: $small) {
+            padding: 0 20px;
+        }
+
+        .item {
+
+            & + .item {
+                margin-top: 35px;
+                @media (max-width: $xsmall) {
+                    margin-top: 5px;
+                }
+            }
+
+            .main {
+                font-family: 'geometriabold';
+                font-size: 50px;
+                text-transform: uppercase;
+                @media (max-width: $large) {
+                    font-size: 34px;
+                }
+                @media (max-width: $small) {
+                    margin-bottom: 15px;
+                    padding: 0;
+                }
+                @media (max-width: $xsmall) {
+                    font-size: 14px;
+                    margin-bottom: 5px;
+                    line-height: 40px;
+                    border-bottom: 1px solid #000;
+                }
+
+                &:after {
+                    @media (max-width: $xsmall) {
+                        content: '+';
+                        display: inline-block;
+                        float: right;
+                        font-size: 14px;
+                        font-family: 'geometriabold';
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            .text {
+                @media (max-width: $xsmall) {
+                    font-size: 12px;
+                    line-height: 16px;
+                    // display: none;
+                    border-bottom: 1px solid traansparent;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height .3s ease-in-out;
+                }
+
+                .headline {
+                    font-size: 30px;
+                    line-height: 36px;
+                    font-family: 'geometriabold';
+                    @media (max-width: $large) {
+                        font-size: 24px;
+                        line-height: 30px;
+                    }
+                    @media (max-width: $small) {
+                        font-size: 24px;
+                        line-height: 30px;
+                    }
+                    @media (max-width: $xsmall) {
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+
+                p {
+                    margin-bottom: 1em;
+                }
+            }
+
+            &.active {
+
+                .main {
+                    &:after {
+                        @media (max-width: $xsmall) {
+                            content: '-';
+                        }
+                    }
+                }
+
+                .text {
+                    max-height: 2000px;
+                    border-bottom-color: #000;
+                }
+            }
+        }
+
+        .download {
+            text-align: center;
+            margin-top: 45px;
+            @media (max-width: $large) {
+                margin-top: 70px;
+            }
+            @media (max-width: $small) {
+                margin-top: 60px;
+            }
+            @media (max-width: $xsmall) {
+                margin-top: 50px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}

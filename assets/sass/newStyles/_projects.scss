@@ -1,0 +1,101 @@
+.b-projects {
+
+    .project-item {
+        cursor: move;
+        cursor: -webkit-grab;
+        cursor: grab;
+
+        .type {
+            color: #a7a7a7;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 16px;
+            font-family: 'geometriabold';
+            @media (max-width: $small) {
+                margin-bottom: 5px;
+                font-size: 12px;
+            }
+            @media (max-width: $xsmall) {
+                padding-left: 15px;
+            }
+        }
+
+        .mobile-headline {
+            display: none;
+            @media (max-width: $small) {
+                display: block;
+                margin-bottom: 15px;
+                font-family: 'geometriabold';
+            }
+            @media (max-width: $xsmall) {
+                padding-left: 15px;
+            }
+
+            .title {
+                margin-bottom: 5px;
+                @media (max-width: $small) {
+                    font-size: 34px;
+                }
+                @media (max-width: $xsmall) {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        & + .project-item {
+            margin-top: 110px;
+            @media (max-width: $large) {
+                margin-top: 65px;
+            }
+            @media (max-width: $small) {
+                margin-top: 55px;
+            }
+            @media (max-width: $xsmall) {
+                margin-top: 30px;
+            }
+        }
+
+        .item {
+            line-height: normal;
+
+            &.headline {
+                width: 540px;
+                @media (max-width: $large) {
+                    width: 390px;
+                }
+                @media (max-width: $small) {
+                    display: none;
+                }
+
+                .title {
+                    font-size: 50px;
+                    font-family: 'geometriabold';
+                    margin-bottom: 15px;
+                    @media (max-width: $large) {
+                        font-size: 34px;
+                        margin-bottom: 10px;
+                    }
+                    @media (max-width: $small) {
+                        font-size: 20px;
+                    }
+                }
+
+                .date {
+                    font-size: 14px;
+                    font-family: 'geometriabold';
+                    @media (max-width: $xsmall) {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            &.last {
+                background: url(../../images/author/goto.png) no-repeat center;
+                width: 220px;
+                height: 300px;
+                display: inline-block;
+            }
+        }
+    }
+}

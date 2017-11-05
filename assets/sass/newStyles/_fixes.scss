@@ -68,7 +68,7 @@
 	}
 }
 
-.booklet-page, .news-item-page {
+.booklet-page, .news-item-page, .author-page {
 
 	#header {
 		top: 0;
@@ -366,9 +366,9 @@ h2.block-title {
 }
 
 #nav {
-	padding: 6em 30px 3em;
+	padding: 6em 30px 2em;
 	@media (max-width: $small) {
-		padding: 6em 20px 3em;
+		padding: 6em 20px 2em;
 	}
 
 	.close {
@@ -385,9 +385,23 @@ h2.block-title {
 			left: 20px;
 		}
 	}
+
+	.nav-footer {
+		height: 40px;
+		margin-top: -40px;
+		bottom: 0;
+
+		a {
+			margin-bottom: 0;
+		}
+	}
+
+	.nav-content {
+		padding-bottom: 10px;
+	}
 }
 
-.booklet-page {
+.booklet-page, .author-page {
 
 	#header {
 
@@ -402,8 +416,10 @@ h2.block-title {
 
 			.lg, .lg-white, .lg-black,
 			#header-nav {
-				transform: scale(0);
-				opacity: 0;
+				@media (max-width: $small) {
+					transform: scale(0);
+					opacity: 0;
+				}
 			}
 
 			.sub-scroll-menu {

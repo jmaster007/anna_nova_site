@@ -6,7 +6,7 @@
 			margin: 0 auto 35px;
 			float: none;
 			@media (max-width: $xsmall) {
-				padding: 0 30px;
+				padding: 0 20px;
 			}
 
 			.hash-tags {
@@ -59,70 +59,79 @@
 		}
 	}
 
-	#banner {
-		height: 730px;
-		margin-bottom: 50px;
-		min-height: unset;
-		@media (max-width: $large) {
-			height: 440px;
-		}
-		@media (max-width: $small) {
-			height: 300px;
-			margin-bottom: 30px;
-		}
-		@media (max-width: $xsmall) {
-			height: 250px;
-			margin-bottom: 30px;
+	.author-gal {
+
+		.slick-track {
+			display: flex;
+			align-items: center;
 		}
 
-		.mask-cursor-left,
-		.mask-cursor-right {
-			bottom: 60px;
-		}
+		.slick-slide {
+			outline: 0 none;
+			display: flex;
+			justify-content: center;
+			height: 100%;
+			cursor: url(../../images/icon/arrow-w-r.svg), auto;
 
-		.news-item-carousel {
-			height: 730px;
-			@media (max-width: $large) {
-				height: 440px;
-			}
-			@media (max-width: $small) {
-				height: 300px;
-			}
-			@media (max-width: $xsmall) {
-				height: 250px;
-			}
-
-			.carousel-cell {
-				padding-bottom: 60px;
-				background-size: contain;
-
-				.text {
-					position: absolute;
-					bottom: 0;
-					height: 60px;
-					padding-top: 15px;
-					z-index: 1;
-					background: #fff;
-					width: 100%;
-					text-align: left;
-					font-size: 12px;
-					line-height: 1.42;
-					@media (max-width: $large) {
-						padding: 15px 30px 0;
-					}
-					@media (max-width: $large) {
-						padding: 15px 20px 0;
-					}
-
-					.author {
-						color: #000;
-						text-decoration: underline;
-					}
+			img {
+				max-width: 100%;
+				max-height: 680px;
+				@media (max-width: $large) {
+					max-height: 390px;
+				}
+				@media (max-width: $small) {
+					max-height: 250px;
+				}
+				@media (max-width: $xsmall) {
+					max-height: 200px;
 				}
 			}
 
-			.flickity-page-dots {
-				bottom: -5px;
+			.name {
+				margin-top: 15px;
+				@media (max-width: $xsmall) {
+					padding-left: 20px;
+				}
+			}
+
+			.author {
+				@media (max-width: $xsmall) {
+					padding-left: 20px;
+				}
+			}
+		}
+
+		.slick-dots {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+
+			li {
+				padding: 0;
+				display: inline-block;
+
+				& + li {
+					margin-left: 15px;
+				}
+
+				button {
+					width: 9px;
+					height: 9px;
+					padding: 0;
+					border-radius: 50%;
+					border: 1px solid #000;
+					background: #fff;
+					transition: background .3s ease-in-out;
+					overflow: hidden;
+					text-align: 1000px;
+					outline: 0 none;
+
+					&:hover {
+						box-shadow: none;
+						background: #000;
+					}
+				}
 			}
 		}
 	}
@@ -135,7 +144,7 @@
 			margin: 0 auto;
 			line-height: 1.2;
 			@media (max-width: $xsmall) {
-				padding: 0 30px;
+				padding: 0 20px;
 			}
 
 			& > p:first-child:first-letter {
@@ -167,18 +176,21 @@
 	.author-gallery {
 		display: flex;
 		margin-bottom: 40px;
+		flex-direction: column;
+		align-items: center;
 		@media (max-width: $small) {
-			flex-direction: column;
-			align-items: center;
+			
 		}
 
 		.item {
 
-			.img {
+			img {
+				max-width: 100%;
+			}
 
-				img {
-					max-width: 100%;
-				}
+			iframe {
+				width: 320px!important;
+				height: 200px!important;
 			}
 
 			.text-snip {
@@ -189,6 +201,9 @@
   					padding: 12px 30px 0;
   				}
   				@media (max-width: $small) {
+  					padding: 12px 0 0;
+  				}
+  				@media (max-width: $xsmall) {
   					padding: 12px 20px 0;
   				}
 
@@ -198,7 +213,7 @@
 			}
 
 			& + .item {
-				margin-left: 40px;
+				margin-top: 30px;
 				@media (max-width: $small) {
 					margin-left: 0;
 					margin-top: 30px;
