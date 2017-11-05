@@ -178,9 +178,6 @@
 		margin-bottom: 40px;
 		flex-direction: column;
 		align-items: center;
-		@media (max-width: $small) {
-			
-		}
 
 		.item {
 
@@ -189,8 +186,10 @@
 			}
 
 			iframe {
-				width: 320px!important;
-				height: 200px!important;
+				@media (max-width: $small) {
+					width: 320px!important;
+					height: 200px!important;
+				}
 			}
 
 			.text-snip {
