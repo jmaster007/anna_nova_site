@@ -46,6 +46,6 @@ $(document).ready(function() {
 
         $('.slick-slide').on('click', function() {
             $('.author-gal').slick('slickNext');
-          });
+        });
     }
 });

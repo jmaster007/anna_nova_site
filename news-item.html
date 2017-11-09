@@ -40,9 +40,22 @@
 			@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 			@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 		</style>
+
+		<!-- Шеринг ВК -->
+		<script type="text/javascript" src="https://vk.com/js/api/share.js?93" charset="windows-1251"></script>
 	</head>
 
 	<body id="top" class="news-item-page">
+
+		<!-- Шеринг ФБ -->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.11';
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 
 <!-- LOADER -->
 		<div class="an-loader"><span class="an-loader-img"></span></div>
@@ -87,8 +100,8 @@
 
 			<a id="an-backtotop" class="an-backtotop" onclick="$('#top').animatescroll();"></a>
 
-			<div class="row 0% main-top">
-				<div class="4u 6u(large) 8u(small) 12u$(xsmall) top-holder">
+			<div class="main-top">
+				<div class="top-holder">
 					<div class="hash-tags">
 						<a href="#">#EXHIBITION</a>
 						<a href="#">#EXHIBITION</a>
@@ -122,8 +135,8 @@
 				</div>
 			</div>
 
-			<div class="row 0% main-text">
-				<div class="4u 6u(large) 8u(small) 12u$(xsmall) holder">
+			<div class="main-text">
+				<div class="holder">
 					<p>Дэмиен Хёрст – известный британский художник и, по оценкам Sunday Times, самый богатый в мире. В 1991 он создал знаменитую работу «Физическая невозможность смерти в сознании живущего», которая представляет собой аквариум с тигровой акулой в формалиновом растворе. Эта работа стала символом брит-арта, вызвала бурю дискуссий и повлияла на дальнейшее развитие современного искусства.</p>
 					<p>В видео-манифесте Паша Cas обратился к творчеству Хёрста. Паша погрузился в аквариум, и сквозь толщу воды и стекла пытался донести свой мессендж собравшейся публике.<br>Таким образом молодой художник вернулся к идее, заложенной когда-то Хёрстом: любой, у кого есть потенциал и смелость для художественного высказывания, может стать художником contemporary art.<br>А на вопрос: «Что хотел сказать автор?» - ответит зритель.<br>Полная версия видео по ссылке.</p>
 					<div class="semi-title">Подзаголовок жирным шрифтом</div>
@@ -150,9 +163,9 @@
 						<a href="#" class="author">Автор</a>
 					</div>
 				</div>
-				<div class="item">
+				<div class="item video">
 					<div class="img">
-						<iframe src="https://player.vimeo.com/video/215666233" width="620" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						<iframe src="https://player.vimeo.com/video/215666233" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 					</div>
 					<div class="text-snip">
 						<div class="name">Название</div>
@@ -161,8 +174,8 @@
 				</div>
 			</div>
 
-			<div class="row 0% main-text">
-				<div class="4u 6u(large) 8u(small) 12u$(xsmall) holder">
+			<div class="main-text">
+				<div class="holder">
 					<ul>
 						<li>Автор: street art Pasha CAS</li>
 						<li>Curator: Rush X</li>
@@ -179,19 +192,22 @@
 			<div class="share">
 				<div class="label">SHARE</div>
 				<ul class="social">
-					<li class="item">
-						<a href="#" class="link vk"></a>
+					<li class="item vk">
+						<script type="text/javascript"><!--
+							document.write(VK.Share.button(false,{type: "link_noicon", text: " "}));
+						--></script>
+					</li>
+					<li class="item fb-share-button" data-href="https://google.com" data-layout="button" data-size="small" data-mobile-iframe="true">
+						<a class="link fb fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgoogle.com%2F&amp;src=sdkpreparse"></a>
 					</li>
 					<li class="item">
-						<a href="#" class="link fb"></a>
-					</li>
-					<li class="item">
-						<a href="#" class="link tg"></a>
+						<a href="javascript:window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href), '_blank')" class="link tg"></a>
+
 					</li>
 				</ul>
 			</div>
 
-			<section class="panel news row 0% third-grid">
+			<section class="panel news row 0% third-grid" id="news-list">
 				<div class="4u 6u(small) 12u$(xsmall) news-snip wow fadeIn" data-wow-delay="0.75s">
 					<a href="" title="Read" class="image fit">
 						<img src="images/news/7.png">
