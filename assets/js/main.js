@@ -243,7 +243,7 @@ var $carousel = $('.carousel-booklet').flickity({
 	autoPlay: 5000,
 	pauseAutoPlayOnHover: false,
 	// freeScroll: true,
-	prevNextButtons: false,
+	prevNextButtons: true,
 	imagesLoaded: true,
 	wrapAround: true,
 	bgLazyLoad: 1,

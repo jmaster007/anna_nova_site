@@ -1,0 +1,49 @@
+@media screen and (max-width: 480px){
+	#grid[data-columns]::before {
+		content: '1 .column.size-1of1';
+	}
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	#grid[data-columns]::before {
+		content: '2 .column.size-1of2';
+	}
+}
+@media screen and (min-width: 769px) {
+	#grid[data-columns]::before {
+		content: '3 .column.size-1of3';
+	}
+}
+
+.salvattore {
+
+	.column {
+		float: left;
+
+		.item {
+			margin-bottom: 40px;
+		}
+	}
+
+	.size-1of1 {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.size-1of2 {
+		width: 45%;
+		margin-right: 10%;
+
+		&:nth-child(2n+2) {
+			margin-right: 0;
+		}
+	}
+
+	.size-1of3 {
+		width: 28%;
+		margin-right: 8%;
+
+		&:nth-child(3n+3) {
+			margin-right: 0;
+		}
+	}
+}

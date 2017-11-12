@@ -6,13 +6,75 @@
 	}
 
 	.holder {
-		max-width: 1180px;
-		width: 100%;
+		// max-width: 1180px;
+		// width: 100%;
+		position: relative;
+		overflow: hidden;
+
+		.slick-arrow {
+			color: #000!important;
+			background: none;
+			border: none;
+			cursor: pointer;
+			padding: 0;
+			opacity: 1;
+			transition: opacity .3s ease-in-out;
+			width: 16px;
+			height: 18px;
+			font-size: 18px;
+			line-height: 18px;
+			position: absolute;
+			top: 100px;
+			outline: 0;
+			z-index: 9;
+			@media (max-width: $large) {
+				top: 70px;
+			}
+			@media (max-width: $small) {
+				top: 100px;
+			}
+			@media (max-width: $xsmall) {
+				display: none;
+			}
+
+			&:hover {
+				border: none;
+				color: #000;
+				box-shadow: none;
+				opacity: .6;
+			}
+
+			&.slick-prev {
+				left: 0;
+				@media (max-width: $xsmall) {
+					left: 20px;
+				}
+			}
+
+			&.slick-next {
+				right: 0;
+				@media (max-width: $xsmall) {
+					right: 20px;
+				}
+			}
+		}
+
+		.slick-list {
+			overflow: hidden;
+			padding: 0!important;
+			margin: 0 50px;
+		}
 
 		.item {
-			margin-bottom: 80px;
+			display: inline-block;
+			line-height: normal;
+			margin: 0 35px;
+			@media (max-width: $large) {
+				margin: 0 15px;
+			}
 			@media (max-width: $small) {
 				text-align: center;
+				margin: 0 20px;
 			}
 
 			.image {
@@ -20,13 +82,16 @@
 			}
 
 			.issue {
-				font-size: 1.050em;
+				font-size: 14px;
 				font-family: 'geometriabold';
 			}
 
 			.name {
-				font-size: 2.310em;
+				font-size: 30px;
 				margin-bottom: 0;
+				@media (max-width: $large) {
+					font-size: 24px;
+				}
 			}
 		}
 	}

@@ -1,0 +1,29 @@
+.description {
+	width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 300px;
+	@media (max-width: $large) {
+		margin-bottom: 150px;
+	}
+	@media (max-width: $small) {
+		margin-bottom: 130px;
+	}
+	@media (max-width: $xsmall) {
+		margin-bottom: 70px;
+		width: 100%;
+		padding: 0 20px;
+	}
+
+	.text {
+		font-size: 14px;
+		line-height: 1.143;
+		margin-bottom: 22px;
+	}
+
+	.copy {
+		font-size: 14px;
+		line-height: 1.143;
+		font-family: "geometriabold";
+	}
+}
