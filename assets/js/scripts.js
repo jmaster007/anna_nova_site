@@ -74,4 +74,7 @@ $(document).ready(function() {
         ]
     });
     //
+    $('.locations .headline').on('click', function() {
+        $(this).parent().toggleClass('active');
+    });
 });
