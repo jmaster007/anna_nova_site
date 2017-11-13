@@ -1,6 +1,10 @@
 .mustread {
 	margin-bottom: 280px;
 	height: 340px;
+	@media (max-width: $xsmall) {
+		margin-bottom: 75px;
+		height: 415px;
+	}
 
 	.block-title {
 		margin-bottom: .5em;
@@ -10,6 +14,9 @@
 		height: 340px;
 		position: relative;
 		overflow: hidden;
+		@media (max-width: $xsmall) {
+			height: 415px;
+		}
 
 		.slick-arrow {
 			color: #000!important;

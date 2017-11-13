@@ -138,6 +138,7 @@
 			}
 			@media (max-width: $xsmall) {
 				column-count: 1;
+				border-bottom: 1px solid #000;
 			}
 
 			.headline {
@@ -150,17 +151,32 @@
 				font-size: 14px;
 			}
 
-			.expandeble {
+			.top-headline {
+				margin: 1em 0;
 				@media (max-width: $xsmall) {
-					margin-bottom: 5px;
+					margin-bottom: 1.25em;
 				}
+			}
+
+			.expandeble {
 
 				.expander {
 					@media (max-width: $xsmall) {
 						max-height: 0;
 						overflow: hidden;
-						border-bottom: 1px solid transparent;
-						transition: max-height .3s ease-in-out, border-bottom .3s ease-in-out;
+						transition: max-height .3s ease-in-out;
+					}
+
+					.item {
+						@media (max-width: $xsmall) {
+							padding-left: 10px;
+						}
+					}
+
+					.item:last-child {
+						@media (max-width: $xsmall) {
+							margin-bottom: 10px;
+						}
 					}
 				}
 
@@ -168,17 +184,16 @@
 
 					.expander {
 						@media (max-width: $xsmall) {
-							border-bottom: 1px solid #000;
 							max-height: 2000px;
-							padding: 10px;
 						}
 					}
 				}
 
 				.headline {
 					@media (max-width: $xsmall) {
-						border-bottom: 1px solid #000;
+						border-top: 1px solid #000;
 						position: relative;
+						padding: 1em 0 .9em 10px;
 					}
 
 					&:after {
