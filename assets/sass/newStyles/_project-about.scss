@@ -1,0 +1,40 @@
+.b-project-about {
+    padding: 170px 0 90px;
+    @media (max-width: $small) {
+        padding: 60px 0 140px;
+    }
+    @media (max-width: $xsmall) {
+        padding: 32px 20px 90px;
+    }
+
+    .title {
+        text-align: center;
+        font-family: 'geometriabold';
+        margin-bottom: 90px;
+        font-size: 50px;
+        @media (max-width: $large) {
+            font-size: 34px;
+            line-height: normal;
+            margin-bottom: 75px;
+        }
+        @media (max-width: $small) {
+            margin-bottom: 40px;
+        }
+        @media (max-width: $xsmall) {
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .columns {
+        column-count: 3;
+        font-size: 14px;
+        line-height: 17px;
+        @media (max-width: $small) {
+            column-count: 2;
+        }
+        @media (max-width: $xsmall) {
+            column-count: 1;
+        }
+    }
+}

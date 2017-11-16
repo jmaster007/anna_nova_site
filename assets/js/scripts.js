@@ -49,32 +49,51 @@ $(document).ready(function() {
         });
     }
     //
-    $('.mustread-carousel').slick({
-        dots: false,
-        infinite: true,
-        speed: 300,
-        centerMode: true,
-        prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>',
-        nextArrow: '<button type="button" class="slick-next"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>',
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        responsive: [
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 3
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1
-              }
-            }
-        ]
-    });
+    if ( $('.mustread-carousel').length != 0 ) {
+        $('.mustread-carousel').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            centerMode: true,
+            prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>',
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 3
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1
+                  }
+                }
+            ]
+        });
+    }
     //
     $('.locations .headline').on('click', function() {
         $(this).parent().toggleClass('active');
     });
+    //
+    if ( $('.tipical-gallery').length != 0 ) {
+        $('.tipical-gallery').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            infinite: true,
+        });
+
+        $('.tipical-gallery .slick-slide').on('click', function() {
+            $('.tipical-gallery').slick('slickNext');
+        });
+    }
+    if ( $('.flex-images').length != 0 ) {
+        $('.flex-images').flexImages({rowHeight: 180});
+    }
 });

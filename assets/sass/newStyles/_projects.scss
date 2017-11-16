@@ -47,6 +47,21 @@
                     font-size: 20px;
                 }
             }
+
+            .name {
+                text-transform: uppercase;
+                font-family: 'geometriabold';
+                font-size: 30px;
+                line-height: 36px;
+                @media (max-width: $large) {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+
+                a {
+                    color: #000;
+                }
+            }
         }
 
         & + .project-item {
@@ -96,6 +111,22 @@
                     }
                 }
             }
+
+            .name {
+                text-transform: uppercase;
+                font-family: 'geometriabold';
+                font-size: 30px;
+                line-height: 36px;
+                @media (max-width: $large) {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+            }
+
+            .project-date {
+                font-size: 14px;
+                color: #d8d8d8;
+            }
         }
 
         .last {
@@ -103,6 +134,67 @@
             width: 220px;
             height: 300px;
             display: inline-block;
+        }
+    }
+}
+
+.project-page {
+
+    .b-projects {
+        margin-bottom: 170px;
+        @media (max-width: $small) {
+            margin-bottom: 140px;
+            padding-left: 40px;
+        }
+        @media (max-width: $xsmall) {
+            margin-bottom: 85px;
+            padding-left: 20px;
+        }
+
+        .project-item {
+            height: 405px;
+
+            .item {
+                width: 430px;
+                @media (max-width: $large) {
+                    width: auto;
+                }
+                @media (max-width: $small) {
+                    max-width: 320px;
+                }
+                @media (max-width: $xsmall) {
+                    max-width: 200px;
+                }
+
+                .image {
+                    width: 100%;
+                    margin-bottom: 12px;
+                    height: 300px;
+                    overflow: hidden;
+                    @media (max-width: $large) {
+                        height: 220px;
+                    }
+                    @media (max-width: $small) {
+                        height: 220px;
+                    }
+                    @media (max-width: $xsmall) {
+                        height: 140px;
+                    }
+                }
+
+                &.project-headline {
+                    padding-left: 380px;
+                    width: 930px;
+                    @media (max-width: $large) {
+                        width: 410px;
+                        padding-left: 30px;
+                    }
+
+                    a {
+                        color: #000;
+                    }
+                }
+            }
         }
     }
 }

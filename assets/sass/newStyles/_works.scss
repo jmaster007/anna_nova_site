@@ -1,0 +1,29 @@
+.b-works {
+	overflow: hidden;
+	min-height: fit-content;
+	margin-bottom: 302px;
+	@media (max-width: $large) {
+        margin-bottom: 180px;
+    }
+    @media (max-width: $small) {
+        margin-bottom: 140px;
+    }
+    @media (max-width: $xsmall) {
+        margin-bottom: 90px;
+    }
+
+	.item {
+	    float: left;
+	    margin: 4px;
+	    border: 1px solid #eee;
+	    box-sizing: content-box;
+	    overflow: hidden;
+	    position: relative;
+
+		img {
+			display: block;
+		    width: auto;
+		    height: 100%;
+		}
+	}
+}
