@@ -96,4 +96,9 @@ $(document).ready(function() {
     if ( $('.flex-images').length != 0 ) {
         $('.flex-images').flexImages({rowHeight: 180});
     }
+    //
+    $('.b-project-about .open').on('click', function() {
+        $(this).parents().find('.expander').addClass('active');
+        $(this).fadeOut(300);
+    });
 });

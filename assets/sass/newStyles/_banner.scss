@@ -58,6 +58,32 @@
             a {
                 color: #fff;
             }
+
+            &.large {
+                display: none;
+                @media (max-width: $large) {
+                    display: block;
+                }
+                @media (max-width: $small) {
+                    display: none;
+                }
+            }
+
+            &.xlarge {
+                display: block;
+                @media (max-width: $large) {
+                    display: none;
+                }
+            }
+
+            .date-item {
+                padding-top: 80px;
+                display: inline-block;
+
+                & + .date-item {
+                    padding-left: 40px;
+                }
+            }
         }
     }
 }

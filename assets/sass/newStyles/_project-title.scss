@@ -1,0 +1,42 @@
+.b-project-title {
+    text-align: center;
+    display: none;
+    line-height: normal;
+    @media (max-width: $small) {
+        display: block;
+    }
+
+    .title {
+        font-size: 34px;
+        font-family: 'geometriabold';
+        text-transform: uppercase;
+        @media (max-width: $xsmall) {
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+
+    .subtitle {
+        font-family: 'geometriabold';
+        font-size: 20px;
+        margin-bottom: 10px;
+        @media (max-width: $xsmall) {
+            font-size: 15px;
+            line-height: 26px;
+        }
+
+        a {
+            color: #000;
+        }
+    }
+
+    .date-item {
+
+        & + .date-item {
+            margin-top: 30px;
+            @media (max-width: $xsmall) {
+                margin-top: 22px;
+            }
+        }
+    }
+}
