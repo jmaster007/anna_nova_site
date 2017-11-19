@@ -17,12 +17,15 @@
 .salvattore {
 	overflow: hidden;
 	min-height: fit-content;
+	max-height: fit-content!important;
 
 	.column {
 		float: left;
+		position: relative;
 
 		.item {
 			margin-bottom: 140px;
+			position: static!important;
 			@media (max-width: $large) {
 				margin-bottom: 100px;
 			}

@@ -378,7 +378,7 @@ $('.artists-list').each(function() {
 
 // init Isotope
 var $grid = $('.grid').isotope({
-	itemSelector: '.news-snip',
+	itemSelector: '.item',
 	layoutMode: 'fitRows',
 	percentPosition: true,
 	masonry: {

@@ -185,8 +185,6 @@
 				</div>
 			</section>
 
-		</div>
-
 <!-- PROJECTS -->
 			<section class="b-projects" id="projects">
 				<div class="project-item">
@@ -308,11 +306,10 @@
 			</section>
 			<hr class="trans" />
 
-		<div id="main" class="container">
 <!-- NEWS -->
 			<div class="12u$">
 				<!-- NEWS-TAGS -->
-				<ul class="news-tags">
+				<ul class="news-tags" id="news">
 					<li><a class="active" data-filter="*">ALL</a></li>
 					<li><a data-filter=".exhibition">#EXHIBITION</a></li>
 					<li><a data-filter=".fairs">#FAIRS</a></li>
@@ -321,8 +318,8 @@
 				</ul>
 			</div>
 
-			<section class="panel news row 0% third-grid grid" id="news">
-				<div class="4u 6u(small) 12u$(xsmall) news-snip exhibition">
+			<section class="panel news salvattore grid" data-columns>
+				<div class="item exhibition">
 					<a href="" title="Read" class="image fit">
 						<img src="images/news/7.png">
 					</a>
@@ -336,7 +333,7 @@
 						<p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p>
 					</div>
 				</div>
-				<div class="4u 6u$(small) 12u$(xsmall) hor-image news-snip fairs">
+				<div class="item fairs">
 					<a href="" title="Read" class="image fit">
 						<img src="images/news/1.png">
 					</a>
@@ -350,7 +347,7 @@
 						<p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p>
 					</div>
 				</div>
-				<div class="4u$ 6u(small) 12u$(xsmall) news-snip artists">
+				<div class="item artists">
 					<a href="" title="Read" class="image fit">
 						<img src="images/news/2.png">
 					</a>
@@ -364,7 +361,7 @@
 						<p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p>
 					</div>
 				</div>
-				<div class="4u 6u$(small) 12u$(xsmall) hor-image news-snip booklet">
+				<div class="item booklet">
 					<a href="" title="Read" class="image fit">
 						<img src="images/news/6.png">
 					</a>
@@ -378,7 +375,7 @@
 						<p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p>
 					</div>
 				</div>
-				<div class="4u 6u(small) 12u$(xsmall) news-snip booklet">
+				<div class="item booklet">
 					<a href="" title="Read" class="image fit">
 						<img src="images/news/3.png">
 					</a>
@@ -392,7 +389,7 @@
 						<p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p>
 					</div>
 				</div>
-				<div class="4u$ 6u$(small) 12u$(xsmall) hor-image news-snip">
+				<div class="item">
 					<a href="" title="Read" class="image fit">
 						<img src="images/news/9.png">
 					</a>
@@ -406,7 +403,7 @@
 						<p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p>
 					</div>
 				</div>
-				<div class="4u 6u(small) 12u$(xsmall) news-snip fairs">
+				<div class="item fairs">
 					<a href="" title="Read" class="image fit">
 						<img src="images/news/2.png">
 					</a>
@@ -420,7 +417,7 @@
 						<p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p>
 					</div>
 				</div>
-				<div class="4u 6u$(small) 12u$(xsmall) hor-image news-snip exhibition">
+				<div class="item exhibition">
 					<a href="" title="Read" class="image fit">
 						<img src="images/news/1.png">
 					</a>
@@ -511,6 +508,9 @@
 
 		<!-- SLICK -->
 		<script src="assets/js/slick/slick.js"></script>
+
+		<!-- SALVATORE -->
+		<script src="assets/js/salvattore/salvattore.js"></script>
 
 		<!-- Scrollspy -->
 		<script src="assets/js/scrollspy.js"></script>
