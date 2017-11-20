@@ -12,7 +12,7 @@ $(document).ready(function() {
 	});
     //
     if ( $('#header .sub-scroll-menu').length != 0 ) {
-        $('#header .sub-scroll-menu').scrollspy({ offset: -80 });
+        $('#header .sub-scroll-menu').scrollspy({ offset: -160 });
     }
     //
     $('.personal .item .main').on('click', function() {
