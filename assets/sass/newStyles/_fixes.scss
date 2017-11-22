@@ -205,6 +205,7 @@
 		}
 
 		.flickity-prev-next-button {
+			background: none!important;
 
 			&.previous {
 				display: none;
@@ -402,6 +403,13 @@ h2.block-title {
 
 	.nav-content {
 		padding-bottom: 10px;
+
+		ul.links {
+
+			li {
+				text-transform: uppercase;
+			}
+		}
 	}
 }
 
@@ -466,4 +474,38 @@ body.is-loading {
 			animation: spin 4s linear infinite!important;
 		}
 	}
+}
+
+// Костыль
+.one-slide {
+
+	.flickity-prev-next-button {
+		display: none;
+	}
+
+	.flickity-slider {
+		position: static;
+		transform: none!important;
+	}
+
+	.flickity-page-dots {
+		display: none;
+	}
+}
+
+//Ещё костыль
+.one-slick-slide {
+	margin-bottom: 50px;
+
+	.slick-dots {
+		display: none;
+	}
+
+	.slick-slide {
+		cursor: auto!important;
+	}
+}
+
+.zero-slick-slide {
+	display: none;
 }

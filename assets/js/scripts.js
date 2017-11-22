@@ -101,4 +101,19 @@ $(document).ready(function() {
         $(this).parents().find('.expander').addClass('active');
         $(this).fadeOut(300);
     });
+    //
+    //Проверка, если в карусели один слайд
+    $('.flickity-enabled').each( function() {
+        if ( $(this).find('.flickity-slider').children('.carousel-cell').length == 1 ) {
+            $(this).addClass('one-slide');;
+        }
+    });
+    //Такая же проверка, но для слик-слайдера
+    $('.slick-slider').each( function() {
+        if ( $(this).find('.slick-track').children('.item').length == 1 ) {
+            $(this).addClass('one-slick-slide');
+        } else if ( $(this).find('.slick-track').children('.item').length == 0 ) {
+            $(this).addClass('zero-slick-slide');
+        }
+    });
 });
