@@ -549,3 +549,95 @@ body.is-loading {
 .zero-slick-slide {
 	display: none;
 }
+
+/* Тема белая */
+.all-white-theme {
+
+	#header {
+
+		a[href="#nav"] {
+			background-image: url(../../images/icon/burger-w.svg);
+		}
+
+		#an-backtotop {
+			background-image: url(../../images/icon/logo-w.svg);
+		}
+
+		.sub-scroll-menu {
+
+			.item {
+				color: #fff;
+			}
+		}
+
+		&.sticky {
+
+			a[href="#nav"] {
+				background-image: url(../../images/icon/burger.svg);
+			}
+
+			#an-backtotop {
+				background-image: url(../../images/icon/logo-b.svg);
+			}
+
+			.sub-scroll-menu {
+
+				.item {
+					color: #b4b4b4;
+				}
+			}
+		}
+	}
+
+	#banner {
+
+		.carousel-cell {
+
+			h2 {
+				color: #fff;
+			}
+		}
+	}
+}
+
+// Тема чёрная
+.all-black-theme {
+
+	#header {
+
+		a[href="#nav"] {
+			background-image: url(../../images/icon/burger.svg);
+		}
+
+		#an-backtotop {
+			background-image: url(../../images/icon/logo-b.svg);
+		}
+
+		.sub-scroll-menu {
+
+			.item {
+				color: #000;
+			}
+		}
+
+		&.sticky {
+
+			.sub-scroll-menu {
+
+				.item {
+					color: #b4b4b4;
+				}
+			}
+		}
+	}
+
+	#banner {
+
+		.carousel-cell {
+
+			h2 {
+				color: #000;
+			}
+		}
+	}
+}

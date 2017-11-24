@@ -1,0 +1,28 @@
+.partners {
+
+    .holder {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .item {
+            width: 16.6666666667%;
+            margin: 0 1em;
+            @media (max-width: $small) {
+                width: 25%;
+            }
+            @media (max-width: $xsmall) {
+                width: 33.33333%;
+            }
+
+            &:after {
+                display: none;
+            }
+
+            a:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
