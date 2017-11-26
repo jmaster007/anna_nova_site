@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="assets/css/fonts.css" />
 		<link rel="stylesheet" href="assets/css/animate.min.css" />
 
+		<link rel="stylesheet" href="assets/css/jquery.fancybox.min.css" />
 		<link rel="stylesheet" href="assets/css/styles.css" />
 		<link rel="stylesheet" href="assets/css/owl-carousel.css" />
 		<style type="text/css">
@@ -230,9 +231,9 @@
 						<div class="name">More projects by<br><a href="#">ULDUZ BAKHTIOZINA</a></div>
 					</div>
 					<div class="item">
-						<div class="image">
+						<a class="image" data-fancybox data-src="#project1" href="javascript://">
 							<img src="images/author/10.jpg">
-						</div>
+						</a>
 						<div class="name">We must cultivate our garden</div>
 						<div class="project-date">28.04 - 29.08.2015</div>
 					</div>
@@ -289,6 +290,33 @@
 			</div>
 		</footer>
 
+<!-- Модалка -->
+<div style="display: none;" class="b-main-modal" id="project1">
+	<div class="main-modal-inner">
+		<div class="content">
+			<img src="images/1.jpg">
+			<div class="project-description">
+				<div class="title">Сказка о мертвой царевне и о семи богатырях</div>
+				<a href="#" class="author">Юлдуз Бахтиозина</a>
+				<div class="info">Фотография, пленка, цифровая печать 1/7 , 100х120 мм 2014</div>
+				<div class="project-name">Проект: <a href="#">Russ land</a></div>
+				<ul class="project-social">
+					<li class="vk"><a href="https://vk.com/annanovagallery"></a></li>
+					<li class="fb"><a href="https://www.facebook.com/annanova.artgallery/"></a></li>
+					<li class="telegram"><a href="https://t.me/annanovagallery"></a></li>
+				</ul>
+			</div>
+		</div>
+		<span class="control-btn prev">
+			<img src="images/project/modal-prev.png" class="icon">
+		</span>
+		<span class="control-btn next">
+			<img src="images/project/modal-next.png" class="icon">
+		</span>
+		<div class="close-modal"></div>
+	</div>
+</div>
+
 <!-- SCRIPTS -->
 
 		<!-- SKELJS -->
@@ -344,6 +372,9 @@
 
 		<!-- Scrollspy -->
 		<script src="assets/js/scrollspy.js"></script>
+
+		<!-- Fancybox -->
+		<script src="assets/js/fancybox/jquery.fancybox.min.js"></script>
 
 		<!-- New scripts -->
 		<script src="assets/js/scripts.js"></script>

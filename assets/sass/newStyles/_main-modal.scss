@@ -1,0 +1,224 @@
+.b-main-modal {
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+
+    .main-modal-inner {
+        display: flex!important;
+        align-items: center;
+        justify-content: center;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        position: absolute;
+        padding: 24px 92px;
+        transition: opacity .3s ease-in-out;
+        @media (max-width: $large) {
+            position: static;
+            padding: 69px 92px 24px;
+        }
+        @media (max-width: $small) {
+            padding: 69px 40px 24px;
+        }
+        @media (max-width: $xsmall) {
+            padding: 69px 0 24px;
+        }
+
+        &.now-hidden {
+            opacity: 0;
+        }
+
+        .control-btn {
+            position: absolute;
+            top: 0; bottom: 0;
+            cursor: pointer;
+            width: 92px;
+            display: flex;
+            align-items: center;
+            transition: opacity .3s ease-in-out;
+            outline: 0 none;
+            @media (max-width: $small) {
+                width: 40px;
+            }
+            @media (max-width: $xsmall) {
+                display: none;
+            }
+
+            &:hover {
+                opacity: .6;
+            }
+
+            &.prev {
+                left: 0;
+                padding-left: 30px;
+                @media (max-width: $small) {
+                    padding-left: 10px;
+                }
+            }
+
+            &.next {
+                right: 0;
+                padding-right: 30px;
+                @media (max-width: $small) {
+                    padding-right: 10px;
+                }
+            }
+        }
+
+        .content {
+            max-width: calc(100% - 672px);
+            position: relative;
+            @media (max-width: $large) {
+                max-width: calc(100% - 40px);
+            }
+            @media (max-width: $xsmall) {
+                max-width: 100%;
+            }
+
+            img {
+                max-width: 100%;
+                max-height: 95vh;
+                @media (max-width: $large) {
+                    max-height: unset;
+                    margin-bottom: 26px;
+                }
+                @media (max-width: $xsmall) {
+                    width: 100%;
+                }
+            }
+
+            .project-description {
+                position: absolute;
+                bottom: 0;
+                left: -336px;
+                max-width: 300px;
+                @media (max-width: $large) {
+                    position: static;
+                    max-width: 100%;
+                }
+                @media (max-width: $xsmall) {
+                    padding: 0 20px;
+                }
+
+                .title {
+                    font-family: "geometriabold";
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #12110b;
+                    margin-bottom: 5px;
+                }
+
+                .author, .info, .project-name {
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #12110b;
+                    margin-bottom: 12px;
+                }
+
+                .project-name {
+                    margin-bottom: 20px;
+
+                    a {
+                        color: #12110b;
+                    }
+                }
+
+                .project-social {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        display: inline-block;
+                        padding: 0;
+
+                        & + li {
+                            padding-left: 1.25em;
+                        }
+
+                        a {
+                            width: 27px;
+                            height: 27px;
+                            display: inline-block;
+                            background-repeat: no-repeat;
+                            cursor: pointer;
+                        }
+                    }
+                    
+                    .telegram {
+                        a {background-image: url(../../images/icon/t-b-1.svg);
+                            &:hover {background-image: url(../../images/icon/t-b-2.svg);}
+                        }
+                    }
+
+                    .insta {
+                        a {background-image: url(../../images/icon/in-b-1.svg);
+                            &:hover {background-image: url(../../images/icon/in-b-2.svg);}
+                        }
+                    }
+
+                    .vk {
+                        a {background-image: url(../../images/icon/vk-b-1.svg);
+                            &:hover {background-image: url(../../images/icon/vk-b-2.svg);}
+                        }
+                    }
+
+                    .fb {
+                        a {background-image: url(../../images/icon/f-b-1.svg);
+                            &:hover {background-image: url(../../images/icon/f-b-2.svg);}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .fancybox-close-small {
+        display: none;
+    }
+
+    .close-modal {
+        width: 28px;
+        height: 28px;
+        outline: 0 none;
+        background: url(../../images/project/x.svg) no-repeat;
+        background-size: 100%;
+        top: 30px;
+        right: 57px;
+        position: absolute;
+        cursor: pointer;
+        @media (max-width: $xsmall) {
+            width: 18px;
+            height: 18px;
+            top: 20px;
+            right: 20px;
+        }
+    }
+
+    // &.first {
+
+    //     .main-modal-inner {
+
+    //         .control-btn {
+
+    //             &.prev {
+    //                 display: none;
+    //             }
+    //         }
+    //     }
+    // }
+
+    // &.last {
+
+    //     .main-modal-inner {
+
+    //         .control-btn {
+
+    //             &.next {
+    //                 display: none;
+    //             }
+    //         }
+    //     }
+    // }
+}

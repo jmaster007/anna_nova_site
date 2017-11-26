@@ -116,4 +116,19 @@ $(document).ready(function() {
             $(this).addClass('zero-slick-slide');
         }
     });
+    //
+    if ( $('[data-fancybox]').length != 0 ) {
+        $('[data-fancybox]').fancybox();
+    }
+    //
+    $('.close-modal').on('click', function() {
+        $.fancybox.close( true );
+    });
+    //
+    $('.b-main-modal .control-btn').on('click', function() {
+        $('.main-modal-inner').addClass('now-hidden');
+        setTimeout(function() {
+            $('.main-modal-inner').removeClass('now-hidden');
+        }, 600);
+    });
 });
