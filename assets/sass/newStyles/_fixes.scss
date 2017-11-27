@@ -460,6 +460,10 @@ h2.block-title {
 	.image {
 		margin-bottom: 1em;
 
+		&.fit {
+			margin-bottom: 1em;
+		}
+
 		&:after {
 			background: rgb(229, 48, 48);
 		}
@@ -472,8 +476,11 @@ h2.block-title {
 		}
 
 		.news-snip-tags {
+			font-family: "geometriabold";
+			padding-top: 0;
 
 			li {
+				color: #d6d6d6;
 
 			    a {
 
