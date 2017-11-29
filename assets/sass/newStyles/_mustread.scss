@@ -1,9 +1,10 @@
 .mustread {
 	margin-bottom: 280px;
-	height: 340px;
+	min-height: fit-content;
+	// height: 340px;
 	@media (max-width: $xsmall) {
 		margin-bottom: 75px;
-		height: 415px;
+		// height: 415px;
 	}
 
 	.block-title {
@@ -11,11 +12,12 @@
 	}
 
 	.holder {
-		height: 340px;
+		// height: 340px;
 		position: relative;
 		overflow: hidden;
+		min-height: fit-content;
 		@media (max-width: $xsmall) {
-			height: 415px;
+			// height: 415px;
 		}
 
 		.slick-arrow {
@@ -97,6 +99,7 @@
 			.name {
 				font-size: 30px;
 				margin-bottom: 0;
+				white-space: nowrap;
 				@media (max-width: $large) {
 					font-size: 24px;
 				}
