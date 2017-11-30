@@ -161,6 +161,17 @@ $(window).scroll(function () {
 	    	$('.an-backtotop').css('bottom', '-5em');
 	    }
 	}
+
+	if ($('body').is('.second-screen')) {
+		$(window).scroll(function () {
+		    if ($(this).scrollTop() > $(window).height()) {
+		    	$('header').addClass("sticky");
+		    }
+		    else {
+		    	$('header').removeClass("sticky");
+		    }
+		});
+	}
 	// if ($('body').is('.artists-page')) {}
 		// if ($(this).scrollTop() > $(window).height()) {
 		// 	$('#an-backtotop').css('bottom', '2em')
