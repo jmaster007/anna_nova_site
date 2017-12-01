@@ -88,7 +88,6 @@
 		.item {
 			display: inline-block;
 			font-size: 15px;
-			color: #000;
 
 			& + .item {
 				margin-left: 32px;
@@ -303,7 +302,6 @@
 		.item {
 			display: inline-block;
 			font-size: 15px;
-			color: #000;
 
 			& + .item {
 				margin-right: 32px;
@@ -430,9 +428,12 @@ h2.block-title {
 
 		.lg, .lg-white, .lg-black,
 		#header-nav {
-			transform: scale(1);
+			// transform: scale(1);
 			opacity: 1;
-			transition: transform .3s ease-in-out, opacity .6s ease-in;
+			transition: opacity .6s ease-in;
+			@media (max-width: $xsmall) {
+				transition: none;
+			}
 		}
 
 		&.sticky {
@@ -440,7 +441,10 @@ h2.block-title {
 			.lg, .lg-white, .lg-black,
 			#header-nav {
 				@media (max-width: $small) {
-					transform: scale(0);
+					// transform: scale(0);
+					opacity: 1;
+				}
+				@media (max-width: $xsmall) {
 					opacity: 0;
 				}
 			}
@@ -655,4 +659,57 @@ body {
 		font-family: "geometriabold";
 		font-weight: normal;
 	}
+
+	&.second-screen {
+
+		#header {
+
+			.sub-scroll-menu {
+				opacity: 0;
+				transition: none;
+
+				.item {
+					color: #b5b4b4;
+				}
+			}
+
+			&.fade-fast {
+				animation: fade .5s;
+			}
+
+			&.sticky {
+
+				.sub-scroll-menu {
+					opacity: 1;
+					transition: opacity .5s ease-in-out;
+				}
+			}
+
+			&.banner-bottom {
+				top: 100vh;
+
+				.sub-scroll-menu {
+					opacity: 1;
+					transition: opacity .5s ease-in-out;
+					visibility: visible;
+				}
+
+				#an-backtotop, #header-nav {
+					animation: fade .5s;
+					@media (max-width: $xsmall) {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes fade {
+  from {
+    opacity: 0; 
+  }
+  to { 
+    opacity: 1;
+  }  
 }

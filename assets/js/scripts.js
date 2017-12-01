@@ -131,4 +131,34 @@ $(document).ready(function() {
             $('.main-modal-inner').removeClass('now-hidden');
         }, 600);
     });
+    //
+    if ($('body').is('.second-screen')) {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > $(window).height()) {
+                $('header').addClass("sticky");
+            }
+            else {
+                $('header').removeClass("sticky");
+            }
+            //
+            if ($(this).scrollTop() > 1 ) {
+                $('header').addClass('banner-bottom').removeClass('fade-fast');
+            } else {
+                $('header').removeClass('banner-bottom').addClass('fade-fast');
+            }
+        });
+    }
+    //
+    if ($(this).scrollTop() > $(window).height()) {
+        $('header').addClass("sticky");
+    }
+    else {
+        $('header').removeClass("sticky");
+    }
+    //
+    if ($(this).scrollTop() > 1 ) {
+        $('header').addClass('banner-bottom').removeClass('fade-fast');
+    } else {
+        $('header').removeClass('banner-bottom').addClass('fade-fast');
+    }
 });
