@@ -121,14 +121,10 @@ $(document).ready(function() {
         $('[data-fancybox]').fancybox();
     }
     //
-    $('.close-modal').on('click', function() {
-        $.fancybox.close( true );
-    });
-    //
-    $('.b-main-modal .control-btn').on('click', function() {
-        $('.main-modal-inner').addClass('now-hidden');
+    $('.b-main-modal .control-btn').on('click touchstart', function() {
+        $('.main-modal-inner .content').addClass('now-hidden');
         setTimeout(function() {
-            $('.main-modal-inner').removeClass('now-hidden');
+            $('.main-modal-inner .content').removeClass('now-hidden');
         }, 600);
     });
     //
@@ -162,3 +158,4 @@ $(document).ready(function() {
         $('header').removeClass('banner-bottom').addClass('fade-fast');
     }
 });
+

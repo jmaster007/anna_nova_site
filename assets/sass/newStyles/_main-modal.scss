@@ -25,10 +25,6 @@
             padding: 69px 0 24px;
         }
 
-        &.now-hidden {
-            opacity: 0;
-        }
-
         .control-btn {
             position: absolute;
             top: 0; bottom: 0;
@@ -36,7 +32,6 @@
             width: 92px;
             display: flex;
             align-items: center;
-            transition: opacity .3s ease-in-out;
             outline: 0 none;
             @media (max-width: $small) {
                 width: 40px;
@@ -55,6 +50,10 @@
                 @media (max-width: $small) {
                     padding-left: 10px;
                 }
+
+                img {
+                    transform: rotate(-90deg);
+                }
             }
 
             &.next {
@@ -63,17 +62,31 @@
                 @media (max-width: $small) {
                     padding-right: 10px;
                 }
+
+                img {
+                    transform: rotate(90deg);
+                }
+            }
+
+            img {
+                max-width: 100%;
             }
         }
 
         .content {
             max-width: calc(100% - 672px);
             position: relative;
+            opacity: 1;
+            transition: opacity .3s ease-in-out;
             @media (max-width: $large) {
                 max-width: calc(100% - 40px);
             }
             @media (max-width: $xsmall) {
                 max-width: 100%;
+            }
+
+            &.now-hidden {
+                opacity: 0;
             }
 
             img {
@@ -175,26 +188,45 @@
     }
 
     .fancybox-close-small {
-        display: none;
-    }
-
-    .close-modal {
         width: 28px;
         height: 28px;
         outline: 0 none;
         background: url(../../images/project/x.svg) no-repeat;
         background-size: 100%;
         top: 30px;
-        right: 57px;
+        right: 34px;
         position: absolute;
         cursor: pointer;
+        box-shadow: none;
         @media (max-width: $xsmall) {
             width: 18px;
             height: 18px;
             top: 20px;
             right: 20px;
         }
+
+        &:after {
+            display: none;
+        }
     }
+
+    // .close-modal {
+    //     width: 28px;
+    //     height: 28px;
+    //     outline: 0 none;
+    //     background: url(../../images/project/x.svg) no-repeat;
+    //     background-size: 100%;
+    //     top: 30px;
+    //     right: 57px;
+    //     position: absolute;
+    //     cursor: pointer;
+    //     @media (max-width: $xsmall) {
+    //         width: 18px;
+    //         height: 18px;
+    //         top: 20px;
+    //         right: 20px;
+    //     }
+    // }
 
     // &.first {
 
