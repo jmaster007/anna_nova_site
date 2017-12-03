@@ -80,8 +80,9 @@
 		position: relative;
 
 		.item {
-			margin-bottom: 140px;
+			margin-bottom: 100px;
 			position: relative;
+			position: static!important;
 			@media (max-width: $large) {
 				margin-bottom: 100px;
 			}

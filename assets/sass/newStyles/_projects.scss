@@ -126,10 +126,22 @@
                 font-size: 14px;
                 color: #d8d8d8;
             }
+
+            &.goto {
+                text-transform: uppercase;
+                font-family: 'geometriabold';
+                font-size: 24px;
+                padding-top: 110px;
+
+                a {
+                    color: #000;
+                    text-decoration: none;
+                }
+            }
         }
 
         .last {
-            background: url(../../images/author/goto.png) no-repeat center;
+            background: url(../../images/author/goto.svg) no-repeat center;
             width: 220px;
             height: 300px;
             display: inline-block;

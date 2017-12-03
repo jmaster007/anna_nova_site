@@ -157,5 +157,11 @@ $(document).ready(function() {
     } else {
         $('header').removeClass('banner-bottom').addClass('fade-fast');
     }
+    //
+    $('.project-description .title').on('click', function() {
+        if ( $(window).width() < 480 ) {
+            $(this).toggleClass('open').parents('.project-description').find('.expand').slideToggle( "slow" );
+        }
+    });
 });
 

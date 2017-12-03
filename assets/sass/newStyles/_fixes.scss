@@ -262,16 +262,18 @@
 	}
 
 	.an-notify {
-		position: absolute;
+		position: relative;
 		height: 0;
 		overflow: hidden;
 		top: -53px;
+		padding: 0;
 
 		&.visible {
 			position: relative;
 			height: 53px;
 			top: 0;
-			transition: top .3s ease-in-out;
+			padding: 1em 4em 1em 2em;
+			transition: all .1s ease-in-out;
 		}
 	}
 }
