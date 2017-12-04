@@ -715,3 +715,16 @@ body {
     opacity: 1;
   }  
 }
+
+.isotope-grid {
+
+	.item {
+		padding-bottom: 100px;
+		@media (max-width: $large) {
+			margin-bottom: 100px;
+		}
+		@media (max-width: $small) {
+			margin-bottom: 40px;
+		}
+	}
+}

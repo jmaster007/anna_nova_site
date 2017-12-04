@@ -163,5 +163,28 @@ $(document).ready(function() {
             $(this).toggleClass('open').parents('.project-description').find('.expand').slideToggle( "slow" );
         }
     });
+    //
+    // init Isotope
+    var $grid = $('.isotope-grid').isotope({
+        itemSelector: '.item',
+        layoutMode: 'masonry',
+        percentPosition: true,
+        masonry: {
+            columnWidth: '.item'
+        },
+    });
+    // filter items on button click
+    $('.news-tags').on( 'click', 'a', function() {
+        var filterValue = $(this).attr('data-filter');
+        $grid.isotope({ filter: filterValue });
+    });
+    // change is-checked class on buttons
+    $('.news-tags').each( function( i, tagsGroup ) {
+        var $tagsGroup = $( tagsGroup );
+        $tagsGroup.on( 'click', 'a', function() {
+            $tagsGroup.find('.active').removeClass('active');
+            $( this ).addClass('active');
+        });
+    });
 });
 
