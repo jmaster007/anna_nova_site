@@ -122,10 +122,16 @@ $(document).ready(function() {
     }
     //
     $('.b-main-modal .control-btn').on('click touchstart', function() {
-        $('.main-modal-inner .content').addClass('now-hidden');
-        setTimeout(function() {
-            $('.main-modal-inner .content').removeClass('now-hidden');
-        }, 600);
+        blinkContent();
+    });
+    //
+    $('.b-main-modal .main-modal-inner .content img').on('click touchstart', function() {
+        blinkContent();
+    });
+    //
+    $(window).keyup(function (event) {
+        if ( event.keyCode == 37 ) {blinkContent();} //arrow left keyup
+        if ( event.keyCode == 39 ) {blinkContent();} //arrow right keyup
     });
     //
     if ($('body').is('.second-screen')) {
@@ -188,3 +194,9 @@ $(document).ready(function() {
     });
 });
 
+function blinkContent() {
+    $('.main-modal-inner .content').addClass('now-hidden');
+    setTimeout(function() {
+        $('.main-modal-inner .content').removeClass('now-hidden');
+    }, 600);
+}

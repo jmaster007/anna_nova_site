@@ -414,6 +414,7 @@ h2.block-title {
 
 	.nav-content {
 		padding-bottom: 10px;
+		min-height: 99%;
 
 		ul.links {
 
@@ -743,5 +744,15 @@ body {
 	}
 	@media (max-width: $xsmall) {
 		columns: 1;
+	}
+}
+
+.artists-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	#main{
+		min-height: unset;
 	}
 }
