@@ -728,3 +728,20 @@ body {
 		}
 	}
 }
+
+.booklet-page {
+
+	.news + hr.trans {
+		margin-bottom: 0;
+	}
+}
+
+.artists-list {
+	columns: 3;
+	@media (max-width: $small) {
+		columns: 2;
+	}
+	@media (max-width: $xsmall) {
+		columns: 1;
+	}
+}

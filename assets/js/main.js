@@ -354,13 +354,13 @@ $('.artists-list').each(function() {
 		$('body').css('background-image', "url('images/2.jpg')");
 	});
 	$("a[href|='ROST.html']").hover(function() {
-		$('body').css('background-image', "url('images/2.jpg')");
+		$('body').css('background-image', "url('images/3.jpg')");
 	});
 	$("a[href|='VLADK.html']").hover(function() {
-		$('body').css('background-image', "url('images/3.jpg')");
+		$('body').css('background-image', "url('images/1.jpg')");
 	});
 	$("a[href|='BORK.html']").hover(function() {
-		$('body').css('background-image', "url('images/3.jpg')");
+		$('body').css('background-image', "url('images/2.jpg')");
 	});
 	$("a[href|='ANAP.html']").hover(function() {
 		$('body').css('background-image', "url('images/artists/1.jpg')");
@@ -369,6 +369,9 @@ $('.artists-list').each(function() {
 		$('body').css('background-image', "url('images/artists/2.jpg')");
 	});
 	$("a[href|='ALK.html']").hover(function() {
+		$('body').css('background-image', "url('images/artists/3.jpg')");
+	});
+	$("a[href|='ALJOSCHA.html']").hover(function() {
 		$('body').css('background-image', "url('images/artists/3.jpg')");
 	});
 })

@@ -2,9 +2,9 @@
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 270px;
+	margin-bottom: 80px;
 	@media (max-width: $large) {
-		margin-bottom: 110px;
+		margin-bottom: 80px;
 	}
 	@media (max-width: $xsmall) {
 		margin-bottom: 120px;
