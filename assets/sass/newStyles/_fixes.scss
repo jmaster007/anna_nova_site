@@ -387,6 +387,10 @@ h2.block-title {
 		padding: 6em 20px 2em;
 	}
 
+	&.visible {
+		overflow-x: hidden;
+	}
+
 	.close {
 		right: 0;
 		@media (max-width: $small) {
@@ -718,6 +722,7 @@ body {
 }
 
 .isotope-grid {
+	margin-left: 0;
 
 	.item {
 		padding: 0 2em;
@@ -763,5 +768,16 @@ body {
 
 	#main{
 		min-height: unset;
+	}
+}
+
+.news-tags {
+	@media (max-width: $large) {
+		margin-top: 10px;
+		margin-bottom: 50px;
+	}
+	@media (max-width: $small) {
+		margin-top: 5px;
+		margin-bottom: 50px;
 	}
 }
