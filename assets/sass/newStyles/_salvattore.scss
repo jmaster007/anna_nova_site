@@ -15,7 +15,7 @@
 }
 
 .salvattore {
-	overflow: hidden;
+	// overflow: hidden;
 	min-height: fit-content;
 	max-height: fit-content!important;
 
@@ -25,12 +25,19 @@
 
 		.item {
 			margin-bottom: 100px;
-			position: static!important;
+			position: relative;
 			@media (max-width: $large) {
 				margin-bottom: 100px;
 			}
 			@media (max-width: $small) {
 				margin-bottom: 40px;
+			}
+
+			.news-snip-last {
+				left: -60px;
+				@media (max-width: $xsmall) {
+					left: -30px;
+				}
 			}
 		}
 	}

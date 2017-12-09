@@ -782,3 +782,17 @@ body {
 		margin-bottom: 50px;
 	}
 }
+
+.news-page {
+
+	#header {
+
+		& > a[href="#nav"] {
+			background-image: url(../../images/icon/burger.svg);
+		}
+	}
+
+	.news-more {
+		clear: both;
+	}
+}
