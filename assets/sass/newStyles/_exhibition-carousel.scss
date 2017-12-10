@@ -1,0 +1,124 @@
+.b-exhibition-carousel {
+	margin-bottom: 270px;
+	@media (max-width: $large) {
+		margin-bottom: 170px;
+	}
+	@media (max-width: $small) {
+		margin-bottom: 100px;
+	}
+
+	.tipical-gallery {
+		position: relative;
+
+		.item {
+			height: 930px;
+			color: #000;
+			background-size: cover;
+			background-position: center;
+			@media (max-width: $large) {
+				height: 565px;
+			}
+			@media (max-width: $small) {
+				height: 710px;
+			}
+			@media (max-width: $xsmall) {
+	    		height: 370px;
+	    	}
+
+			.holder {
+				width: 80em;
+			    display: flex;
+			    text-align: right;
+			    justify-content: flex-end;
+			    align-items: flex-end;
+			    color: #fff;
+			    font-family: "geometriabold";
+			    padding-bottom: 165px;
+			    flex-direction: column;
+			    line-height: normal;
+			    margin: 0 auto;
+			    @media (max-width: $large) {
+			    	padding-bottom: 80px;
+			    	width: 70em;
+			    }
+			    @media (max-width: 1024px) {
+			    	width: 90%;
+			    }
+			    @media (max-width: $small) {
+			    	padding-bottom: 70px;
+			    }
+			    @media (max-width: $xsmall) {
+			    	padding-bottom: 45px;
+			    	width: 100%;
+			    	padding-left: 20px;
+			    	padding-right: 20px;
+			    }
+
+			    .big-title {
+			    	font-size: 72px;
+			    	letter-spacing: .1px;
+			    	@media (max-width: $large) {
+			    		font-size: 44px;
+			    		letter-spacing: normal;
+			    	}
+			    	@media (max-width: $xsmall) {
+			    		font-size: 30px;
+			    		letter-spacing: -.4px;
+			    	}
+			    }
+
+			    .author {
+			    	font-size: 44px;
+			    	letter-spacing: 1px;
+			    	margin-bottom: 5px;
+			    	@media (max-width: $large) {
+			    		font-size: 19px;
+			    		letter-spacing: normal;
+			    	}
+			    	@media (max-width: $small) {
+			    		font-size: 24px;
+			    	}
+			    	@media (max-width: $xsmall) {
+			    		font-size: 15px;
+			    	}
+			    }
+
+			    .dates {
+			    	font-size: 44px;
+			    	letter-spacing: 1px;
+			    	@media (max-width: $large) {
+			    		font-size: 19px;
+			    		letter-spacing: normal;
+			    	}
+			    	@media (max-width: $small) {
+			    		font-size: 20px;
+			    	}
+			    	@media (max-width: $xsmall) {
+			    		font-size: 15px;
+			    	}
+			    }
+			}
+		}
+
+		.slick-dots {
+			position: relative;
+			bottom: 30px;
+			margin-top: 0;
+
+			li {
+
+				button {
+					border: 1px solid #fff;
+					background: transparent;
+				}
+
+				&.slick-active {
+
+					button {
+						background: #fff;
+					}
+				}
+			}
+		}
+	}
+}

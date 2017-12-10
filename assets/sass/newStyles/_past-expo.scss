@@ -1,0 +1,31 @@
+.b-past-expo {
+
+	.news-snip {
+		padding-bottom: 130px!important;
+		padding-left: 0;
+		@media (max-width: $large) {
+			padding-bottom: 95px!important;
+		}
+		@media (max-width: $small) {
+			padding-bottom: 90px!important;
+		}
+		@media (max-width: $xsmall) {
+			padding-bottom: 35px!important;
+		}
+
+		&:nth-of-type(2n) {
+			padding-left: 5em;
+			@media (max-width: $xsmall) {
+				padding-left: 0;
+			}
+		}
+
+		.news-snip-content {
+			padding-left: 0;
+			@media (max-width: $xsmall) {
+				padding-left: 37px;
+				padding-right: 20px;
+			}
+		}
+	}
+}

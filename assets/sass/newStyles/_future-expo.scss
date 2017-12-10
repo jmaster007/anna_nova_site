@@ -1,0 +1,22 @@
+.b-future-expo {
+	padding-bottom: 110px;
+	border-bottom: 1px solid #000;
+	margin: 0;
+	margin-bottom: 140px;
+	@media (max-width: $large) {
+		padding-bottom: 70px;
+		margin-bottom: 100px;
+	}
+	@media (max-width: $small) {
+		padding-bottom: 90px;
+		margin-bottom: 100px;
+	}
+	@media (max-width: $xsmall) {
+		padding-bottom: 50px;
+		margin-bottom: 60px;
+	}
+
+	.news-snip {
+		padding-right: 0;
+	}
+}
