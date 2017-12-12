@@ -83,15 +83,15 @@
 					$nav.appendChild($navClose);
 
 			// Event: Hide on ESC.
-				window.addEventListener('keydown', function(event) {
+				// window.addEventListener('keydown', function(event) {
 
-					if (event.keyCode == 27)
-						$nav.classList.remove('visible');
-						$navMask.classList.remove('visible');
-						// if (!skel.vars.touch) {
-							$body.classList.remove('noscroll');
-						// }
-				});
+				// 	if (event.keyCode == 27)
+				// 		$nav.classList.remove('visible');
+				// 		$navMask.classList.remove('visible');
+				// 		// if (!skel.vars.touch) {
+				// 			$body.classList.remove('noscroll');
+				// 		// }
+				// });
 
 			// Event: Hide nav on click.
 				$navClose.addEventListener('click', function(event) {

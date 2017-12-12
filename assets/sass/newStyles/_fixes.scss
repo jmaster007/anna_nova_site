@@ -265,15 +265,18 @@
 		position: relative;
 		height: 0;
 		overflow: hidden;
-		top: -53px;
+		top: 0;
 		padding: 0;
+		text-align: center;
 
 		&.visible {
 			position: relative;
 			height: 53px;
 			top: 0;
-			padding: 1em 4em 1em 2em;
 			transition: all .1s ease-in-out;
+			@media (max-width: $small) {
+				padding: 1em 4em 1em 2em;
+			}
 		}
 	}
 }
@@ -569,7 +572,7 @@ body.is-loading {
 }
 
 /* Тема белая */
-.all-white-theme {
+body.all-white-theme {
 
 	#header {
 
@@ -611,15 +614,22 @@ body.is-loading {
 
 		.carousel-cell {
 
-			h2 {
+			* {
 				color: #fff;
 			}
+		}
+	}
+
+	#b-banner {
+
+		* {
+			color: #fff;
 		}
 	}
 }
 
 // Тема чёрная
-.all-black-theme {
+body.all-black-theme {
 
 	#header {
 
@@ -653,9 +663,16 @@ body.is-loading {
 
 		.carousel-cell {
 
-			h2 {
+			* {
 				color: #000;
 			}
+		}
+	}
+
+	#b-banner {
+
+		* {
+			color: #000!important;
 		}
 	}
 }
@@ -699,6 +716,14 @@ body {
 					opacity: 1;
 					transition: opacity .5s ease-in-out;
 					visibility: visible;
+
+					.item {
+						color: #b4b4b4;
+
+						&.active {
+							color: #000;
+						}
+					}
 				}
 
 				#an-backtotop, #header-nav {
@@ -706,6 +731,14 @@ body {
 					@media (max-width: $xsmall) {
 						display: none;
 					}
+				}
+
+				#an-backtotop {
+					background-image: url(../../images/icon/logo-b.svg);
+				}
+
+				#header-nav {
+					background-image: url(../../images/icon/burger.svg);
 				}
 			}
 		}
@@ -836,5 +869,11 @@ body {
 
 	&.no-top {
 		padding-top: 0;
+	}
+}
+
+.partners {
+	@media (max-width: $xsmall) {
+		padding: 0 20px;
 	}
 }
