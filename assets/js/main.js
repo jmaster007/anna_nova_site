@@ -380,28 +380,28 @@ $('.artists-list').each(function() {
 // ISOTOPE ----------------------------------
 
 // init Isotope
-// var $grid = $('.grid').isotope({
-// 	itemSelector: '.item',
-// 	layoutMode: 'fitRows',
-// 	percentPosition: true,
-// 	masonry: {
-// 		columnWidth: '.grid-sizer',
-// 		gutter: '.gutter-sizer'
-// 	},
-// });
-// // filter items on button click
-// $('.news-tags').on( 'click', 'a', function() {
-// 	var filterValue = $(this).attr('data-filter');
-// 	$grid.isotope({ filter: filterValue });
-// });
-// // change is-checked class on buttons
-// $('.news-tags').each( function( i, tagsGroup ) {
-// 	var $tagsGroup = $( tagsGroup );
-// 	$tagsGroup.on( 'click', 'a', function() {
-// 		$tagsGroup.find('.active').removeClass('active');
-// 		$( this ).addClass('active');
-// 	});
-// });
+var $grid = $('.grid').isotope({
+	itemSelector: '.item',
+	layoutMode: 'fitRows',
+	percentPosition: true,
+	masonry: {
+		columnWidth: '.grid-sizer',
+		gutter: '.gutter-sizer'
+	},
+});
+// filter items on button click
+$('.news-tags').on( 'click', 'a', function() {
+	var filterValue = $(this).attr('data-filter');
+	$grid.isotope({ filter: filterValue });
+});
+// change is-checked class on buttons
+$('.news-tags').each( function( i, tagsGroup ) {
+	var $tagsGroup = $( tagsGroup );
+	$tagsGroup.on( 'click', 'a', function() {
+		$tagsGroup.find('.active').removeClass('active');
+		$( this ).addClass('active');
+	});
+});
 
 // filter functions
 // var filterFns = {
