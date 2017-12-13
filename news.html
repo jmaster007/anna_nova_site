@@ -98,8 +98,8 @@
 			</ul>
 
 			<!-- NEWS-SNIP -->
-			<section class="panel news salvattore" data-columns>
-				<div class="item exhibition">
+			<section class="panel news row isotope-grid" data-isotope>
+				<div class="item 4u 6u(small) 12u$(xsmall)">
 					<span class="news-snip-last">LAST NEWS</span>
 					<a href="news-item.html" title="Read" class="image fit">
 						<img src="images/news/1.png">
@@ -115,7 +115,7 @@
 						<span class="news-snip-date">08.08.2016</span>
 					</div>
 				</div>
-				<div class="item exhibition" data-wow-delay="0.25s">
+				<div class="item 4u 6u$(small) 12u$(xsmall)">
 					<span class="news-snip-last">LAST NEWS</span>
 					<a href="" title="Read" class="image fit">
 						<img src="images/news/2.png">
@@ -131,7 +131,7 @@
 						<span class="news-snip-date">08.08.2016</span>
 					</div>
 				</div>
-				<div class="item exhibition">
+				<div class="item 4u$ 6u(small) 12u$(xsmall)">
 					<span class="news-snip-last">LAST NEWS</span>
 					<a href="" title="Read" class="image fit">
 						<img src="images/news/3.png">
@@ -147,7 +147,7 @@
 						<span class="news-snip-date">08.08.2016</span>
 					</div>
 				</div>
-				<div class="item artists" data-wow-delay="0.15s">
+				<div class="item 4u 6u$(small) 12u$(xsmall)">
 					<span class="news-snip-last">LAST NEWS</span>
 					<a href="" title="Read" class="image fit">
 						<img src="images/news/4.png">
@@ -163,7 +163,7 @@
 						<span class="news-snip-date">08.08.2016</span>
 					</div>
 				</div>
-				<div class="item fairs booklet">
+				<div class="item 4u 6u(small) 12u$(xsmall)">
 					<a href="" title="Read" class="image fit">
 						<img src="images/news/6.png">
 					</a>
@@ -178,7 +178,7 @@
 						<span class="news-snip-date">08.08.2016</span>
 					</div>
 				</div>
-				<div class="item artists" data-wow-delay="0.2s">
+				<div class="item 4u$ 6u$(small) 12u$(xsmall)">
 					<a href="" title="Read" class="image fit">
 						<img src="images/news/7.png">
 					</a>
@@ -193,7 +193,7 @@
 						<span class="news-snip-date">08.08.2016</span>
 					</div>
 				</div>
-				<div class="item booklet">
+				<div class="item 4u 6u(small) 12u$(xsmall)">
 					<a href="" title="Read" class="image fit">
 						<img src="images/news/8.png">
 					</a>
@@ -208,7 +208,7 @@
 						<span class="news-snip-date">08.08.2016</span>
 					</div>
 				</div>
-				<div class="item exhibition artists" data-wow-delay="0.15s">
+				<div class="item 4u 6u$(small) 12u$(xsmall)">
 					<a href="" title="Read" class="image fit">
 						<img src="images/news/9.png">
 					</a>
@@ -224,7 +224,7 @@
 					</div>
 				</div>
 			</section>
-			<div class="action 12u$ align-center news-more"><a class="button special">VIEW MORE</a></div>
+			<div class="action 12u$ align-center news-more"><a class="button special" id="addMoreItems">VIEW MORE</a></div>
 		</div>
 		<hr class="trans" />
 
@@ -263,6 +263,8 @@
 		<script src="assets/js/desandro/flickity.bg-lazyload.js"></script>
 		<script src="assets/js/desandro/isotope.pkgd.min.js"></script>
 
+		<script src="assets/js/desandro/infinite-scroll.pkgd.js"></script>
+
 		<!-- ANIMATESCROLL -->
 		<script src="assets/js/animatescroll/animatescroll.min.js"></script>
 		<script src="assets/js/animatescroll/animatescroll.noeasing.js"></script>
@@ -284,7 +286,7 @@
 		<script src="assets/js/scrollmagic/plugins/jquery.scrollmagic.min.js"></script>
 
 		<!-- SALVATORE -->
-		<script src="assets/js/salvattore/salvattore.js"></script>
+		<!-- <script src="assets/js/salvattore/salvattore.js"></script> -->
 
 		<!-- WOWJS -->
 		<script src="assets/js/wowjs/wow.min.js"></script>
@@ -294,6 +296,22 @@
 
 		<!-- New scripts -->
 		<script src="assets/js/scripts.js"></script>
+
+		<!-- Добавление изотопных новостей -->
+		<script type="text/javascript">
+			$('#addMoreItems').on('click', function() {
+		        var $newItems = $(`
+		            <div class="item 4u 6u$(small) 12u$(xsmall)"><a href="" title="Read" class="image fit"><img src="images/news/9.png"></a><div class="news-snip-content"><ul class="news-snip-tags"><li><a href="">EXHIBITION</a></li></ul><h4><a href="" title="Read">ARTISTS OF ANNA NOVA<br>IN STREET ART MUSEUM</a></h4><p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p><span class="news-snip-date">08.08.2016</span></div></div>
+		            <div class="item 4u 6u$(small) 12u$(xsmall)"><a href="" title="Read" class="image fit"><img src="images/news/9.png"></a><div class="news-snip-content"><ul class="news-snip-tags"><li><a href="">EXHIBITION</a></li></ul><h4><a href="" title="Read">ARTISTS OF ANNA NOVA<br>IN STREET ART MUSEUM</a></h4><p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p><span class="news-snip-date">08.08.2016</span></div></div>
+		            <div class="item 4u 6u$(small) 12u$(xsmall)"><span class="news-snip-last">LAST NEWS</span><a href="" title="Read" class="image fit"><img src="images/news/2.png"></a><div class="news-snip-content"><ul class="news-snip-tags"><li><a href="">EXHIBITION</a></li></ul><h4><a href="" title="Read">ARTISTS OF ANNA NOVA<br>IN STREET ART MUSEUM</a></h4><p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p><span class="news-snip-date">08.08.2016</span></div></div>
+		            <div class="item 4u$ 6u(small) 12u$(xsmall)"><span class="news-snip-last">LAST NEWS</span><a href="" title="Read" class="image fit"><img src="images/news/3.png"></a><div class="news-snip-content"><ul class="news-snip-tags"><li><a href="">EXHIBITION</a></li></ul><h4><a href="" title="Read">ARTISTS OF ANNA NOVA<br>IN STREET ART MUSEUM</a></h4><p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p><span class="news-snip-date">08.08.2016</span></div></div>
+		            <div class="item 4u 6u$(small) 12u$(xsmall)"><span class="news-snip-last">LAST NEWS</span><a href="" title="Read" class="image fit"><img src="images/news/4.png"></a><div class="news-snip-content"><ul class="news-snip-tags"><li><a href="">EXHIBITION</a></li></ul><h4><a href="" title="Read">ARTISTS OF ANNA NOVA<br>IN STREET ART MUSEUM</a></h4><p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p><span class="news-snip-date">08.08.2016</span></div></div>
+		            <div class="item 4u 6u(small) 12u$(xsmall)"><a href="" title="Read" class="image fit"><img src="images/news/6.png"></a><div class="news-snip-content"><ul class="news-snip-tags"><li><a href="">EXHIBITION</a></li></ul><h4><a href="" title="Read">ARTISTS OF ANNA NOVA<br>IN STREET ART MUSEUM</a></h4><p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p><span class="news-snip-date">08.08.2016</span></div></div>
+		            `),
+		        	$grid = $('.isotope-grid');
+		        $grid.isotope( 'insert', $newItems );
+		    });
+		</script>
 
 	</body>
 </html>

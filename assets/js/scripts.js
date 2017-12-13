@@ -166,6 +166,7 @@ $(document).ready(function() {
             columnWidth: '.item'
         },
     });
+
     // filter items on button click
     $('.news-tags').on( 'click', 'a', function() {
         var filterValue = $(this).attr('data-filter');
@@ -180,22 +181,6 @@ $(document).ready(function() {
         });
     });
 });
-
-//TODO
-// $(window).scroll(function () {
-//     if ($(this).scrollTop() > $(window).height()) {
-//         $('header').addClass("sticky");
-//     }
-//     else {
-//         $('header').removeClass("sticky");
-//     }
-//     //
-//     if ($(this).scrollTop() > 1 ) {
-//         $('header').addClass('banner-bottom').removeClass('fade-fast');
-//     } else {
-//         $('header').removeClass('banner-bottom').addClass('fade-fast');
-//     }
-// });
 
 function blinkContent() {
     $('.main-modal-inner .content').addClass('now-hidden');
