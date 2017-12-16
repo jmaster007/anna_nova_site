@@ -198,8 +198,9 @@ if ($('body').is('.home-page')) {
 
 
 // NOTIFY-CLOSE --------------------------------
-$('.an-notify-close').on( 'click', function() {
+$('.an-notify-close').on( 'click', function(event) {
 	$('.an-notify').removeClass('visible');
+	event.preventDefault();
 });
 // $(window).scroll(function () {
 //     if ($(this).scrollTop() > $(window).height()) {
@@ -219,7 +220,7 @@ var $carousel = $('.carousel').flickity({
 	// autoPlay: 10000,
 	pauseAutoPlayOnHover: false,
 	// freeScroll: true,
-	prevNextButtons: false,
+	prevNextButtons: true,
 	imagesLoaded: true,
 	wrapAround: true,
 	bgLazyLoad: 1,
@@ -295,7 +296,6 @@ skel.on("change", function() {
 	// 	}
 	// };
 });
-
 
 // SKEL-READY ---------------------------
 skel.on("ready", function() {

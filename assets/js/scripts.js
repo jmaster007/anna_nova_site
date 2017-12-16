@@ -180,11 +180,37 @@ $(document).ready(function() {
             $( this ).addClass('active');
         });
     });
+    //
+    checkTheme();
+    //
+    var $carousel = $('.home-page .carousel').flickity();
+    $carousel.on( 'select.flickity', function() {
+        checkTheme();
+    });
 });
 
+// блинк проектов
 function blinkContent() {
     $('.main-modal-inner .content').addClass('now-hidden');
     setTimeout(function() {
         $('.main-modal-inner .content').removeClass('now-hidden');
     }, 600);
+}
+
+// проверка темы для слайдера на главной
+function checkTheme() {
+    var homeCarouselSlide = $('.home-page .carousel-cell'),
+        isSelectedSlide = $('.home-page .carousel-cell.is-selected'),
+        staticLogo = $('.home-page .static-banner-logo'),
+        staticMenu = $('.home-page .static-banner-menu'),
+        nextBtn = $('.home-page .flickity-prev-next-button.next');
+    if ( isSelectedSlide.hasClass('black-inner-theme') ) {
+        staticLogo.addClass('black-inner-theme').removeClass('white-inner-theme');
+        staticMenu.addClass('black-inner-theme').removeClass('white-inner-theme');
+        nextBtn.addClass('black-inner-theme').removeClass('white-inner-theme');
+    } else if ( isSelectedSlide.hasClass('white-inner-theme') ) {
+        staticLogo.addClass('white-inner-theme').removeClass('black-inner-theme');
+        staticMenu.addClass('white-inner-theme').removeClass('black-inner-theme');
+        nextBtn.addClass('white-inner-theme').removeClass('black-inner-theme');
+    }
 }

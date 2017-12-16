@@ -89,7 +89,6 @@
 		.item {
 			margin-bottom: 100px;
 			position: relative;
-			position: static!important;
 			@media (max-width: $large) {
 				margin-bottom: 100px;
 			}
@@ -102,6 +101,9 @@
 			left: -4.5em;
 			position: absolute;
 			transform: rotate(-90deg);
+			@media (max-width: $xsmall) {
+				left: -21px;
+			}
 		}
 	}
 
