@@ -1020,9 +1020,13 @@ body {
 
 		.banner-title {
 			right: 30px;
-			padding: 0;
+			padding: 2em 0 0;
 			@media (max-width: $small) {
 				right: 20px;
+			}
+
+			&:before {
+				right: 0;
 			}
 		}
 	}
