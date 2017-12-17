@@ -201,16 +201,10 @@ function blinkContent() {
 function checkTheme() {
     var homeCarouselSlide = $('.home-page .carousel-cell'),
         isSelectedSlide = $('.home-page .carousel-cell.is-selected'),
-        staticLogo = $('.home-page .static-banner-logo'),
-        staticMenu = $('.home-page .static-banner-menu'),
-        nextBtn = $('.home-page .flickity-prev-next-button.next');
+        themeChangeItems = $('.home-page').find('.static-banner-logo, .static-banner-menu, .flickity-prev-next-button.next, .flickity-page-dots, #header');
     if ( isSelectedSlide.hasClass('black-inner-theme') ) {
-        staticLogo.addClass('black-inner-theme').removeClass('white-inner-theme');
-        staticMenu.addClass('black-inner-theme').removeClass('white-inner-theme');
-        nextBtn.addClass('black-inner-theme').removeClass('white-inner-theme');
+        themeChangeItems.addClass('black-inner-theme').removeClass('white-inner-theme');
     } else if ( isSelectedSlide.hasClass('white-inner-theme') ) {
-        staticLogo.addClass('white-inner-theme').removeClass('black-inner-theme');
-        staticMenu.addClass('white-inner-theme').removeClass('black-inner-theme');
-        nextBtn.addClass('white-inner-theme').removeClass('black-inner-theme');
+        themeChangeItems.addClass('white-inner-theme').removeClass('black-inner-theme');
     }
 }
