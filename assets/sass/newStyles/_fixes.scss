@@ -1145,3 +1145,20 @@ body {
 		}
 	}
 }
+
+.manifest {
+
+	.image {
+
+		&.first-child {
+			left: 0;
+			width: 100%;
+			text-align: center;
+			margin-left: 0;
+		}
+
+		img {
+			max-width: 100%;
+		}
+	}
+}
