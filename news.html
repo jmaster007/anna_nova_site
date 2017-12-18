@@ -263,8 +263,6 @@
 		<script src="assets/js/desandro/flickity.bg-lazyload.js"></script>
 		<script src="assets/js/desandro/isotope.pkgd.min.js"></script>
 
-		<script src="assets/js/desandro/infinite-scroll.pkgd.js"></script>
-
 		<!-- ANIMATESCROLL -->
 		<script src="assets/js/animatescroll/animatescroll.min.js"></script>
 		<script src="assets/js/animatescroll/animatescroll.noeasing.js"></script>
@@ -308,8 +306,8 @@
 		            <div class="item 4u 6u$(small) 12u$(xsmall)"><span class="news-snip-last">LAST NEWS</span><a href="" title="Read" class="image fit"><img src="images/news/4.png"></a><div class="news-snip-content"><ul class="news-snip-tags"><li><a href="">EXHIBITION</a></li></ul><h4><a href="" title="Read">ARTISTS OF ANNA NOVA<br>IN STREET ART MUSEUM</a></h4><p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p><span class="news-snip-date">08.08.2016</span></div></div>
 		            <div class="item 4u 6u(small) 12u$(xsmall)"><a href="" title="Read" class="image fit"><img src="images/news/6.png"></a><div class="news-snip-content"><ul class="news-snip-tags"><li><a href="">EXHIBITION</a></li></ul><h4><a href="" title="Read">ARTISTS OF ANNA NOVA<br>IN STREET ART MUSEUM</a></h4><p>Artists of anna nova gallery in street art museum Аrtists of ANNA NOVA Gallery in street art museum. Аrtists of ANNA NOVA</p><span class="news-snip-date">08.08.2016</span></div></div>
 		            `),
-		        	$grid = $('.isotope-grid');
-		        $grid.isotope( 'insert', $newItems );
+	        		$grid = $('.isotope-grid');
+		        $grid.isotope( 'insert', $newItems ).isotope('layout', $newItems);
 		    });
 		</script>
 

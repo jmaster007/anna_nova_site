@@ -277,11 +277,12 @@
 
 		.flickity-page-dots {
 		    cursor: auto;
-		    height: 4em;
-		    line-height: 4em;
+		    height: 6em;
+		    line-height: 6em;
 		    display: inline-block;
 		    width: auto;
 		    bottom: 0;
+		    padding: 0 2em;
 
 			.dot {
 				border: 1px solid #fff;
