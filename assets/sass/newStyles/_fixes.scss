@@ -275,6 +275,12 @@
 
 	#banner {
 
+		h2 {
+			@media(max-width: 1920px) {
+				font-size: 54px;
+			}
+		}
+
 		.flickity-page-dots {
 		    cursor: auto;
 		    height: 6em;
@@ -283,6 +289,7 @@
 		    width: auto;
 		    bottom: 0;
 		    padding: 0 2em;
+		    margin-left: -80px;
 
 			.dot {
 				border: 1px solid #fff;
@@ -1011,7 +1018,7 @@ body {
 			.static-banner-menu {
 				right: 30px;
 				top: 30px;
-				font-family: "geometriabold";
+				font-family: "geometriamedium";
 				@media (max-width: $small) {
 					right: 20px;
 					top: 20px;

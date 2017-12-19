@@ -76,6 +76,15 @@
         .item {
             line-height: normal;
 
+            img {
+                cursor: pointer;
+                transition: opacity .3s ease-in-out;
+
+                &:hover {
+                    opacity: .8;
+                }
+            }
+
             &.headline {
                 width: 540px;
                 @media (max-width: $large) {
@@ -128,6 +137,7 @@
                 font-family: 'geometriabold';
                 font-size: 24px;
                 padding-top: 110px;
+                padding-left: 60px;
 
                 a {
                     color: #000;
@@ -219,7 +229,10 @@
             .owl-item:first-child {
 
                 .item {
-                    padding-left: 10em;
+                    padding-left: 12em;
+                    @media(max-width: $large) {
+                        padding-left: 7em;
+                    }
                 }
             }
         }

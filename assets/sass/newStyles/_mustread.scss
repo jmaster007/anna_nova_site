@@ -21,26 +21,23 @@
 		}
 
 		.slick-arrow {
-			color: #000!important;
-			background: none;
 			border: none;
 			cursor: pointer;
 			padding: 0;
 			opacity: 1;
 			transition: opacity .3s ease-in-out;
-			width: 16px;
-			height: 18px;
-			font-size: 18px;
-			line-height: 18px;
+			width: 33px;
+			height: 35px;
 			position: absolute;
-			top: 100px;
-			outline: 0;
+			top: 90px;
+			outline: 0 none;
 			z-index: 9;
+			background: none;
 			@media (max-width: $large) {
-				top: 70px;
+				top: 75px;
 			}
 			@media (max-width: $small) {
-				top: 100px;
+				top: 70px;
 			}
 			@media (max-width: $xsmall) {
 				display: none!important;
@@ -48,9 +45,22 @@
 
 			&:hover {
 				border: none;
-				color: #000;
 				box-shadow: none;
 				opacity: .6;
+			}
+
+			.arr {
+				display: inline-block;
+				width: 33px;
+				height: 35px;
+
+				&.lft {
+					background: url(../../images/icon/arrow-l-b.svg) no-repeat center;
+				}
+
+				&.rgt {
+					background: url(../../images/icon/arrow-r-b.svg) no-repeat center;
+				}
 			}
 
 			&.slick-prev {

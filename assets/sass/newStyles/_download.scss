@@ -23,6 +23,19 @@
 			@media (max-width: $xsmall) {
 				font-size: 14px;
 			}
+
+			.arr {
+				display: inline-block;
+				height: 20px;
+				width: 25px;
+				background: url(../../images/icon/arrow-b.svg) no-repeat center;
+				background-size: contain;
+				transform: rotate(90deg);
+				@media (max-width: $large) {
+					height: 15px;
+					width: 20px;
+				}
+			}
 		}
 
 		.label {

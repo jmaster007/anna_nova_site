@@ -55,8 +55,8 @@ $(document).ready(function() {
             infinite: true,
             speed: 300,
             centerMode: true,
-            prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>',
-            nextArrow: '<button type="button" class="slick-next"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>',
+            prevArrow: '<button type="button" class="slick-prev"><span class="arr lft"></span></button>',
+            nextArrow: '<button type="button" class="slick-next"><span class="arr rgt"></span></button>',
             slidesToShow: 4,
             slidesToScroll: 1,
             responsive: [
