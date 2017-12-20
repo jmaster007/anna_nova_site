@@ -239,9 +239,9 @@ var $carousel = $('.carousel').flickity({
 // FLICKITY --------------------------------
 var $carousel = $('.carousel-booklet').flickity({
 	cellSelector: '.carousel-cell',
-	selectedAttraction: 0.002,
-	friction: 0.1,
-	autoPlay: 5000,
+	// selectedAttraction: 0.002,
+	// friction: 0.1,
+	// autoPlay: 5000,
 	pauseAutoPlayOnHover: false,
 	// freeScroll: true,
 	prevNextButtons: true,

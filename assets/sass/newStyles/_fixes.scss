@@ -328,6 +328,10 @@
 				}
 			}
 		}
+
+		.lg-white {
+			background-size: 100%;
+		}
 	}
 
 	.an-notify {
@@ -820,6 +824,21 @@ body {
 			}
 		}
 	}
+
+	&.author-page.second-screen {
+
+		#header {
+
+			&.banner-bottom {
+				@media (max-width: $small) {
+			    	top: 580px;
+			    }
+			    @media (max-width: $xsmall) {
+			    	top: 230px;
+			    }
+			}
+		}
+	}
 }
 
 @keyframes fade {
@@ -1035,6 +1054,12 @@ body {
 
 			&:before {
 				right: 0;
+			}
+
+			h2 {
+				@media (max-width: $xsmall) {
+					font-size: 34px;
+				}
 			}
 		}
 	}
