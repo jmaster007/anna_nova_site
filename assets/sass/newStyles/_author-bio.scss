@@ -62,6 +62,9 @@
                 font-size: 22px;
                 margin-bottom: 31px;
             }
+            @media (max-width: $small) {
+                padding: 0 20px;
+            }
         }
     }
 
@@ -98,6 +101,9 @@
                     margin-bottom: 5px;
                     line-height: 40px;
                     border-bottom: 1px solid #000;
+                    margin: 0 20px 15px;
+                    padding: 0 5px;
+                    max-width: calc(100% - 20px);
                 }
 
                 &:after {
@@ -107,12 +113,14 @@
                         float: right;
                         font-size: 14px;
                         font-family: 'geometriabold';
-                        margin-right: 10px;
                     }
                 }
             }
 
             .text {
+                @media (max-width: $small) {
+                    padding: 0;
+                }
                 @media (max-width: $xsmall) {
                     font-size: 12px;
                     line-height: 16px;
@@ -121,6 +129,7 @@
                     max-height: 0;
                     overflow: hidden;
                     transition: max-height .3s ease-in-out;
+                    padding: 0 25px;
                 }
 
                 .headline {
@@ -178,6 +187,15 @@
 
             a {
                 text-decoration: none;
+
+                .arr {
+                    display: inline-block;
+                    height: 13px;
+                    width: 16px;
+                    background: url(../../images/icon/arrow-b.svg) no-repeat center;
+                    background-size: contain;
+                    transform: rotate(90deg);
+                }
             }
         }
     }

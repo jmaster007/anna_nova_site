@@ -28,10 +28,10 @@ $(document).ready(function() {
     //
     if ( $('.project-row').length != 0 ) {
         $('.project-row').owlCarousel({
-            margin:15,
-            loop:false,
-            autoWidth:true,
-            items:4
+            margin: 15,
+            loop: false,
+            autoWidth: true,
+            smartSpeed: 500
         });
     }
     //
@@ -184,7 +184,7 @@ $(document).ready(function() {
         });
     }
     //
-    $('.project-description .title').on('click', function() {
+    $('.project-description .title').on('click touch', function() {
         if ( $(window).width() < 480 ) {
             $(this).toggleClass('open').parents('.project-description').find('.expand').slideToggle( "slow" );
         }
