@@ -28,10 +28,10 @@
                 display: block;
                 margin-bottom: 15px;
                 font-family: 'geometriabold';
-                padding-left: 15px;
+                padding-left: 0;
             }
             @media (max-width: $xsmall) {
-                padding-left: 15px;
+                padding-left: 0;
             }
 
             .title {
@@ -58,6 +58,24 @@
                     color: #000;
                 }
             }
+        }
+
+        & .owl-stage-outer {
+            @media (max-width: $xlarge) {
+                padding-left: calc((100% - 80em)/2);
+            }
+            @media (max-width: $large) {
+                padding-left: calc((100% - 70em)/2);
+            }
+            @media (min-width: 769px) and(max-width: $medium) {
+                padding-left: calc((100% - 90%)/2);
+            }
+            & .owl-item:first-child {
+                @media (max-width: $small) {
+                    margin-right: 0 !important;
+                }
+            }
+
         }
 
         & + .project-item {
@@ -203,11 +221,10 @@
                 }
 
                 &.project-headline {
-                    padding-left: 380px;
-                    width: 930px;
+                    padding-left: 0;
                     @media (max-width: $large) {
                         width: 410px;
-                        padding-left: 30px;
+                        padding-left: 0;
                     }
 
                     a {
