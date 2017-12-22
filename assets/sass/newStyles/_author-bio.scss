@@ -71,7 +71,7 @@
     .personal {
         margin-bottom: 120px;
         @media (max-width: $small) {
-            padding: 0 20px;
+            padding: 0 10px;
         }
 
         .item {
@@ -79,7 +79,7 @@
             & + .item {
                 margin-top: 35px;
                 @media (max-width: $xsmall) {
-                    margin-top: 5px;
+                    margin-top: 0;
                 }
             }
 
@@ -100,8 +100,8 @@
                     font-size: 14px;
                     margin-bottom: 5px;
                     line-height: 40px;
-                    border-bottom: 1px solid #000;
-                    margin: 0 20px 15px;
+                    border-top: 1px solid #000;
+                    margin: 0 20px;
                     padding: 0 5px;
                     max-width: calc(100% - 20px);
                 }
@@ -124,8 +124,6 @@
                 @media (max-width: $xsmall) {
                     font-size: 12px;
                     line-height: 16px;
-                    // display: none;
-                    border-bottom: 1px solid traansparent;
                     max-height: 0;
                     overflow: hidden;
                     transition: max-height .3s ease-in-out;
@@ -182,7 +180,9 @@
                 margin-top: 60px;
             }
             @media (max-width: $xsmall) {
-                margin-top: 50px;
+                margin-top: 0;
+                padding-top: 50px;
+                border-top: 1px solid #000;
             }
 
             a {

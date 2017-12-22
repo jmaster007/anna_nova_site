@@ -35,6 +35,17 @@ $(document).ready(function() {
         });
     }
     //
+    if ( $('.flickity-row').length != 0 ) {
+        $('.flickity-row').flickity({
+            freeScroll: true,
+            cellSelector: '.item',
+            draggable: true,
+            contain: true,
+            prevNextButtons: false,
+            pageDots: false
+        });
+    }
+    //
     if ( $('.author-gal').length != 0 ) {
         $('.author-gal').slick({
             slidesToShow: 1,
@@ -154,7 +165,7 @@ $(document).ready(function() {
     if ( $('body.author-page').is('.second-screen') ) {
         $(window).scroll(function () {
             if (parseInt($(window).width()) < 769) {
-                if ($(this).scrollTop() > 580) {
+                if ($(this).scrollTop() > 725) {
                     $('header').addClass("sticky");
                 }
                 else {
