@@ -271,6 +271,26 @@ $(document).ready(function() {
     $carousel.on( 'select.flickity', function() {
         checkTheme();
     });
+
+    // popup description positio
+    function setDescHeight() {
+        if ($(window).width() <= 768) {
+            var descHeight = $('.main-modal-inner .content img').height();
+            $('.project-description').css('top', descHeight + 26);
+        }
+    };
+
+    $('.b-works .item').on('click', function () {
+        setDescHeight();
+    });
+
+    $(window).on('resize', function(){
+        if ($(window).width() <= 768) {
+            setDescHeight();
+        } else {
+            $('.project-description').css('top', 'auto');
+        }
+    });
 });
 
 // блинк проектов

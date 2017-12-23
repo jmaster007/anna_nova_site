@@ -21,10 +21,10 @@
             justify-content: flex-end;
         }
         @media (max-width: $small) {
-            padding: 100px 40px 24px;
+            padding: 0 40px;
         }
         @media (max-width: $xsmall) {
-            padding: 69px 0 24px;
+            padding: 0;
         }
 
         .control-btn {
@@ -86,6 +86,7 @@
             }
             @media (max-width: $small) {
                 max-width: 100%;
+                position: relative;
             }
             @media (max-width: $xsmall) {
                 max-width: 100%;
@@ -100,7 +101,8 @@
                 max-height: 95vh;
                 @media (max-width: $small) {
                     max-height: unset;
-                    margin-bottom: 26px;
+                    margin: 0;
+                    display: block;
                 }
                 @media (max-width: $xsmall) {
                     width: 100%;
@@ -115,6 +117,9 @@
                 @media (max-width: $small) {
                     position: static;
                     max-width: 100%;
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
                 }
                 @media (max-width: $xsmall) {
                     padding: 0 20px;
@@ -192,7 +197,7 @@
                             cursor: pointer;
                         }
                     }
-                    
+
                     .telegram {
                         a {background-image: url(../../images/icon/t-b-1.svg);
                             &:hover {background-image: url(../../images/icon/t-b-2.svg);}
