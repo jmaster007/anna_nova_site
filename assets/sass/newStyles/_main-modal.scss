@@ -14,7 +14,7 @@
         position: absolute;
         padding: 24px 92px;
         transition: opacity .3s ease-in-out;
-        @media (max-width: $large) {
+        @media (max-width: 1440px) {
             position: static;
             padding: 69px 92px 24px;
             align-items: flex-end;
@@ -81,7 +81,7 @@
             position: relative;
             opacity: 1;
             transition: opacity .3s ease-in-out;
-            @media (max-width: $large) {
+            @media (max-width: 1440px) {
                 max-width: calc(100% - 336px);
             }
             @media (max-width: $small) {
@@ -239,6 +239,7 @@
         position: absolute;
         cursor: pointer;
         box-shadow: none;
+        z-index: 999;
         @media (max-width: $small) {
             width: 18px;
             height: 18px;

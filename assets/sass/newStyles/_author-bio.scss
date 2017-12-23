@@ -62,13 +62,16 @@
                 font-size: 22px;
                 margin-bottom: 31px;
             }
+            @media (max-width: $small) {
+                padding: 0 20px;
+            }
         }
     }
 
     .personal {
         margin-bottom: 120px;
         @media (max-width: $small) {
-            padding: 0 20px;
+            padding: 0 10px;
         }
 
         .item {
@@ -76,7 +79,7 @@
             & + .item {
                 margin-top: 35px;
                 @media (max-width: $xsmall) {
-                    margin-top: 5px;
+                    margin-top: 0;
                 }
             }
 
@@ -97,7 +100,10 @@
                     font-size: 14px;
                     margin-bottom: 5px;
                     line-height: 40px;
-                    border-bottom: 1px solid #000;
+                    border-top: 1px solid #000;
+                    margin: 0 20px;
+                    padding: 0 5px;
+                    max-width: calc(100% - 20px);
                 }
 
                 &:after {
@@ -107,20 +113,21 @@
                         float: right;
                         font-size: 14px;
                         font-family: 'geometriabold';
-                        margin-right: 10px;
                     }
                 }
             }
 
             .text {
+                @media (max-width: $small) {
+                    padding: 0;
+                }
                 @media (max-width: $xsmall) {
                     font-size: 12px;
                     line-height: 16px;
-                    // display: none;
-                    border-bottom: 1px solid traansparent;
                     max-height: 0;
                     overflow: hidden;
                     transition: max-height .3s ease-in-out;
+                    padding: 0 25px;
                 }
 
                 .headline {
@@ -173,11 +180,22 @@
                 margin-top: 60px;
             }
             @media (max-width: $xsmall) {
-                margin-top: 50px;
+                margin-top: 0;
+                padding-top: 50px;
+                border-top: 1px solid #000;
             }
 
             a {
                 text-decoration: none;
+
+                .arr {
+                    display: inline-block;
+                    height: 13px;
+                    width: 16px;
+                    background: url(../../images/icon/arrow-b.svg) no-repeat center;
+                    background-size: contain;
+                    transform: rotate(90deg);
+                }
             }
         }
     }

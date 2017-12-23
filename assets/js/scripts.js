@@ -28,10 +28,21 @@ $(document).ready(function() {
     //
     if ( $('.project-row').length != 0 ) {
         $('.project-row').owlCarousel({
-            margin:15,
-            loop:false,
-            autoWidth:true,
-            items:4
+            margin: 15,
+            loop: false,
+            autoWidth: true,
+            smartSpeed: 500
+        });
+    }
+    //
+    if ( $('.flickity-row').length != 0 ) {
+        $('.flickity-row').flickity({
+            freeScroll: true,
+            cellSelector: '.item',
+            draggable: true,
+            contain: true,
+            prevNextButtons: false,
+            pageDots: false
         });
     }
     //
@@ -154,7 +165,7 @@ $(document).ready(function() {
     if ( $('body.author-page').is('.second-screen') ) {
         $(window).scroll(function () {
             if (parseInt($(window).width()) < 769) {
-                if ($(this).scrollTop() > 580) {
+                if ($(this).scrollTop() > 725) {
                     $('header').addClass("sticky");
                 }
                 else {
@@ -196,7 +207,40 @@ $(document).ready(function() {
         }
     });
 
-    //
+    //костыль для страницы проекта
+    if ( $('body.project-page').is('.second-screen') ) {
+        $(window).scroll(function () {
+            if (parseInt($(window).width()) < 769) {
+                if ($(this).scrollTop() > 770) {
+                    $('header').addClass("sticky");
+                }
+                else {
+                    $('header').removeClass("sticky");
+                }
+                //
+                if ($(this).scrollTop() > 1 ) {
+                    $('header').addClass('banner-bottom').removeClass('fade-fast');
+                } else {
+                    $('header').removeClass('banner-bottom').addClass('fade-fast');
+                }
+            }
+            if (parseInt($(window).width()) < 481) {
+                if ($(this).scrollTop() > 385) {
+                    $('header').addClass("sticky");
+                }
+                else {
+                    $('header').removeClass("sticky");
+                }
+                //
+                if ($(this).scrollTop() > 1 ) {
+                    $('header').addClass('banner-bottom').removeClass('fade-fast');
+                } else {
+                    $('header').removeClass('banner-bottom').addClass('fade-fast');
+                }
+            }
+        });
+    }
+
     // init Isotope
     var $grid = $('.isotope-grid').isotope({
         itemSelector: '.item',

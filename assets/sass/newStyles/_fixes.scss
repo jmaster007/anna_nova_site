@@ -831,10 +831,25 @@ body {
 
 			&.banner-bottom {
 				@media (max-width: $small) {
-			    	top: 580px;
+			    	top: 725px;
 			    }
 			    @media (max-width: $xsmall) {
 			    	top: 230px;
+			    }
+			}
+		}
+	}
+
+	&.project-page.second-screen {
+
+		#header {
+
+			&.banner-bottom {
+				@media (max-width: $small) {
+			    	top: 770px;
+			    }
+			    @media (max-width: $xsmall) {
+			    	top: 385px;
 			    }
 			}
 		}
@@ -941,14 +956,6 @@ body {
 			@media (max-width: $xsmall) {
 				padding-top: 125px;
 			}
-		}
-	}
-
-	h1 {
-		margin-bottom: 65px;
-		line-height: normal;
-		@media (max-width: $large) {
-			margin-bottom: 0;
 		}
 	}
 
@@ -1193,5 +1200,12 @@ body {
 		img {
 			max-width: 100%;
 		}
+	}
+}
+
+.project-page {
+
+	#header {
+		top: 770px;
 	}
 }
