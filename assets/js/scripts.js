@@ -183,12 +183,19 @@ $(document).ready(function() {
             }
         });
     }
+
     //
-    $('.project-description .title').on('click', function() {
-        if ( $(window).width() < 480 ) {
-            $(this).toggleClass('open').parents('.project-description').find('.expand').slideToggle( "slow" );
+    var flag = false;
+    $('.project-description .title').bind('click touchstart', function(){
+        if (!flag) {
+            flag = true;
+            setTimeout(function(){ flag = false; }, 100);
+            if ( $(window).width() <= 480 ) {
+                $(this).toggleClass('open').siblings('.expand').slideToggle('slow');
+            }
         }
     });
+
     //
     // init Isotope
     var $grid = $('.isotope-grid').isotope({
