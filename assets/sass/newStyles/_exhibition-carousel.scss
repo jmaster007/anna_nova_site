@@ -1,29 +1,72 @@
 .b-exhibition-carousel {
 	margin-bottom: 270px;
+	padding-top: 200px;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
 	@media (max-width: $large) {
 		margin-bottom: 170px;
+		padding-top: 110px;
 	}
 	@media (max-width: $small) {
 		margin-bottom: 100px;
+		padding-top: 190px;
+	}
+	@media (max-width: $xsmall) {
+		padding-top: 120px;
+	}
+
+	.title {
+		width: 80em;
+		margin: 0 auto;
+		@media (max-width: $large) {
+			width: 70em;
+		}
+		@media (max-width: 1024px) {
+			width: 90%;
+		}
+		@media (max-width: $xsmall) {
+			width: 100%;
+			padding: 0 20px;
+		}
+	}
+
+	.block-title {
+		margin-bottom: 25px;
+		line-height: normal;
+		@media (max-width: $large) {
+			margin-bottom: 0;
+		}
 	}
 
 	.tipical-gallery {
 		position: relative;
+		height: 100%;
+
+		.slick-list {
+			height: 100%;
+
+			.slick-track {
+				height: 100%;
+				align-items: stretch;
+			}
+		}
 
 		.item {
-			height: 930px;
+			// height: 930px;
 			color: #000;
 			background-size: cover;
 			background-position: center;
-			@media (max-width: $large) {
-				height: 565px;
-			}
-			@media (max-width: $small) {
-				height: 710px;
-			}
-			@media (max-width: $xsmall) {
-	    		height: 370px;
-	    	}
+			height: 100%;
+			// @media (max-width: $large) {
+			// 	height: 565px;
+			// }
+			// @media (max-width: $small) {
+			// 	height: 710px;
+			// }
+			// @media (max-width: $xsmall) {
+	  //   		height: 370px;
+	  //   	}
 
 			.holder {
 				width: 80em;

@@ -194,6 +194,39 @@ $(document).ready(function() {
             }
         });
     }
+    //костыль для страницы проекта
+    if ( $('body.project-page').is('.second-screen') ) {
+        $(window).scroll(function () {
+            if (parseInt($(window).width()) < 769) {
+                if ($(this).scrollTop() > 770) {
+                    $('header').addClass("sticky");
+                }
+                else {
+                    $('header').removeClass("sticky");
+                }
+                //
+                if ($(this).scrollTop() > 1 ) {
+                    $('header').addClass('banner-bottom').removeClass('fade-fast');
+                } else {
+                    $('header').removeClass('banner-bottom').addClass('fade-fast');
+                }
+            }
+            if (parseInt($(window).width()) < 481) {
+                if ($(this).scrollTop() > 385) {
+                    $('header').addClass("sticky");
+                }
+                else {
+                    $('header').removeClass("sticky");
+                }
+                //
+                if ($(this).scrollTop() > 1 ) {
+                    $('header').addClass('banner-bottom').removeClass('fade-fast');
+                } else {
+                    $('header').removeClass('banner-bottom').addClass('fade-fast');
+                }
+            }
+        });
+    }
     //
     $('.project-description .title').on('click touch', function() {
         if ( $(window).width() < 480 ) {

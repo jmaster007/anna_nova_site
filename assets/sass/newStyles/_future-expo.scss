@@ -3,6 +3,7 @@
 	border-bottom: 1px solid #000;
 	margin: 0;
 	margin-bottom: 140px;
+	min-height: fit-content;
 	@media (max-width: $large) {
 		padding-bottom: 70px;
 		margin-bottom: 100px;
@@ -18,5 +19,13 @@
 
 	.news-snip {
 		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.news-snip-content {
+
+		.name {
+			text-transform: uppercase;
+		}
 	}
 }

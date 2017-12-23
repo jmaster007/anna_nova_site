@@ -41,7 +41,7 @@
 		</style>
 	</head>
 
-	<body id="top" class="exhibitions-page">
+	<body id="top" class="exhibitions-page second-screen">
 
 <!-- LOADER -->
 		<div class="an-loader"><span class="an-loader-img"></span></div>
@@ -49,6 +49,11 @@
 <!-- HEADER -->
 		<header id="header" class="sticky">
 			<a class="lg-black" href="http://annanova-gallery.ru"></a>
+			<div class="sub-scroll-menu">
+				<h4 class="item"></h4>
+				<h4 class="item"><a href="" onclick="$('#future').animatescroll();">FUTURE</a></h4>
+				<h4 class="item"><a href="" onclick="$('#past').animatescroll();">PAST</a></h4>
+			</div>
 			<a href="#nav" id="header-nav"></a>
 		</header>
 
@@ -82,14 +87,12 @@
 		<div id="nav-mask"></div>
 
 <!-- MAIN -->
-		<div id="main" class="container top-container">
+		<section class="b-exhibition-carousel" id="carousel">
 
-			<a id="an-backtotop" class="an-backtotop" onclick="$('#top').animatescroll();"></a>
+			<div class="title">
+				<h1 class="block-title">FAIRS</h1>
+			</div>
 
-			<h1 id="content" class="block-title">FAIRS</h1>
-		</div>
-
-		<section class="b-exhibition-carousel">
 			<div class="tipical-gallery">
 				<div class="item" style="background-image: url(images/1.jpg);">
 					<div class="holder">
@@ -134,29 +137,31 @@
 		</section>
 
 		<div id="main" class="container no-top">
+			<a id="an-backtotop" class="an-backtotop" onclick="$('#top').animatescroll();"></a>
 			<!-- FUTURE -->
-			<section class="b-future-expo row news">
+			<section class="b-future-expo row news" id="future">
 				<banner class="12u$ news-snip">
 					<a href="" title="Read" class="image">
 						<img src="images/news/5.png">
 					</a>
 					<div class="news-snip-content">
 						<h4><a href="" title="Read">ARTISTS OF ANNA NOVA IN STREET ART MUSEUM</a></h4>
-						<h4><a href="" title="Read">by Uldus</a></h4>
+						<h4 class="name"><a href="" title="Read">by Uldus</a></h4>
 						<div><span class="news-snip-date">08.08.2016 - 08.08.2016</span></div>
 						<div><span class="news-snip-date">In Anna Nova Gallery</span></div>
 					</div>
 				</banner>
 			</section>
 			<!-- PAST -->
-			<section class="b-past-expo row news">
+			<section class="b-past-expo row news" id="past">
+
 				<div class="news-snip 6u 12u$(xsmall)">
 					<a href="#" title="Read" class="image fit">
 						<img src="images/news/1.png">
 					</a>
 					<div class="news-snip-content">
 						<h4><a href="#" title="Read">ARTISTS OF ANNA NOVA<br>IN STREET ART MUSEUM</a></h4>
-						<h4><a href="#" title="Read">by Uldus</a></h4>
+						<h4 class="name"><a href="#" title="Read">by Uldus</a></h4>
 						<div><span class="news-snip-date">08.08.2016 - 08.08.2016</span></div>
 						<div><span class="news-snip-date">In Anna Nova Gallery</span></div>
 					</div>
@@ -167,7 +172,7 @@
 					</a>
 					<div class="news-snip-content">
 						<h4><a href="#" title="Read">ARTISTS OF ANNA NOVA<br>IN STREET ART MUSEUM</a></h4>
-						<h4><a href="#" title="Read">by Uldus</a></h4>
+						<h4 class="name"><a href="#" title="Read">by Uldus</a></h4>
 						<div><span class="news-snip-date">08.08.2016 - 08.08.2016</span></div>
 						<div><span class="news-snip-date">In Anna Nova Gallery</span></div>
 					</div>
@@ -178,7 +183,7 @@
 					</a>
 					<div class="news-snip-content">
 						<h4><a href="#" title="Read">ARTISTS OF ANNA NOVA<br>IN STREET ART MUSEUM</a></h4>
-						<h4><a href="#" title="Read">by Uldus</a></h4>
+						<h4 class="name"><a href="#" title="Read">by Uldus</a></h4>
 						<div><span class="news-snip-date">08.08.2016 - 08.08.2016</span></div>
 						<div><span class="news-snip-date">In Anna Nova Gallery</span></div>
 					</div>
@@ -189,11 +194,12 @@
 					</a>
 					<div class="news-snip-content">
 						<h4><a href="#" title="Read">ARTISTS OF ANNA NOVA<br>IN STREET ART MUSEUM</a></h4>
-						<h4><a href="#" title="Read">by Uldus</a></h4>
+						<h4 class="name"><a href="#" title="Read">by Uldus</a></h4>
 						<div><span class="news-snip-date">08.08.2016 - 08.08.2016</span></div>
 						<div><span class="news-snip-date">In Anna Nova Gallery</span></div>
 					</div>
 				</div>
+
 				<div class="action 12u$ align-center news-more"><a class="button special">VIEW MORE</a></div>
 			</section>
 		</div>
@@ -265,6 +271,9 @@
 
 		<!-- SLICK -->
 		<script src="assets/js/slick/slick.js"></script>
+
+		<!-- Scrollspy -->
+		<script src="assets/js/scrollspy.js"></script>
 
 		<!-- New scripts -->
 		<script src="assets/js/scripts.js"></script>

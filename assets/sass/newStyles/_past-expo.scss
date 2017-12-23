@@ -1,4 +1,5 @@
 .b-past-expo {
+	min-height: fit-content;
 
 	.news-snip {
 		padding-bottom: 130px!important;
@@ -15,8 +16,21 @@
 
 		&:nth-of-type(2n) {
 			padding-left: 5em;
+			@media (max-width: $small) {
+				padding-left: 2em;
+			}
 			@media (max-width: $xsmall) {
 				padding-left: 0;
+			}
+		}
+
+		&:nth-of-type(2n+1) {
+			padding-right: 5em;
+			@media (max-width: $small) {
+				padding-right: 2em;
+			}
+			@media (max-width: $xsmall) {
+				padding-right: 0;
 			}
 		}
 
@@ -25,6 +39,10 @@
 			@media (max-width: $xsmall) {
 				padding-left: 37px;
 				padding-right: 20px;
+			}
+
+			.name {
+				text-transform: uppercase;
 			}
 		}
 	}
