@@ -1220,9 +1220,28 @@ body {
 		width: 80em;
 	}
 	@media (max-width: $small) {
-		width: 70em;
+		width: 100%;
+		padding-left: 20px!important;
+		padding-right: 20px!important;
 	}
 	@media (max-width: $xsmall) {
 		width: 100%!important;
+		padding-left: 0!important;
+		padding-right: 0!important;
+	}
+}
+
+#banner {
+
+	.banner-menu {
+		@media (max-width: $small) {
+			display: none;
+		}
+	}
+}
+
+#header {
+	@media (max-width: $small) {
+		top: 0;
 	}
 }
