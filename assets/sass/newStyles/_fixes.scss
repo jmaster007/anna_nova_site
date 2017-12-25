@@ -565,6 +565,9 @@ h2.block-title {
 	}
 
 	.news-snip-content {
+		@media (max-width: $xsmall) {
+			padding: 0 2em;
+		}
 
 		a:hover {
 			color: rgb(229, 48, 48);
@@ -884,6 +887,7 @@ body {
 
 		.news-snip-last {
 			left: -35px;
+			z-index: 1;
 		}
 	}
 }
@@ -1207,5 +1211,18 @@ body {
 
 	#header {
 		top: 770px;
+	}
+}
+
+.container {
+	width: 80em;
+	@media (max-width: $large) {
+		width: 80em;
+	}
+	@media (max-width: $small) {
+		width: 70em;
+	}
+	@media (max-width: $xsmall) {
+		width: 100%!important;
 	}
 }
