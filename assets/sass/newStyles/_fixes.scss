@@ -807,6 +807,12 @@ body {
 					}
 				}
 
+                & .lg-black {
+                    @media (max-width: $xsmall) {
+                        display: none;
+                    }
+                }
+
 				#an-backtotop, #header-nav {
 					animation: fade .5s;
 					@media (max-width: $xsmall) {
