@@ -23,10 +23,12 @@
         @media (max-width: $xsmall) {
             font-size: 15px;
             line-height: 26px;
+            padding: 0 20px;
         }
 
         a {
             color: #000;
+            text-transform: uppercase;
         }
     }
 

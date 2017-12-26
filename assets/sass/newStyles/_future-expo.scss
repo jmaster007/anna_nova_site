@@ -2,24 +2,36 @@
 	padding-bottom: 110px;
 	border-bottom: 1px solid #000;
 	margin: 0;
-	margin-bottom: 140px;
 	min-height: fit-content;
+    padding-top: 135px;
 	@media (max-width: $large) {
+        padding-top: 85px;
 		padding-bottom: 70px;
-		margin-bottom: 100px;
 	}
 	@media (max-width: $small) {
+        padding-top: 80px;
 		padding-bottom: 90px;
-		margin-bottom: 100px;
 	}
 	@media (max-width: $xsmall) {
-		padding-bottom: 50px;
-		margin-bottom: 60px;
+		padding-bottom: 0;
+        border-bottom: none;
+
+        &.row:after {
+            content: '';
+            width: calc(100% - 40px);
+            height: 1px;
+            background: #000;
+            bottom: 50px;
+            margin: 0 20px;
+        }
 	}
 
 	.news-snip {
 		padding-right: 0;
 		padding-left: 0;
+        @media (max-width: $xsmall) {
+            padding-bottom: 52px !important;
+        }
 	}
 
 	.news-snip-content {
