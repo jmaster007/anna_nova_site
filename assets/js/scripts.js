@@ -291,6 +291,14 @@ $(document).ready(function() {
         setDescHeight();
     });
 
+    // set mustread-carousel arrow position
+    function setCarouselArrowPosition() {
+        var carouselHeightImage = $('.mustread-carousel .slick-slide img').height();
+        var carouselArrowPosition = (carouselHeightImage - 35) / 2;
+        $('.mustread-carousel .slick-arrow').css('top', carouselArrowPosition);
+    };
+    setCarouselArrowPosition();
+
     $(window).on('resize', function(){
         if ($(window).width() <= 1279) {
             setDescHeight();
@@ -300,6 +308,7 @@ $(document).ready(function() {
         //
         setFlexImages();
         setScrollspy();
+        setCarouselArrowPosition();
     });
 });
 
