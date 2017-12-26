@@ -226,7 +226,14 @@
                 .expand {
                     @media (max-width: $xsmall) {
                         padding-top: 6px;
-                        display: none;
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 0.3s ease-in-out;
+                    }
+                }
+                .expand.open {
+                    @media (max-width: $xsmall) {
+                        max-height: 350px;
                     }
                 }
             }
@@ -311,9 +318,7 @@
 .fancybox-is-open {
 
     .b-main-modal {
-        @media (max-width: $small) {
-            display: flex!important;
-            align-items: center;
-        }
+        display: flex!important;
+        align-items: center;
     }
 }
