@@ -250,6 +250,10 @@
 
             & + .item {
                 margin-left: 15px;
+                @media (max-width: $small) {
+                    margin-left: 0;
+                    margin-right: 15px;
+                }
             }
         }
     }
@@ -258,16 +262,29 @@
 .author-page {
 
     .project-item {
-        margin-left: calc((100% - 80em) / 2 + 2em);
-        @media (max-width: $large) {
-            margin-left: calc((100% - 70em) / 2 + 2em);
-        }
-        @media (max-width: 1024px) {
-            margin-left: calc(5% + 2em);
-        }
-        @media (max-width: $small) {
-            margin-left: 20px;
-            margin-right: 20px;
+
+        .flickity-slider {
+
+            .item {
+
+                &.headline {
+                    padding-left: calc((100% - 80em) / 2 + 2em);
+                    // @media (max-width: $large) {
+                    //     margin-left: calc((100% - 70em) / 2 + 2em);
+                    // }
+                    // @media (max-width: 1024px) {
+                    //     margin-left: calc(5% + 2em);
+                    // }
+                    @media (max-width: $small) {
+                        padding-left: calc(20px + 2em);
+                        padding-right: calc(20px + 2em);
+                    }
+                    @media (max-width: $xsmall) {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                    }
+                }
+            }
         }
     }
 }
