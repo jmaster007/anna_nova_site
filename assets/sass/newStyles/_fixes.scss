@@ -774,6 +774,7 @@ body {
 
 			.sub-scroll-menu {
 				opacity: 0;
+                display: none;
 				transition: none;
 
 				.item {
@@ -783,12 +784,17 @@ body {
 
 			&.fade-fast {
 				animation: fade .5s;
+
+                & .sub-scroll-menu {
+                    display: none;
+                }
 			}
 
 			&.sticky {
 
 				.sub-scroll-menu {
-					opacity: 1;
+					opacity: 0;
+                    display: none;
 					transition: opacity .5s ease-in-out;
 				}
 			}
@@ -798,6 +804,7 @@ body {
 
 				.sub-scroll-menu {
 					opacity: 1;
+                    display: block;
 					transition: opacity .5s ease-in-out;
 					visibility: visible;
 
@@ -809,6 +816,12 @@ body {
 						}
 					}
 				}
+
+                & .lg-black {
+                    @media (max-width: $xsmall) {
+                        display: none;
+                    }
+                }
 
 				#an-backtotop, #header-nav {
 					animation: fade .5s;
