@@ -186,7 +186,7 @@ $(document).ready(function() {
                 }
             }
             if (parseInt($(window).width()) < 769) {
-                if ($(this).scrollTop() > 230) {
+                if ($(this).scrollTop() > 315) {
                     $('header').addClass("sticky");
                 }
                 else {
