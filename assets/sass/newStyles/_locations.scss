@@ -54,6 +54,10 @@
 		.locations-type {
 			padding: 0 10px;
 
+            @media (max-width: $xsmall) {
+                padding: 0 20px;
+            }
+
 			&#list-block {
 				display: flex;
 				margin-top: 50px;
