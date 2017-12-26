@@ -209,7 +209,7 @@ $(document).ready(function() {
             flag = true;
             setTimeout(function(){ flag = false; }, 100);
             if ( $(window).width() <= 768 ) {
-                $(this).toggleClass('open').siblings('.expand').slideToggle('slow');
+                $(this).toggleClass('open').siblings('.expand').toggleClass('open');
             }
         }
     });
