@@ -75,7 +75,6 @@ $(document).ready(function() {
             dots: false,
             infinite: true,
             speed: 300,
-            centerMode: true,
             prevArrow: '<button type="button" class="slick-prev"><span class="arr lft"></span></button>',
             nextArrow: '<button type="button" class="slick-next"><span class="arr rgt"></span></button>',
             slidesToShow: 4,
