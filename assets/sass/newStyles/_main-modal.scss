@@ -318,9 +318,7 @@
 .fancybox-is-open {
 
     .b-main-modal {
-        @media (max-width: $small) {
-            display: flex!important;
-            align-items: center;
-        }
+        display: flex!important;
+        align-items: center;
     }
 }

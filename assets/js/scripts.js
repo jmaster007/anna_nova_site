@@ -281,7 +281,7 @@ $(document).ready(function() {
 
     // popup description positio
     function setDescHeight() {
-        if ($(window).width() <= 1280) {
+        if ($(window).width() <= 1279) {
             var descHeight = $('.main-modal-inner .content img').height();
             $('.project-description').css('top', descHeight + 26);
         }
@@ -292,7 +292,7 @@ $(document).ready(function() {
     });
 
     $(window).on('resize', function(){
-        if ($(window).width() <= 1280) {
+        if ($(window).width() <= 1279) {
             setDescHeight();
         } else {
             $('.project-description').css('top', 'auto');
