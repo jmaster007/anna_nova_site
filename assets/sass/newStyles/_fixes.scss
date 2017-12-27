@@ -223,6 +223,12 @@
 
 	.carousel {
 
+    & .flickity-prev-next-button.previous,
+    & .flickity-prev-next-button.next {
+        @media (max-width: $small) {
+            display: none;
+        }
+    }
 		.flickity-prev-next-button {
 			background: none!important;
 
@@ -268,6 +274,8 @@
 
 	.mask-cursor-right {
 		left: 0;
+    cursor: url(../../images/icon/StrelkaWhiteRight.png), auto;
+
 	}
 }
 
