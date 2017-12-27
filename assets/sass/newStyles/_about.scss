@@ -1,0 +1,54 @@
+.b-about {
+	padding: 0 400px;
+	margin-top: 220px;
+	@media (max-width: $large) {
+		padding: 0 100px;
+		margin-top: 130px;
+	}
+	@media (max-width: $small) {
+		padding: 0 50px;
+		margin-top: 120px;
+	}
+	@media (max-width: $xsmall) {
+		padding: 0 20px;
+		margin-top: 50px;
+	}
+
+	.row {
+
+		& + .row {
+			margin-top: 60px;
+			@media (max-width: $large) {
+				margin-top: 45px;
+			}
+			@media (max-width: $xsmall) {
+				margin-top: 40px;
+			}
+		}
+
+		.headline {
+			padding-left: 0;
+			font-family: "geometriabold";
+			font-size: 28px;
+			@media (max-width: $large) {
+				font-size: 24px;
+			}
+			@media (max-width: $small) {
+				font-size: 20px;
+			}
+			@media (max-width: $xsmall) {
+				padding: 0 20px;
+				margin-bottom: 15px;
+			}
+		}
+
+		.text {
+			padding-left: 0;
+			font-size: 14px;
+			line-height: 1.21;
+			@media (max-width: $xsmall) {
+				padding: 0 20px;
+			}
+		}
+	}
+}

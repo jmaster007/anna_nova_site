@@ -1277,3 +1277,18 @@ body {
 		top: 0;
 	}
 }
+
+.about-page {
+
+	#main {
+		padding-top: 0;
+	}
+
+	#header {
+		top: 0;
+
+		& > a[href="#nav"] {
+			background-image: url(../../images/icon/burger.svg);
+		}
+	}
+}

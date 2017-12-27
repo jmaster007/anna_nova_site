@@ -1,0 +1,89 @@
+.b-custom-map {
+	padding-top: 210px;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	@media (max-width: $large) {
+		padding-top: 130px;
+	}
+	@media (max-width: $small) {
+		padding-top: 125px;
+		min-height: 100vh;
+		height: auto;
+	}
+	@media (max-width: $xsmall) {
+		padding-top: 130px;
+	}
+
+	.map {
+		margin-bottom: 115px;
+		width: 100%;
+		flex: 1;
+		border: 1px solid rgba(0,0,0,.1);
+		@media (max-width: $large) {
+			margin-bottom: 35px;
+		}
+		@media (max-width: $small) {
+			margin-bottom: 40px;
+			height: 400px;
+		}
+		@media (max-width: $xsmall) {
+			margin-bottom: 10px;
+		}
+	}
+
+	.address-info {
+		padding: 0 140px;
+		@media (max-width: $large) {
+			padding: 0 100px;
+		}
+		@media (max-width: $small) {
+			padding: 0 50px;
+		}
+		@media (max-width: $xsmall) {
+			padding: 0 20px;
+		}
+
+		.item {
+			font-size: 28px;
+			line-height: normal;
+			padding-left: 0;
+			color: #000;
+			@media (max-width: $large) {
+				font-size: 24px;
+				letter-spacing: -1px;
+			}
+			@media (max-width: $small) {
+				font-size: 20px;
+			}
+			@media (max-width: $xsmall) {
+				text-align: center;
+				margin-top: 25px;
+			}
+
+			.headline {
+				font-family: "geometriabold";
+			}
+
+			p {
+				margin: 20px 0 0;
+				font-size: 28px;
+				@media (max-width: $large) {
+					font-size: 14px;
+					letter-spacing: -.5px;
+				}
+			}
+
+			&.left-padding {
+				padding-left: 30%;
+				@media (max-width: $xsmall) {
+					padding-left: 0;
+				}
+			}
+
+			a {
+				color: #000;
+			}
+		}
+	}
+}
