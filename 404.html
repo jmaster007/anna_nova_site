@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>404 Not Found</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link href="../apple-touch-icon.png" rel="apple-touch-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <style type="text/css">
+        .no-js #loader { display: none;  }
+        .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+        .an-loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: #fff;
+        }
+        .an-loader-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 120px;
+            height: 120px;
+            margin: -60px 0 0 -60px;
+            background: url(images/preload.svg) center no-repeat;
+            -webkit-animation:spin 4s linear infinite;
+            -moz-animation:spin 4s linear infinite;
+            animation:spin 4s linear infinite;
+        }
+        @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+        @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+        @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+    </style>
+</head>
+
+<body class="error-404">
+    <!-- LOADER -->
+    <div class="an-loader"><span class="an-loader-img"></span></div>
+
+    <!-- HEADER -->
+    <header id="header" class="">
+        <a id="an-backtotop" class="lg-black" href="http://annanova-gallery.ru" onclick="$('#top').animatescroll();"></a>
+        <a href="#nav" id="header-nav"></a>
+    </header>
+
+    <!-- NAV -->
+    <nav id="nav">
+        <div class="nav-content">
+            <a class="lg-black only-small only-xsmall" href="http://annanova-gallery.ru"></a>
+            <ul class="links align-right">
+                <li><a href="artists.html">ARTISTS</a></li>
+                <li><a>EXHIBITIONS</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a>ART FAIRS</a></li>
+                <li><a>PROJECTS</a></li>
+                <li><a href="booklet.html">BOOKLET</a></li>
+                <li><a>28 BUGS SHOP</a></li>
+                <li><a>ABOUT</a></li>
+                <li id="lang"><a></a></li>
+            </ul>
+            <ul class="nav-social">
+                <li class="telegram"><a href="https://t.me/annanovagallery"></a></li>
+                <li class="insta"><a href="https://www.instagram.com/annanova_gallery/"></a></li>
+                <li class="vk"><a href="https://vk.com/annanovagallery"></a></li>
+                <li class="fb"><a href="https://www.facebook.com/annanova.artgallery/"></a></li>
+            </ul>
+        </div>
+        <div class="nav-footer">
+            <a><i class="fa fa-map-marker" aria-hidden="true"></i>Zhukovskogo St., 28</a>
+            <span><strong>Tue - Sat</strong><br>12:00 – 19:00</span>
+        </div>
+    </nav>
+    <div id="nav-mask"></div>
+
+
+
+    <div id="main" class="container">
+        <div class="text">Looks like something went wrong.<br>Don’t worry, we’re hard at work getting that fixed.</div>
+    </div>
+
+    <footer id="footer">
+        <div class="row 0%">
+            <div class="4u 12u(small) fit align-left(">
+                <h4>PARTNERSHIP</h4>
+                <p><a href="">For collectors, designers, museums, etc.</a></p>
+            </div>
+            <div class="4u 12u(small) align-center">
+                <h4>CONTACT US</h4>
+                <p><a href="tel:+7(812)275-97-62">+7 (812) 275-97-62</a></p>
+            </div>
+            <div class="4u 12u(small) align-right">
+                <div class="email-us">
+                    <h4>EMAIL US</h4>
+                    <p><a href="mailto:info@annanova-gallery.ru">info@annanova-gallery.ru</a></p>
+                </div>
+            </div>
+            <div class="12u copyright">© 2017 Anna Nova Gallery</div>
+        </div>
+    </footer>
+
+    <!-- SKELJS -->
+    <script src="assets/js/skel/skel.min.js"></script>
+    <script src="assets/js/skel/skel-viewport.min.js"></script>
+    <script src="assets/js/skel/skel-layout.min.js"></script>
+
+    <!-- JQUERY -->
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+
+    <!-- DESANDRO -->
+    <script src="assets/js/desandro/flickity.min.js"></script>
+    <script src="assets/js/desandro/flickity.bg-lazyload.js"></script>
+    <script src="assets/js/desandro/isotope.pkgd.min.js"></script>
+
+    <!-- WOWJS -->
+    <script src="assets/js/wowjs/wow.min.js"></script>
+
+    <!-- MAINJS -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- New scripts -->
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
