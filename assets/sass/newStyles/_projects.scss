@@ -28,7 +28,7 @@
                 display: block;
                 margin-bottom: 15px;
                 font-family: 'geometriabold';
-                padding-left: 0;
+                padding-left: 20px;
             }
             @media (max-width: $xsmall) {
                 padding-left: 0;
@@ -105,11 +105,14 @@
 
             &.headline {
                 width: 540px;
+                box-sizing: content-box;
                 @media (max-width: $large) {
                     width: 390px;
                 }
                 @media (max-width: $small) {
-                    display: none;
+                    width: 20px;
+                    padding: 0!important;
+                    opacity: 0;
                 }
 
                 .title {
@@ -153,7 +156,8 @@
                 text-transform: uppercase;
                 font-family: 'geometriabold';
                 font-size: 24px;
-                padding: 110px 60px 0;
+                padding-top: 110px;
+                padding-left: 60px;
 
                 a {
                     color: #000;
@@ -165,13 +169,17 @@
                     }
                 }
             }
-        }
 
-        .last {
-            background: url(../../images/author/goto.svg) no-repeat center;
-            width: 220px;
-            height: 300px;
-            display: inline-block;
+            &.last {
+                width: calc((100% - 80em) / 2 + 2em);
+                margin-left: 0;
+                @media (max-width: $small) {
+                    width: calc(20px + 2em);
+                }
+                @media (max-width: $xsmall) {
+                    width: 20px;
+                }
+            }
         }
     }
 }
@@ -192,47 +200,72 @@
         .project-item {
             height: 405px;
 
-            .item {
-                width: 430px;
-                @media (max-width: $large) {
-                    width: auto;
-                }
-                @media (max-width: $small) {
-                    max-width: 320px;
-                }
-                @media (max-width: $xsmall) {
-                    max-width: 200px;
-                }
+            .flickity-row {
 
-                &.headline {
-                    padding-left: 15px;
-                }
-
-                .image {
-                    width: 100%;
-                    margin-bottom: 12px;
-                    height: 300px;
-                    overflow: hidden;
+                .item {
+                    width: 430px;
                     @media (max-width: $large) {
-                        height: 220px;
+                        width: 320px;
                     }
                     @media (max-width: $small) {
-                        height: 220px;
+                        max-width: 320px;
                     }
                     @media (max-width: $xsmall) {
-                        height: 140px;
-                    }
-                }
-
-                &.project-headline {
-                    padding-left: 0;
-                    @media (max-width: $large) {
-                        width: 410px;
-                        padding-left: 0;
+                        max-width: 200px;
                     }
 
-                    a {
-                        color: #000;
+                    &.headline {
+                        padding-left: calc((100% - 80em) / 2);
+                        @media (max-width: $small) {
+                            padding-left: calc(20px + 2em);
+                            padding-right: calc(20px + 2em);
+                        }
+                        @media (max-width: $xsmall) {
+                            padding-left: 20px;
+                            padding-right: 20px;
+                        }
+                    }
+
+                    .image {
+                        width: 100%;
+                        margin-bottom: 12px;
+                        height: 300px;
+                        overflow: hidden;
+                        @media (max-width: $large) {
+                            height: 220px;
+                        }
+                        @media (max-width: $small) {
+                            height: 220px;
+                        }
+                        @media (max-width: $xsmall) {
+                            height: 140px;
+                        }
+
+                        img {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+
+                    &.project-headline {
+                        @media (max-width: $large) {
+                            width: 410px;
+                        }
+
+                        a {
+                            color: #000;
+                        }
+                    }
+
+                    &.last {
+                        width: calc((100% - 80em) / 2 + 2em);
+                        margin-left: 0;
+                        @media (max-width: $small) {
+                            width: calc(20px + 2em);
+                        }
+                        @media (max-width: $xsmall) {
+                            width: 20px;
+                        }
                     }
                 }
             }

@@ -31,6 +31,15 @@
     	@media (max-width: $small) {
     		font-size: 0;
     	}
+
+        .name {
+            opacity: 0;
+            transition: opacity .6s ease-in-out;
+
+            &.show {
+                opacity: 1;
+            }
+        }
     }
 }
 

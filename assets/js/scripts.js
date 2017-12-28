@@ -309,6 +309,10 @@ $(document).ready(function() {
         setScrollspy();
         setCarouselArrowPosition();
     });
+    //
+    setTimeout(function() {
+        $('#b-author-banner .name').addClass('show');
+    }, 600);
 });
 
 // блинк проектов

@@ -23,6 +23,7 @@
             width: 250px;
             height: 250px;
             border-radius: 50%;
+            overflow: hidden;
             margin-bottom: 49px;
             @media (max-width: $large) {
                 width: 180px;
@@ -76,6 +77,11 @@
         }
 
         .item {
+            margin-left: 0;
+            padding-left: 2em;
+            @media (max-width: $small) {
+                padding-left: 0;
+            }
 
             & + .item {
                 margin-top: 35px;
