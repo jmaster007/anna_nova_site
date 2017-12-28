@@ -837,6 +837,7 @@ body {
 
 				#an-backtotop, #header-nav {
 					animation: fade .5s;
+					display: none;
 					@media (max-width: $xsmall) {
 						display: none;
 					}
@@ -848,6 +849,16 @@ body {
 
 				#header-nav {
 					background-image: url(../../images/icon/burger.svg);
+				}
+
+				&.sticky {
+
+					#an-backtotop, #header-nav {
+						display: inline-block;
+						@media (max-width: $xsmall) {
+							display: none;
+						}
+					}
 				}
 			}
 		}
