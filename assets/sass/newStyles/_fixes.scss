@@ -311,7 +311,7 @@
 			}
 
 			&.white-inner-theme {
-				
+
 				.dot {
 					border: 1px solid #fff;
 					width: 13px;
@@ -324,11 +324,15 @@
 			}
 
 			&.black-inner-theme {
-				
+
 				.dot {
 					border: 1px solid #000;
 					width: 13px;
 					height: 13px;
+
+                    &:hover {
+                        background: #000;
+                    }
 
 					&.is-selected {
 						background: #000;
@@ -882,11 +886,11 @@ body {
 
 @keyframes fade {
   from {
-    opacity: 0; 
+    opacity: 0;
   }
-  to { 
+  to {
     opacity: 1;
-  }  
+  }
 }
 
 .isotope-grid {
@@ -1111,7 +1115,7 @@ body {
 .static-banner-logo {
 
 	&.white-inner-theme {
-		
+
 		.lg-white {
 			background-image: url(../../images/icon/logo-w.svg);
 
@@ -1130,7 +1134,7 @@ body {
 	}
 
 	&.black-inner-theme {
-		
+
 		.lg-white {
 			background-image: url(../../images/icon/logo-b.svg);
 
