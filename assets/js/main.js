@@ -220,7 +220,7 @@ var $carousel = $('.carousel').flickity({
 	// autoPlay: 10000,
 	pauseAutoPlayOnHover: false,
 	// freeScroll: true,
-	prevNextButtons: true,
+	prevNextButtons: false,
 	imagesLoaded: true,
 	wrapAround: true,
 	bgLazyLoad: 1,
@@ -348,31 +348,49 @@ $('.artists-list').each(function() {
 	// 	$('body').css('background-image', "url('images/artists/artists-bg.jpg')");
 	// });
 	$("a[href|='ALEXD.html']").hover(function() {
-		$('body').css('background-image', "url('images/1.jpg')");
+		setTimeout(function() {
+	        $('body').css('background-image', "url('images/1.jpg')");
+	    }, 150);
 	});
 	$("a[href|='UB.html']").hover(function() {
-		$('body').css('background-image', "url('images/2.jpg')");
+		setTimeout(function() {
+	        $('body').css('background-image', "url('images/2.jpg')");
+	    }, 150);
 	});
 	$("a[href|='ROST.html']").hover(function() {
-		$('body').css('background-image', "url('images/3.jpg')");
+		setTimeout(function() {
+	        $('body').css('background-image', "url('images/3.jpg')");
+	    }, 150);
 	});
 	$("a[href|='VLADK.html']").hover(function() {
-		$('body').css('background-image', "url('images/1.jpg')");
+		setTimeout(function() {
+	        $('body').css('background-image', "url('images/1.jpg')");
+	    }, 150);
 	});
 	$("a[href|='BORK.html']").hover(function() {
-		$('body').css('background-image', "url('images/2.jpg')");
+		setTimeout(function() {
+	        $('body').css('background-image', "url('images/2.jpg')");
+	    }, 150);
 	});
 	$("a[href|='ANAP.html']").hover(function() {
-		$('body').css('background-image', "url('images/artists/1.jpg')");
+		setTimeout(function() {
+	        $('body').css('background-image', "url('images/artists/1.jpg')");
+	    }, 150);
 	});
 	$("a[href|='ANDK.html']").hover(function() {
-		$('body').css('background-image', "url('images/artists/2.jpg')");
+		setTimeout(function() {
+	        $('body').css('background-image', "url('images/artists/2.jpg')");
+	    }, 150);
 	});
 	$("a[href|='ALK.html']").hover(function() {
-		$('body').css('background-image', "url('images/artists/3.jpg')");
+		setTimeout(function() {
+	        $('body').css('background-image', "url('images/artists/3.jpg')");
+	    }, 150);
 	});
 	$("a[href|='ALJOSCHA.html']").hover(function() {
-		$('body').css('background-image', "url('images/artists/3.jpg')");
+		setTimeout(function() {
+	        $('body').css('background-image', "url('images/artists/3.jpg')");
+	    }, 150);
 	});
 })
 

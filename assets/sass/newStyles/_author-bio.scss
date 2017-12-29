@@ -108,9 +108,8 @@
                     margin-bottom: 5px;
                     line-height: 40px;
                     border-top: 1px solid #000;
-                    margin: 0 20px;
+                    margin: 0;
                     padding: 0 5px;
-                    max-width: calc(100% - 20px);
                 }
 
                 &:after {
@@ -134,7 +133,7 @@
                     max-height: 0;
                     overflow: hidden;
                     transition: max-height .3s ease-in-out;
-                    padding: 0 25px;
+                    padding: 0 20px;
                 }
 
                 .headline {
@@ -158,6 +157,10 @@
                 .personal-text {
                     columns: 2;
                     column-gap: 2em;
+                    padding-left: 0;
+                    @media (max-width: $xsmall) {
+                        columns: 1;
+                    }
                 }
 
                 p {

@@ -313,6 +313,10 @@ $(document).ready(function() {
     setTimeout(function() {
         $('#b-author-banner .name').addClass('show');
     }, 600);
+    //
+    $('.carousel .mask-cursor-right').on('click', function() {
+        $('.carousel').flickity( 'next' );
+    });
 });
 
 // блинк проектов

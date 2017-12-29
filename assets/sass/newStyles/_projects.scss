@@ -30,9 +30,6 @@
                 font-family: 'geometriabold';
                 padding-left: 20px;
             }
-            @media (max-width: $xsmall) {
-                padding-left: 0;
-            }
 
             .title {
                 margin-bottom: 5px;
@@ -194,7 +191,7 @@
         }
         @media (max-width: $xsmall) {
             margin-bottom: 85px;
-            padding-left: 20px;
+            padding-left: 0;
         }
 
         .project-item {
@@ -250,6 +247,9 @@
                     &.project-headline {
                         @media (max-width: $large) {
                             width: 410px;
+                        }
+                        @media (max-width: $small) {
+                            width: 20px;
                         }
 
                         a {
