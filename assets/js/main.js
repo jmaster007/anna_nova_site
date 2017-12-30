@@ -350,47 +350,47 @@ $('.artists-list').each(function() {
 	$("a[href|='ALEXD.html']").hover(function() {
 		setTimeout(function() {
 	        $('body').css('background-image', "url('images/1.jpg')");
-	    }, 750);
+	    }, 300);
 	});
 	$("a[href|='UB.html']").hover(function() {
 		setTimeout(function() {
 	        $('body').css('background-image', "url('images/2.jpg')");
-	    }, 750);
+	    }, 300);
 	});
 	$("a[href|='ROST.html']").hover(function() {
 		setTimeout(function() {
 	        $('body').css('background-image', "url('images/3.jpg')");
-	    }, 750);
+	    }, 300);
 	});
 	$("a[href|='VLADK.html']").hover(function() {
 		setTimeout(function() {
 	        $('body').css('background-image', "url('images/1.jpg')");
-	    }, 750);
+	    }, 300);
 	});
 	$("a[href|='BORK.html']").hover(function() {
 		setTimeout(function() {
 	        $('body').css('background-image', "url('images/2.jpg')");
-	    }, 750);
+	    }, 300);
 	});
 	$("a[href|='ANAP.html']").hover(function() {
 		setTimeout(function() {
 	        $('body').css('background-image', "url('images/artists/1.jpg')");
-	    }, 750);
+	    }, 300);
 	});
 	$("a[href|='ANDK.html']").hover(function() {
 		setTimeout(function() {
 	        $('body').css('background-image', "url('images/artists/2.jpg')");
-	    }, 750);
+	    }, 300);
 	});
 	$("a[href|='ALK.html']").hover(function() {
 		setTimeout(function() {
 	        $('body').css('background-image', "url('images/artists/3.jpg')");
-	    }, 750);
+	    }, 300);
 	});
 	$("a[href|='ALJOSCHA.html']").hover(function() {
 		setTimeout(function() {
 	        $('body').css('background-image', "url('images/artists/3.jpg')");
-	    }, 750);
+	    }, 300);
 	});
 })
 
