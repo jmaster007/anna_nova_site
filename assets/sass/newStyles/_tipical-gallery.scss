@@ -23,13 +23,13 @@
           background-position: center center;
 
           @media (max-width: $xsmall) {
-            height: 180px;
+            height: 200px;
           }
           @media (min-width: $xsmall) {
             height: 424px;
           }
           @media (min-width: $small) {
-            height: 812px;
+            height: 520px;
           }
         }
 
