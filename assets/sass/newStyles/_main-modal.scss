@@ -241,28 +241,34 @@
     }
 
     .fancybox-close-small {
+        box-sizing: content-box;
+        padding: 20px;
         width: 28px;
         height: 28px;
         outline: 0 none;
         background: url(../../images/project/x.svg) no-repeat;
         background-size: 100%;
-        top: 30px;
-        right: 34px;
+        top: 10px;
+        right: 14px;
         position: absolute;
         cursor: pointer;
         box-shadow: none;
         z-index: 999;
+        background-size: 28px 28px;
+        background-position: center center;
         @media (max-width: $small) {
-            width: 18px;
-            height: 18px;
-            top: 40px;
-            right: 40px;
-        }
-        @media (max-width: $xsmall) {
             width: 18px;
             height: 18px;
             top: 20px;
             right: 20px;
+            background-size: 18px 18px;
+        }
+        @media (max-width: $xsmall) {
+            width: 18px;
+            height: 18px;
+            top: 0px;
+            right: 0px;
+            background-size: 18px 18px;
         }
 
         &:after {
