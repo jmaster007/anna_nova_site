@@ -15,7 +15,26 @@
         height: 100%;
         cursor: url(../../images/icon/StrelkaWhiteRight.png), auto;
 
+
+        & .item-image {
+          width: 100%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+
+          @media (max-width: $xsmall) {
+            height: 180px;
+          }
+          @media (min-width: $xsmall) {
+            height: 424px;
+          }
+          @media (min-width: $small) {
+            height: 812px;
+          }
+        }
+
         .holder {
+            width: 100%;
             max-width: 100%;
             overflow: hidden;
 
