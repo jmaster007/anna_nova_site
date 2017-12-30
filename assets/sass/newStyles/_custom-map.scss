@@ -29,7 +29,7 @@
 		}
 		@media (max-width: $small) {
 			margin-bottom: 40px;
-			height: 400px;
+      height: 400px;
 		}
 		@media (max-width: $xsmall) {
 			margin-bottom: 10px;
@@ -39,13 +39,13 @@
 	.address-info {
 		padding: 0 140px;
 		@media (max-width: $large) {
-			padding: 0 100px;
+			padding: 0 100px 35px;
 		}
 		@media (max-width: $small) {
-			padding: 0 50px;
+			padding: 0 50px 40px;
 		}
 		@media (max-width: $xsmall) {
-			padding: 0 20px;
+			padding: 0 20px 10px;
 		}
 
 		.item {
