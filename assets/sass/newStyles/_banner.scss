@@ -1,10 +1,10 @@
 #b-banner {
     background-size: cover;
     text-align: center;
-    min-height: 100vh;
+    min-height: 580px;
     position: relative;
-    @media (max-width: $small) {
-    	min-height: 580px;
+    @media (min-width: $small) {
+      min-height: 100vh;
     }
     @media (max-width: $xsmall) {
     	min-height: 230px;
@@ -34,11 +34,12 @@
             font-size: 110px;
             margin-bottom: 24px;
             line-height: normal;
+            display: none;
             @media (max-width: $large) {
                 font-size: 72px;
             }
-            @media (max-width: $small) {
-                display: none;
+            @media (min-width: $small) {
+              display: block;
             }
         }
 
@@ -78,11 +79,11 @@
 
             &.large {
                 display: none;
-                @media (min-width: $small) {
-                    display: block;
-                }
                 @media (max-width: $small) {
                     display: none;
+                }
+                @media (min-width: $small) {
+                    display: block;
                 }
             }
 
