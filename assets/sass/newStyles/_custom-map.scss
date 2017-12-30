@@ -10,9 +10,13 @@
 		padding-top: 125px;
 		min-height: 100vh;
 		height: auto;
+    width: calc(100% + 40px);
+    margin-left: -20px;
 	}
 	@media (max-width: $xsmall) {
 		padding-top: 130px;
+    width: 100%;
+    margin-left: 0;
 	}
 
 	.map {
