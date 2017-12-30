@@ -870,10 +870,10 @@ body {
 
 			&.banner-bottom {
 				@media (max-width: $small) {
-			    	top: 725px;
+			    	top: 750px;
 			    }
 			    @media (max-width: $xsmall) {
-			    	top: 315px;
+			    	top: 320px;
 			    }
 			}
 		}
@@ -1254,12 +1254,12 @@ body {
 	}
 }
 
-.project-page {
+// .project-page {
 
-	#header {
-		top: 770px;
-	}
-}
+// 	#header {
+// 		top: 770px;
+// 	}
+// }
 
 .container {
 	width: 80em;
