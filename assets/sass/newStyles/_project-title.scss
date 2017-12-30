@@ -1,9 +1,9 @@
 .b-project-title {
     text-align: center;
-    display: none;
+    display: block;
     line-height: normal;
-    @media (max-width: $small) {
-        display: block;
+    @media (min-width: $small) {
+        display: none;
     }
 
     .title {

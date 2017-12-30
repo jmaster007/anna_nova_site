@@ -307,6 +307,20 @@ $(document).ready(function() {
 
     $('.b-works .item').on('click', function () {
         setDescHeight();
+    // popup slider
+    $('.popup-slider').slick({
+      arrows: false,
+      adaptiveHeight: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            fade: true,
+            cssEase: 'linear',
+          }
+        }
+      ]
+    });
     });
 
     // set mustread-carousel arrow position
@@ -336,13 +350,28 @@ $(document).ready(function() {
     $('.carousel .mask-cursor-right').on('click', function() {
         $('.carousel').flickity( 'next' );
     });
+
+
+    // author project-item link hover
+    $('.project-item .headline a').hover(
+      function(){
+        $(this).addClass('active');
+        $(this).parent('div').siblings('div').find('a').addClass('active');
+      },
+      function(){
+        $(this).removeClass('active');
+        $(this).parent('div').siblings('div').find('a').removeClass('active');
+      }
+    );
+
+
 });
 
 // блинк проектов
 function blinkContent() {
-    $('.main-modal-inner .content').addClass('now-hidden');
+    $('.main-modal-inner .content .project-description').addClass('now-hidden');
     setTimeout(function() {
-        $('.main-modal-inner .content').removeClass('now-hidden');
+        $('.main-modal-inner .content .project-description').removeClass('now-hidden');
     }, 600);
 }
 

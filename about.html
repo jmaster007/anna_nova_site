@@ -46,15 +46,27 @@
 			var map;
 			// Функция initMap которая отрисует карту на странице
 			function initMap() {
-			    // В переменной map создаем объект карты GoogleMaps и вешаем эту переменную на <div id="map"></div>
-			    map = new google.maps.Map(document.getElementById('map'), {
-			        // При создании объекта карты необходимо указать его свойства
-			        // center - определяем точку на которой карта будет центрироваться
-			        center: {lat: 59.935973, lng: 30.359831},
-			        // zoom - определяет масштаб. 0 - видно всю платнеу. 18 - видно дома и улицы города.
-			        zoom: 14,
-			        styles: [{"featureType": "water","elementType": "all","stylers": [{"hue": "#ffffff"},{"saturation": -100},{"lightness": 100},{"visibility": "on"}]},{"featureType": "landscape","elementType": "all","stylers": [{"hue": "#ffffff"},{"saturation": -100},{"lightness": 100},{"visibility": "on"}]},{"featureType": "road","elementType": "geometry","stylers": [{"hue": "#000000"},{"saturation": -100},{"lightness": -100},{"visibility": "simplified"}]},{"featureType": "road","elementType": "labels","stylers": [{"hue": "#ffffff"},{"saturation": -100},{"lightness": 100},{"visibility": "off"}]},{"featureType": "poi","elementType": "all","stylers": [{"hue": "#ffffff"},{"saturation": -100},{"lightness": 100},{"visibility": "off"}]},{"featureType": "administrative","elementType": "all","stylers": [{"hue": "#ffffff"},{"saturation": 0},{"lightness": 100},{"visibility": "off"}]},{"featureType": "transit","elementType": "geometry","stylers": [{"hue": "#000000"},{"saturation": 0},{"lightness": -100},{"visibility": "on"}]},{"featureType": "transit","elementType": "labels","stylers": [{"hue": "#ffffff"},{"saturation": 0},{"lightness": 100},{"visibility": "off"}]}]
-			    });
+          // В переменной map создаем объект карты GoogleMaps и вешаем эту переменную на <div id="map"></div>
+          map = new google.maps.Map(document.getElementById('map'), {
+              // При создании объекта карты необходимо указать его свойства
+              // center - определяем точку на которой карта будет центрироваться
+              center: {lat: 59.935973, lng: 30.359831},
+              // zoom - определяет масштаб. 0 - видно всю платнеу. 18 - видно дома и улицы города.
+              zoom: 14,
+              styles: [{"featureType": "water","elementType": "all","stylers": [{"hue": "#ffffff"},{"saturation": -100},{"lightness": 100},{"visibility": "on"}]},{"featureType": "landscape","elementType": "all","stylers": [{"hue": "#ffffff"},{"saturation": -100},{"lightness": 100},{"visibility": "on"}]},{"featureType": "road","elementType": "geometry","stylers": [{"hue": "#000000"},{"saturation": -100},{"lightness": -100},{"visibility": "simplified"}]},{"featureType": "road","elementType": "labels","stylers": [{"hue": "#ffffff"},{"saturation": -100},{"lightness": 100},{"visibility": "off"}]},{"featureType": "poi","elementType": "all","stylers": [{"hue": "#ffffff"},{"saturation": -100},{"lightness": 100},{"visibility": "off"}]},{"featureType": "administrative","elementType": "all","stylers": [{"hue": "#ffffff"},{"saturation": 0},{"lightness": 100},{"visibility": "off"}]},{"featureType": "transit","elementType": "geometry","stylers": [{"hue": "#000000"},{"saturation": 0},{"lightness": -100},{"visibility": "on"}]},{"featureType": "transit","elementType": "labels","stylers": [{"hue": "#ffffff"},{"saturation": 0},{"lightness": 100},{"visibility": "off"}]}]
+          });
+          var myLatLng = { lat: 59.936102, lng: 30.3576963 };
+          var infowindow = new google.maps.InfoWindow({
+            content: 'Санкт-Петербург, ул. Жуковского, 28'
+          });
+          var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map
+          });
+          marker.setMap(map);
+          marker.addListener('click', function() {
+            infowindow.open(map, marker);
+          });
 			}
 		</script>
 
@@ -97,7 +109,7 @@
 		<!-- WOWJS -->
 		<script src="assets/js/wowjs/wow.min.js"></script>
 
-		
+
 
 		<!-- SLICK -->
 		<script src="assets/js/slick/slick.js"></script>
@@ -165,7 +177,7 @@
 						<div class="6u 12u$(small) item">
 							<div class="headline">АДРЕС:</div>
 							<p>Saint-Petersburg 191014<br>Jukovskogo street, 28</p>
-							<p>+7 (812) 275 97 62<br><a href="mailto:info@annanova-gallery.ru">info@annanova-gallery.ru</a></p>
+							<p><a href="tel:+78122759762">+7 (812) 275 97 62</a><br><a href="mailto:info@annanova-gallery.ru">info@annanova-gallery.ru</a></p>
 						</div>
 						<div class="6u 12u$(small)">
 							<div class="row">
@@ -175,7 +187,11 @@
 								</div>
 								<div class="6u 12u$(small) item left-padding">
 									<div class="headline">ПЛАН:</div>
-									<p>1 Flour<br>2 Flour<br>3 Flour</p>
+									<p>
+                    <a href="#">1 Flour</a><br>
+                    <a href="#">2 Flour</a><br>
+                    <a href="#">3 Flour</a>
+                  </p>
 								</div>
 							</div>
 						</div>
@@ -189,7 +205,7 @@
 					<div class="6u 12u$(small) text">
 						Галерея Anna Nova основана в Петербурге в 2005 году, в данный момент является одной из ведущих галерей в России.
 						<br><br>
-						Помимо продажи произведений современного искусства и выставочной деятельности галерея выполняет образовательную функцию организуя лекции, встречи, мастер-классы, кинопоказы, создавая площадку для общения художников и кураторов, профессионалов, коллекционеров и всех интересующихся развитием современного искусства. 
+						Помимо продажи произведений современного искусства и выставочной деятельности галерея выполняет образовательную функцию организуя лекции, встречи, мастер-классы, кинопоказы, создавая площадку для общения художников и кураторов, профессионалов, коллекционеров и всех интересующихся развитием современного искусства.
 					</div>
 				</div>
 				<div class="row">

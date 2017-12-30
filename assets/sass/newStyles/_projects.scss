@@ -22,8 +22,20 @@
             }
         }
 
+        & .title a,
+        & .date a {
+          color: #12110e;
+          text-decoration: none;
+        }
+
+        & .title a.active,
+        & .date a.active {
+          opacity: 0.7;
+        }
+
         .mobile-headline {
             display: none;
+
             @media (max-width: $small) {
                 display: block;
                 margin-bottom: 15px;
@@ -184,18 +196,19 @@
 .project-page {
 
     .b-projects {
-        margin-bottom: 170px;
+        margin-bottom: 120px;
         @media (max-width: $small) {
-            margin-bottom: 140px;
+            margin-bottom: 90px;
             padding-left: 30px;
         }
         @media (max-width: $xsmall) {
-            margin-bottom: 85px;
+            margin-bottom: 40px;
             padding-left: 0;
         }
 
         .project-item {
-            height: 405px;
+            /*height: 405px;*/
+            height: auto;
 
             .flickity-row {
 
@@ -277,7 +290,7 @@
 .b-projects {
 
     .flickity-row {
-        
+
         .item {
             margin-left: 0;
 
