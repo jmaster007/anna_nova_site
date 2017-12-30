@@ -254,6 +254,17 @@ $(document).ready(function() {
             }
         });
     }
+    //костыль для страницы ярмарки
+    if ( $('body').is('.exhibitions-page') ) {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 210) {
+                $('.sub-scroll-menu').addClass('visible');
+            }
+            else {
+                $('.sub-scroll-menu').removeClass('visible');
+            }
+        });
+    }
 
     // init Isotope
     var $grid = $('.isotope-grid').isotope({
