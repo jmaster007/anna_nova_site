@@ -22,8 +22,20 @@
             }
         }
 
+        & .title a,
+        & .date a {
+          color: #12110e;
+          text-decoration: none;
+        }
+
+        & .title a.active,
+        & .date a.active {
+          opacity: 0.7;
+        }
+
         .mobile-headline {
             display: none;
+
             @media (max-width: $small) {
                 display: block;
                 margin-bottom: 15px;
@@ -277,7 +289,7 @@
 .b-projects {
 
     .flickity-row {
-        
+
         .item {
             margin-left: 0;
 

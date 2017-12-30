@@ -336,6 +336,19 @@ $(document).ready(function() {
     $('.carousel .mask-cursor-right').on('click', function() {
         $('.carousel').flickity( 'next' );
     });
+
+
+    // author project-item link hover
+    $('.project-item .headline a').hover(
+      function(){
+        $(this).addClass('active');
+        $(this).parent('div').siblings('div').find('a').addClass('active');
+      },
+      function(){
+        $(this).removeClass('active');
+        $(this).parent('div').siblings('div').find('a').removeClass('active');
+      }
+    );
 });
 
 // блинк проектов
