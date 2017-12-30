@@ -196,18 +196,19 @@
 .project-page {
 
     .b-projects {
-        margin-bottom: 170px;
+        margin-bottom: 120px;
         @media (max-width: $small) {
-            margin-bottom: 140px;
+            margin-bottom: 90px;
             padding-left: 30px;
         }
         @media (max-width: $xsmall) {
-            margin-bottom: 85px;
+            margin-bottom: 40px;
             padding-left: 0;
         }
 
         .project-item {
-            height: 405px;
+            /*height: 405px;*/
+            height: auto;
 
             .flickity-row {
 
