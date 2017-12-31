@@ -124,6 +124,12 @@
                 @media (max-width: $xsmall) {
                     padding: 0 20px;
                 }
+                @media (min-width: $small) {
+                  position: absolute !important;
+                  top: 50% !important;
+                  transform: translate(0, -50%) !important;
+                  bottom: auto !important;
+                }
 
                 .title {
                     font-family: "geometriabold";
