@@ -24,12 +24,15 @@
 		width: 100%;
 		flex: 1;
 		border: 1px solid rgba(0,0,0,.1);
+
 		@media (max-width: $large) {
 			margin-bottom: 35px;
+            height: 420px !important;
+            flex: none;
 		}
 		@media (max-width: $small) {
 			margin-bottom: 40px;
-      height: 400px;
+            height: 285px;
 		}
 		@media (max-width: $xsmall) {
 			margin-bottom: 10px;
@@ -46,6 +49,10 @@
 		}
 		@media (max-width: $xsmall) {
 			padding: 0 20px 10px;
+
+            & .row {
+                margin: 0;
+            }
 		}
 
 		.item {

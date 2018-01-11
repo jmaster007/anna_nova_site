@@ -61,7 +61,10 @@
           });
           var marker = new google.maps.Marker({
             position: myLatLng,
-            map: map
+            map: map,
+            // icon: {
+            //     url: "images/markers/chart.png"
+            // }
           });
           marker.setMap(map);
           marker.addListener('click', function() {

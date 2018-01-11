@@ -10,11 +10,13 @@
 		margin-top: 120px;
 	}
 	@media (max-width: $xsmall) {
-		padding: 0 20px;
+		padding: 0px;
 		margin-top: 50px;
 	}
 
 	.row {
+        margin-left: 0;
+        margin-right: 0;
 
 		& + .row {
 			margin-top: 60px;
