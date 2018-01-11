@@ -167,11 +167,14 @@
 
 	.main-text {
 		font-size: 14px;
-		width: 735px;
+		width: 740px;
 		margin: 0 auto;
-		@media (max-width: $large) {
-			width: 500px;
-		}
+        @media (max-width: $large) {
+            width: 500px;
+        }
+        @media (min-width: $large) {
+            width: 740px;
+        }
 		@media (max-width: $small) {
 			width: 100%;
 		}
