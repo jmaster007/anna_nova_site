@@ -100,6 +100,14 @@
             }
         }
 
+        a.item {
+            &:first-child {
+                @media (max-width: $xsmall) {
+                    left: 20px !important;
+                }
+            }
+        }
+
         .item {
             line-height: normal;
 
@@ -166,7 +174,9 @@
                 font-family: 'geometriabold';
                 font-size: 24px;
                 padding-top: 110px;
-                padding-left: 60px;
+                padding-left: 40px;
+                padding-right: 40px;
+                margin-right: -5px !important;
 
                 a {
                     color: #000;
