@@ -11,12 +11,12 @@ $(document).ready(function() {
 		event.stopPropagation();
 	});
     //
-    function setFlexImages() {
-        if ( $('.flex-images').length != 0 ) {
-            $('.flex-images').flexImages({rowHeight: 180});
-        }
-    }
-    setFlexImages();
+    // function setFlexImages() {
+    //     if ( $('.flex-images').length != 0 ) {
+    //         $('.flex-images').flexImages({rowHeight: 180});
+    //     }
+    // }
+    // setFlexImages();
     //
     function setScrollspy() {
         if ( $('#header .sub-scroll-menu').length != 0 ) {
@@ -324,7 +324,12 @@ $(document).ready(function() {
             $('.project-description').css('top', 'auto');
         }
         //
-        setFlexImages();
+        // setFlexImages();
+        $('.flex-gall').justifiedGallery({
+            rowHeight :140,
+            lastRow : 'nojustify',
+            margins : 8
+        });
         setScrollspy();
         setCarouselArrowPosition();
     });
@@ -349,6 +354,12 @@ $(document).ready(function() {
         $(this).parent('div').siblings('div').find('a').removeClass('active');
       }
     );
+    //
+    $('.flex-gall').justifiedGallery({
+        rowHeight : 140,
+        lastRow : 'nojustify',
+        margins : 8
+    });
 });
 
 // блинк проектов
