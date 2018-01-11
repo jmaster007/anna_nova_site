@@ -936,7 +936,13 @@ body {
 }
 
 .artists-list {
-	columns: 3;
+    @media (min-width: $large) {
+        columns: 4;
+        column-gap: 4em;
+    }
+    @media (max-width: $large) {
+        columns: 3;
+    }
 	@media (max-width: $small) {
 		columns: 2;
 	}
@@ -946,10 +952,11 @@ body {
 }
 
 .artists-page {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
+    transition: background-image 0.75s ease-in-out;
 
     &:before {
         content: '';
@@ -961,9 +968,42 @@ body {
         background-color: rgba(0, 0, 0, 0.25);
     }
 
-	#main{
-		min-height: unset;
-	}
+    & #main{
+        @media (min-width: $small) {
+            min-height: unset;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    & .artists-list {
+        transform: translate3d(0,0,0);
+        @media (min-width: $small) {
+            margin: 0;
+        }
+    }
+
+    & .artists-list li {
+        text-align: center;
+        transform: translate3d(0,0,0);
+
+        @media (min-width: $large) {
+            padding: 25px 0;
+        }
+    }
+
+    & #footer {
+        @media (min-width: $small) {
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+        }
+    }
 }
 
 .news-tags {
