@@ -1317,3 +1317,10 @@ body {
 		}
 	}
 }
+
+.flex-gall {
+
+	& > a {
+		position: absolute;
+	}
+}
