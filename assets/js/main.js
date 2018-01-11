@@ -347,53 +347,72 @@ $('.artists-list').each(function() {
 	// }, function () {
 	// 	$('body').css('background-image', "url('images/artists/artists-bg.jpg')");
 	// });
-	$("a[href|='ALEXD.html']").hover(function() {
-		setTimeout(function() {
-	        $('body').css('background-image', "url('images/1.jpg')");
-	    }, 300);
+    var timer;
+	$("a[href|='ALEXD.html']").hover(
+                                     function() {
+        timer = setTimeout(function(){$('body').css('background-image', "url('images/1.jpg')");}, 300);
 	});
-	$("a[href|='UB.html']").hover(function() {
-		setTimeout(function() {
-	        $('body').css('background-image', "url('images/2.jpg')");
-	    }, 300);
-	});
-	$("a[href|='ROST.html']").hover(function() {
-		setTimeout(function() {
-	        $('body').css('background-image', "url('images/3.jpg')");
-	    }, 300);
-	});
-	$("a[href|='VLADK.html']").hover(function() {
-		setTimeout(function() {
-	        $('body').css('background-image', "url('images/1.jpg')");
-	    }, 300);
-	});
-	$("a[href|='BORK.html']").hover(function() {
-		setTimeout(function() {
-	        $('body').css('background-image', "url('images/2.jpg')");
-	    }, 300);
-	});
-	$("a[href|='ANAP.html']").hover(function() {
-		setTimeout(function() {
-	        $('body').css('background-image', "url('images/artists/1.jpg')");
-	    }, 300);
-	});
-	$("a[href|='ANDK.html']").hover(function() {
-		setTimeout(function() {
-	        $('body').css('background-image', "url('images/artists/2.jpg')");
-	    }, 300);
-	});
-	$("a[href|='ALK.html']").hover(function() {
-		setTimeout(function() {
-	        $('body').css('background-image', "url('images/artists/3.jpg')");
-	    }, 300);
-	});
+	$("a[href|='UB.html']").hover(
+        function() {
+            timer = setTimeout(function(){$('body').css('background-image', "url('images/2.jpg')");}, 300);
+        },
+        function () {
+            clearTimeout(timer);
+        }
+    );
+	$("a[href|='ROST.html']").hover(
+        function() {
+            timer = setTimeout(function(){$('body').css('background-image', "url('images/3.jpg')");}, 300);
+        },
+        function () {
+            clearTimeout(timer);
+        }
+    );
+	$("a[href|='VLADK.html']").hover(
+        function() {
+            timer = setTimeout(function(){$('body').css('background-image', "url('images/1.jpg')");}, 300);
+        },
+        function () {
+            clearTimeout(timer);
+        }
+    );
+	$("a[href|='BORK.html']").hover(
+        function() {
+            timer = setTimeout(function(){$('body').css('background-image', "url('images/2.jpg')");}, 300);
+        },
+        function () {
+            clearTimeout(timer);
+        }
+    );
+	$("a[href|='ANAP.html']").hover(
+        function() {
+            timer = setTimeout(function(){$('body').css('background-image', "url('images/artists/1.jpg')");}, 300);
+        },
+        function () {
+            clearTimeout(timer);
+        }
+    );
+	$("a[href|='ANDK.html']").hover(
+        function() {
+            timer = setTimeout(function(){$('body').css('background-image', "url('images/artists/2.jpg')");}, 300);
+        },
+        function () {
+            clearTimeout(timer);
+        }
+    );
+	$("a[href|='ALK.html']").hover(
+        function() {
+            timer = setTimeout(function(){$('body').css('background-image', "url('images/artists/3.jpg')");}, 300);
+        },
+        function () {
+            clearTimeout(timer);
+        }
+    );
 	$("a[href|='ALJOSCHA.html']").hover(function() {
-		setTimeout(function() {
-	        $('body').css('background-image', "url('images/artists/3.jpg')");
-	    }, 300);
+        timer = setTimeout(function(){$('body').css('background-image', "url('images/artists/3.jpg')");}, 300);
 	});
 })
-
+// clearTimeout(timer);
 
 // ISOTOPE ----------------------------------
 
