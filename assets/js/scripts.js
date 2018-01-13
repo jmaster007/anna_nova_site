@@ -325,11 +325,13 @@ $(document).ready(function() {
         }
         //
         // setFlexImages();
-        $('.flex-gall').justifiedGallery({
-            rowHeight :140,
-            lastRow : 'nojustify',
-            margins : 8
-        });
+        if ( $('.flex-gall').length != 0 ) {
+            $('.flex-gall').justifiedGallery({
+                rowHeight :140,
+                lastRow : 'nojustify',
+                margins : 8
+            });
+        }
         setScrollspy();
         setCarouselArrowPosition();
     });
@@ -355,11 +357,13 @@ $(document).ready(function() {
       }
     );
     //
-    $('.flex-gall').justifiedGallery({
-        rowHeight : 140,
-        lastRow : 'nojustify',
-        margins : 8
-    });
+    if ( $('.flex-gall').length != 0 ) {
+        $('.flex-gall').justifiedGallery({
+            rowHeight :140,
+            lastRow : 'nojustify',
+            margins : 8
+        });
+    }
 });
 
 // блинк проектов
