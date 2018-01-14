@@ -867,6 +867,7 @@ body {
 	&.author-page.second-screen {
 
 		#header {
+			top: 0!important;
 
 			&.banner-bottom {
 				@media (max-width: $small) {
@@ -875,6 +876,55 @@ body {
 			    @media (max-width: $xsmall) {
 			    	top: 320px;
 			    }
+
+			    #an-backtotop, #header-nav {
+			    	display: inline-block;
+			    	animation: none;
+			    }
+
+			    #an-backtotop {
+			    	background-image: url(../../images/icon/logo-w.svg);
+			    }
+
+			    #header-nav {
+			    	background-image: url(../../images/icon/burger-w.svg);
+			    }
+			}
+
+			.sub-scroll-menu {
+				position: absolute;
+				top: 100vh;
+				display: block;
+				opacity: 1;
+				@media (max-width: $small) {
+			    	top: 750px;
+			    }
+			    @media (max-width: $xsmall) {
+			    	top: 320px;
+			    }
+			}
+
+			&.sticky {
+				position: absolute;
+
+				.sub-scroll-menu {
+					position: static;
+				}
+
+				&.banner-bottom {
+
+				    #an-backtotop {
+				    	background-image: url(../../images/icon/logo-b.svg);
+				    }
+
+				    #header-nav {
+				    	background-image: url(../../images/icon/burger.svg);
+				    }
+				}
+			}
+
+			&.fade-fast {
+				animation: none;
 			}
 		}
 	}
@@ -882,6 +932,7 @@ body {
 	&.project-page.second-screen {
 
 		#header {
+			top: 0!important;
 
 			&.banner-bottom {
 				@media (max-width: $small) {
@@ -890,6 +941,55 @@ body {
 			    @media (max-width: $xsmall) {
 			    	top: 385px;
 			    }
+
+			    #an-backtotop, #header-nav {
+			    	display: inline-block;
+			    	animation: none;
+			    }
+
+			    #an-backtotop {
+			    	background-image: url(../../images/icon/logo-w.svg);
+			    }
+
+			    #header-nav {
+			    	background-image: url(../../images/icon/burger-w.svg);
+			    }
+			}
+
+			.sub-scroll-menu {
+				position: absolute;
+				top: 100vh;
+				display: block;
+				opacity: 1;
+				@media (max-width: $small) {
+			    	top: 770px;
+			    }
+			    @media (max-width: $xsmall) {
+			    	top: 385px;
+			    }
+			}
+
+			&.sticky {
+				position: absolute;
+
+				.sub-scroll-menu {
+					position: static;
+				}
+
+				&.banner-bottom {
+
+				    #an-backtotop {
+				    	background-image: url(../../images/icon/logo-b.svg);
+				    }
+
+				    #header-nav {
+				    	background-image: url(../../images/icon/burger.svg);
+				    }
+				}
+			}
+
+			&.fade-fast {
+				animation: none;
 			}
 		}
 	}
