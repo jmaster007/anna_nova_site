@@ -178,12 +178,20 @@ $(document).ready(function() {
     //костыль для страницы автора
     if ( $('body.author-page').is('.second-screen') ) {
         $(window).scroll(function () {
+            if ($(this).scrollTop() > $(window).height()) {
+                $('.sticky-scroll-menu').addClass('hide');
+            }
+            else {
+                $('.sticky-scroll-menu').removeClass('hide');
+            }
             if (parseInt($(window).width()) < 1281) {
                 if ($(this).scrollTop() > 750) {
                     $('header').addClass("sticky");
+                    $('.sticky-scroll-menu').addClass('hide');
                 }
                 else {
                     $('header').removeClass("sticky");
+                    $('.sticky-scroll-menu').removeClass('hide');
                 }
                 //
                 if ($(this).scrollTop() > 1 ) {
@@ -195,9 +203,11 @@ $(document).ready(function() {
             if (parseInt($(window).width()) < 769) {
                 if ($(this).scrollTop() > 320) {
                     $('header').addClass("sticky");
+                    $('.sticky-scroll-menu').addClass('hide');
                 }
                 else {
                     $('header').removeClass("sticky");
+                    $('.sticky-scroll-menu').removeClass('hide');
                 }
                 //
                 if ($(this).scrollTop() > 1 ) {
@@ -224,12 +234,20 @@ $(document).ready(function() {
     //костыль для страницы проекта
     if ( $('body.project-page').is('.second-screen') ) {
         $(window).scroll(function () {
+            if ($(this).scrollTop() > $(window).height()) {
+                $('.sticky-scroll-menu').addClass('hide');
+            }
+            else {
+                $('.sticky-scroll-menu').removeClass('hide');
+            }
             if (parseInt($(window).width()) < 1281) {
                 if ($(this).scrollTop() > 770) {
                     $('header').addClass("sticky");
+                    $('.sticky-scroll-menu').addClass('hide');
                 }
                 else {
                     $('header').removeClass("sticky");
+                    $('.sticky-scroll-menu').removeClass('hide');
                 }
                 //
                 if ($(this).scrollTop() > 1 ) {
@@ -241,9 +259,11 @@ $(document).ready(function() {
             if (parseInt($(window).width()) < 769) {
                 if ($(this).scrollTop() > 385) {
                     $('header').addClass("sticky");
+                    $('.sticky-scroll-menu').addClass('hide');
                 }
                 else {
                     $('header').removeClass("sticky");
+                    $('.sticky-scroll-menu').removeClass('hide');
                 }
                 //
                 if ($(this).scrollTop() > 1 ) {

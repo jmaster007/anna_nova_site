@@ -894,7 +894,7 @@ body {
 			.sub-scroll-menu {
 				position: absolute;
 				top: 100vh;
-				display: block;
+				display: none;
 				opacity: 1;
 				@media (max-width: $small) {
 			    	top: 750px;
@@ -909,6 +909,7 @@ body {
 
 				.sub-scroll-menu {
 					position: static;
+					display: block;
 				}
 
 				&.banner-bottom {
@@ -959,7 +960,7 @@ body {
 			.sub-scroll-menu {
 				position: absolute;
 				top: 100vh;
-				display: block;
+				display: none;
 				opacity: 1;
 				@media (max-width: $small) {
 			    	top: 770px;
@@ -974,6 +975,7 @@ body {
 
 				.sub-scroll-menu {
 					position: static;
+					display: block;
 				}
 
 				&.banner-bottom {
@@ -1462,5 +1464,83 @@ body {
 
 	& > a {
 		position: absolute;
+	}
+}
+
+.sticky-scroll-menu {
+	position: absolute;
+	top: 100vh;
+	width: 100%;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 11;
+	left: 0;
+
+	&.hide {
+		display: none;
+	}
+
+	h4 {
+	    display: inline-block;
+    	font-size: 15px;
+    	margin: 0;
+
+		& + h4 {
+			margin-right: 32px;
+		}
+
+		a {
+			margin: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	a {
+	    margin: 0 10px;
+	    text-decoration: none;
+	    color: #CCC;
+	    font-weight: 700;
+	}
+}
+
+.sub-scroll-menu {
+
+	& > a {
+		margin: 0 10px;
+	    text-decoration: none;
+	    color: #CCC;
+	    font-weight: 700;
+	}
+}
+
+body {
+	
+	&.second-screen.project-page {
+
+		.sticky-scroll-menu {
+			@media (max-width: $small) {
+				top: 770px;
+			}
+			@media (max-width: $xsmall) {
+				top: 385px;
+			}
+		}
+	}
+
+	&.second-screen.project-page {
+
+		.sticky-scroll-menu {
+			@media (max-width: $small) {
+		    	top: 750px;
+		    }
+		    @media (max-width: $xsmall) {
+		    	top: 320px;
+		    }
+		}
 	}
 }
