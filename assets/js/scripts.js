@@ -144,7 +144,8 @@ $(document).ready(function() {
     });
     //
     if ( $('.b-works [data-fancybox]').length != 0 ) {
-        $('.b-works [data-fancybox]').fancybox();    }
+        $('.b-works [data-fancybox]').fancybox();
+    }
     //
     $('.b-main-modal .control-btn').on('click touchstart', function() {
         blinkContent();
