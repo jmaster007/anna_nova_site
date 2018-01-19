@@ -1614,6 +1614,26 @@ body {
   }
 }
 .fancybox-container .fancybox-caption-wrap {
+  pointer-events: all !important;
+    @media (max-width: $xsmall) {
+      width: 100%;
+    }
+    @media (min-width: $xsmall) {
+      padding: 35px 40px;
+      background: #fff;
+      box-sizing: content-box;
+    }
+    @media (min-width: $small) {
+      padding: 35px 100px;
+      background: transparent;
+      box-sizing: content-box;
+    }
+    @media (min-width: $large) {
+      padding: 35px 40px 0;
+      background: transparent;
+      box-sizing: content-box;
+    }
+
 
   .project-description {
       position: absolute;
@@ -1630,15 +1650,17 @@ body {
       @media (min-width: $small) {
         order: 1;
         align-self: flex-end;
-        padding-right: 50px;
+        /*padding-right: 50px;*/
         display: block;
         min-width: 300px;
         position: relative;
         top: auto;
         left: 0;
+        bottom: 0;
       }
       @media (max-width: $xsmall) {
-          padding: 0 20px;
+          width: 100%;
+          padding: 20px;
 
           //
           bottom: unset;

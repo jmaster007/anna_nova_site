@@ -222,7 +222,7 @@ $(document).ready(function() {
 
     //
     var flag = false;
-    $('.project-description .title').bind('click touchstart', function(){
+    $('body').on('click', '.project-description .title', function(){
         if (!flag) {
             flag = true;
             setTimeout(function(){ flag = false; }, 100);
@@ -231,6 +231,15 @@ $(document).ready(function() {
             }
         }
     });
+    // $('.project-description .title').bind('click', function(){
+    //     if (!flag) {
+    //         flag = true;
+    //         setTimeout(function(){ flag = false; }, 100);
+    //         if ( $(window).width() <= 768 ) {
+    //             $(this).toggleClass('open').siblings('.expand').toggleClass('open');
+    //         }
+    //     }
+    // });
 
     //костыль для страницы проекта
     if ( $('body.project-page').is('.second-screen') ) {

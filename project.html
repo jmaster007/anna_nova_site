@@ -458,49 +458,23 @@
       clickContent: false,
       clickSlide : false,
       afterShow: function() {
-        console.log('move');
+        // console.log('move');
         var setPosition = function () {
           var offsetImage,
-          heightImage,
-          widthDescription,
-          heightDescription,
+          imageHeight,
+          descriptionWidth,
           windowHeight,
           windowWidth;
           windowHeight = $(window).height();
           windowWidth = $(window).width();
-          if (windowWidth >= 768 && windowWidth <= 1279) {
-            $('.fancybox-image-wrap').css({left: '0px', top: '0px'});
-          } else if (windowWidth >= 1280 && windowWidth <= 2559) {
-            $('.fancybox-image-wrap').css({left: '160px', top: '0px'});
-          } else if (windowWidth >= 2560) {
-            $('.fancybox-image-wrap').css({left: '0px', top: '0px'});
-          }
           offsetImage = $('.fancybox-container .fancybox-stage .fancybox-slide--current .fancybox-image-wrap .fancybox-image').offset();
-          heightImage = $('.fancybox-container .fancybox-stage .fancybox-slide--current .fancybox-image-wrap .fancybox-image').height();
-          widthDescription = $('.fancybox-container .fancybox-caption-wrap').outerWidth();
-          heightDescription = $('.fancybox-container .fancybox-caption-wrap').outerHeight();
-          // console.log('left', offsetImage.left);
-          // console.log('top', offsetImage.top);
-          // console.log('heightImage', heightImage);
-          // console.log('widthDescription', widthDescription);
-          // console.log('heightDescription', heightDescription);
-          // console.log('windowHeight', windowHeight);
-          // var ProjectDescription = $('.fancybox-caption-wrap').offset({ top: offsetImage.top + heightImage - heightDescription, left: offsetImage.left - widthDescription });
-          if (windowWidth <= 767) {
-            console.log('asd');
-            $('.fancybox-caption-wrap').css({ left: 0, bottom: 0, top: 'auto' });
-          }
-          if (windowWidth >= 768 && windowWidth <= 1279) {
-            if (((windowHeight - heightImage) / 2) < (heightDescription + 20)) {
-              $('.fancybox-image-wrap').css({ left: '0px', top: ((windowHeight - heightImage) / 2) - heightDescription - 20 });
-            }
-            var ProjectDescription = $('.fancybox-caption-wrap').css({ bottom: 0, left: (windowWidth - widthDescription) / 2, top: 'auto' });
-          } else if (windowWidth >= 1280 && windowWidth <= 2559) {
-            // $('.fancybox-image-wrap').css({left: '160px'});
-            var ProjectDescription = $('.fancybox-caption-wrap').css({ bottom: (windowHeight - heightImage) / 2, left: offsetImage.left - widthDescription - 20, top: 'auto' });
-          } else if (windowWidth >= 2560) {
-            // $('.fancybox-image-wrap').css({left: '0px'});
-            var ProjectDescription = $('.fancybox-caption-wrap').css({ bottom: (windowHeight - heightImage) / 2, left: offsetImage.left - widthDescription - 20, top: 'auto' });
+          imageHeight = $('.fancybox-container .fancybox-stage .fancybox-slide--current .fancybox-image-wrap .fancybox-image').height();
+          descriptionWidth = $('.fancybox-container .fancybox-caption-wrap').outerWidth();
+
+          if (windowWidth >= 1920) {
+            $('.fancybox-caption-wrap').css({ bottom: (windowHeight - imageHeight) / 2, left: offsetImage.left - descriptionWidth - 20, top: 'auto' });
+          } else if (windowWidth < 1920) {
+            $('.fancybox-caption-wrap').css({ bottom: 0, left: 0, top: 'auto' });
           }
         }
         setPosition();
@@ -508,7 +482,7 @@
         $(window).resize(function() {
           setTimeout(function () {
             setPosition();
-          }, 250);
+          }, 100);
         });
       },
       btnTpl: {
