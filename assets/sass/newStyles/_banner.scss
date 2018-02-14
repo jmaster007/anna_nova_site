@@ -10,11 +10,6 @@
     	min-height: 230px;
     }
 
-    &.project-banner {
-        background: url(../../images/project/bg1.jpg) no-repeat center top;
-        background-size: 100% auto;
-    }
-
     .mask-content {
     	color: #fff;
     	position: absolute;
@@ -94,6 +89,18 @@
                 & + .date-item {
                     padding-left: 40px;
                 }
+            }
+        }
+    }
+
+    &.project-banner {
+        background: url(../../images/project/bg1.jpg) no-repeat center top;
+        background-size: 100% auto;
+
+        .mask-content {
+
+            .title, .text {
+                max-width: 60%!important;
             }
         }
     }
