@@ -1071,16 +1071,24 @@ body {
     }
 
     & #main{
-        @media (min-width: $small) {
-            min-height: unset;
-            margin: 0;
-            padding: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin-right: -50%;
-            transform: translate(-50%, -50%);
-        }
+        // @media (min-width: $small) {
+        //     min-height: unset;
+        //     margin: 0;
+        //     padding: 0;
+        //     position: absolute;
+        //     top: 50%;
+        //     left: 50%;
+        //     margin-right: -50%;
+        //     transform: translate(-50%, -50%);
+        // }
+        position: relative;
+	    transform: translate(0);
+	    left: unset;
+	    top: unset;
+	    margin-right: 0;
+	    margin-left: 0;
+	    width: 99%;
+	    min-height: unset;
     }
 
     & .artists-list {
@@ -1100,11 +1108,12 @@ body {
     }
 
     & #footer {
-        @media (min-width: $small) {
-            bottom: 0;
-            position: absolute;
-            width: 100%;
-        }
+        // @media (min-width: $small) {
+        //     bottom: 0;
+        //     position: absolute;
+        //     width: 100%;
+        // }
+        position: relative;
     }
 }
 
