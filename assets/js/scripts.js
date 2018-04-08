@@ -225,7 +225,7 @@ $(document).ready(function() {
     $('body').on('click', '.project-description .title', function(){
         if (!flag) {
             flag = true;
-            setTimeout(function(){ flag = false; }, 100);
+            setTimeout(function(){ flag = false; }, 1);
             if ( $(window).width() <= 768 ) {
                 $(this).toggleClass('open').siblings('.expand').toggleClass('open');
             }

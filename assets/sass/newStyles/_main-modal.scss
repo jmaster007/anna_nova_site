@@ -279,7 +279,7 @@
                         padding-top: 6px;
                         max-height: 0;
                         overflow: hidden;
-                        transition: max-height 0.3s ease-in-out;
+                        transition: max-height .6s ease-in;
                     }
                 }
                 .expand.open {

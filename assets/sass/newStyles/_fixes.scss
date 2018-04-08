@@ -1806,7 +1806,7 @@ body {
               padding-top: 6px;
               max-height: 0;
               overflow: hidden;
-              transition: max-height 0.3s ease-in-out;
+              transition: max-height 0.6s ease-in;
           }
       }
       .expand.open {
@@ -1934,4 +1934,19 @@ body {
             }
         }
     }
+}
+
+.fancybox-container {
+
+	.fancybox-slide .fancybox-image-wrap {
+		transition: none!important;
+		display: none;
+	}
+
+	&.fancybox-is-open {
+		
+		.fancybox-slide .fancybox-image-wrap {
+			display: block;
+		}
+	}
 }
