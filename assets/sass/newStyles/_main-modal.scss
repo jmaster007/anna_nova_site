@@ -57,6 +57,9 @@
 
                 img {
                     transform: rotate(-90deg);
+                    @media (min-width: $small) {
+                        margin-left: 25px;
+                    }
                 }
             }
 
@@ -69,11 +72,17 @@
 
                 img {
                     transform: rotate(90deg);
+                    @media (min-width: $small) {
+                        margin-left: 20px;
+                    }
                 }
             }
 
             img {
                 max-width: 100%;
+                @media (min-width: $small) {
+                    width: 40px;
+                }
             }
         }
 

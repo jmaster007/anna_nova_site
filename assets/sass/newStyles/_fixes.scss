@@ -1038,18 +1038,37 @@ body {
 }
 
 .artists-list {
-    @media (min-width: $large) {
-        columns: 4;
-        column-gap: 4em;
-    }
-    @media (max-width: $large) {
-        columns: 3;
-    }
-	@media (max-width: $small) {
-		columns: 2;
-	}
-	@media (max-width: $xsmall) {
-		columns: 1;
+	columns: unset;
+	padding: 0 4em;
+	display: flex;
+	flex-wrap: wrap;
+	// @media (min-width: $large) {
+ //       columns: 4;
+ //       column-gap: 4em;
+ //   }
+ //   @media (max-width: $large) {
+ //       columns: 3;
+ //   }
+	// @media (max-width: $small) {
+	// 	columns: 2;
+	// }
+	// @media (max-width: $xsmall) {
+	// 	columns: 1;
+	// }
+
+	li {
+		@media (min-width: $large) {
+			width: 25%;
+		}
+		@media (max-width: $large) {
+			width: 33%;
+		}
+		@media (max-width: $small) {
+			width: 33%;
+		}
+		@media (max-width: $xsmall) {
+			width: 100%;
+		}
 	}
 }
 

@@ -156,7 +156,7 @@
 
                 .personal-text {
                     columns: 2;
-                    column-gap: 2em;
+                    column-gap: 80px;
                     padding-left: 0;
                     @media (max-width: $xsmall) {
                         columns: 1;
